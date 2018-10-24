@@ -7,7 +7,7 @@
 " Plugins
 " =========================
 " :scriptnames		" Check loaded plugins  
-" :set runtimepath?	" Check loaded plugins' RT path
+" :set runtimepath? " Check loaded plugins' RT path
 " :echo syntastic#util#system('echo "$PATH"')
 					" to see syntastic's idea of env-var $PATH
 set nocompatible
