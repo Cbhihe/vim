@@ -1,19 +1,19 @@
-#!/usr/bin/vim
-" =========================
-"       ~/.vimrc
+set encoding=utf-8
+scriptencoding=utf-8
+set termencoding=utf-8
+set nocompatible
+				" Superfluous: vim automatically sets nocompatible if it finds 
+				" vimrc or gvimrc " upon startup.
 
 
-" =========================
 " Plugins
 " =========================
-" :scriptnames		" Check loaded plugins  
-" :set runtimepath? " Check loaded plugins' RT path
+" :scriptnames
+				" Check loaded plugins  
+" :set runtimepath? 
+				" Check loaded plugins' RT path
 " :echo syntastic#util#system('echo "$PATH"')
-					" to see syntastic's idea of env-var $PATH
-set nocompatible
- .              " Superfluous !!
-                " vim automatically sets nocompatible if it finds a vimrc or gvimrc 
-                " upon startup.
+				" to see syntastic's idea of env-var $PATH
 filetype off
 set rtp+=~/.vim/bundle/vundle
 				" set the runtime path for vundle, required
@@ -39,7 +39,7 @@ Plugin 'Townk/vim-autoclose'
 				" Delete with one keystroke by doing BS on first sign .
 				" Suppress creation of closing sign, by typing CTRL-V in
 				" insert mode immediately prior to typing the opening sign.
-" Plugin 'vim/matchit.vim'
+"Plugin 'vim/matchit.vim'
 				" part of vim standard distribution since v6.0 
 Plugin 'dougireton/vim-chef'
 				" Detects Chef cookbook and Chef-Repo files and sets the filetype 
@@ -48,8 +48,8 @@ Plugin 'jimhester/lintr'
 				" Detects syntax errors and inconsistencies in R scripts
 				" Git-cloned from https://github.com/jimhester/lintr
 Plugin 'vim-scripts/LaTeX-Suite-aka-Vim-LaTeX'
-                " Git cloned from:
-                " https://github.com/vim-scripts/LaTeX-Suite-aka-Vim-LaTeX.git
+				" Git cloned from:
+				" https://github.com/vim-scripts/LaTeX-Suite-aka-Vim-LaTeX.git
 Plugin 'Kuniwak/vint'
 				" Git cloned from https://github.com/Kuniwak/vint
 " ------------------------------------
@@ -61,6 +61,8 @@ filetype plugin indent on
 				" Load ftplugin.vim and indent.vim from $VIMRUNTIME 
 				" (/usr/share/vim/vim81)
 				" Turn automatic filetype detection on
+
+let mapleader=',,'	" <leader> mapped to '\' by default. 
 
 let g:ft_ignore_pat = '\.\(Z\|gz\|bz2\|zip\|tgz\)$'
 				" Ensure contents of compressed files not inspected.
@@ -126,7 +128,7 @@ let g:syntastic_auto_jump = 0
 let g:Syntastic_enable_signs = 1
 				" keep defaults margin signs
 set signcolumn=yes
-			" Ancker sign column permanently on
+				" Ancker sign column permanently on
 
 "let g:syntastic_error_symbol = "\u2717"
 hi clear SyntasticErrorSign 
@@ -222,11 +224,11 @@ let g:syntastic_php_checkers = ['php', 'phplint']
 				" 'phplint' not installed as of 2018.10.18
 				
 let g:syntastic_html_checkers = ['tidy']
-                " Install with pacman
+				" Install with pacman
 
 let g:syntastic_vim_checkers = ['vint']
-                " Obtained directly from plugin repo
-                " Install with `sudo pip install vim-vint` 
+				" Obtained directly from plugin repo
+				" Install with `sudo pip install vim-vint` 
 let g:no_vim_maps = 0
 				" Enable vim map
 				" Move to start and end of functions with [[ and ]].
@@ -288,8 +290,8 @@ let g:syntastic_ruby_mri_exec = '/user/bin/ruby'
 " =========================
 " Colors
 " =========================
-"syntax on		    " Enable syntax highlighting using vim default highlight colors. 
-				    " By default 'syntax on' also turns on filetype detection.
+"syntax on			" Enable syntax highlighting using vim default highlight colors. 
+					" By default 'syntax on' also turns on filetype detection.
 				    " Overrule previously defined user highlight color settings.
  
 " Define dark or light terminal background color when detection not automatic
@@ -330,28 +332,28 @@ endif
                     " color settings.
  
 " Highlight groups: " Normal, Special, Comment, Constant, Type, Error, Underlined, 
-                    " Boolean, Conditional, NonText, Cursor, CursorLine, Function, 
-                    " Include, Debug, ErrorMsg, Folded, Todo ('TODO','FIXME','XXX'), etc.
-                    " (see http://vimdoc.sourceforge.net/htmldoc/syntax.html#xterm-color)
+					" Boolean, Conditional, NonText, Cursor, CursorLine, Function, 
+					" Include, Debug, ErrorMsg, Folded, Todo ('TODO','FIXME','XXX'), etc.
+					" (see http://vimdoc.sourceforge.net/htmldoc/syntax.html#xterm-color)
 " Key=Value pairs:  
 "           cterm=    underline | bold | none | reverse | italic
 " ctermfg,ctermbg=    NR-16   NR-8    COLOR NAME 
-"			            0       0       Black
-"			    		1       4       DarkBlue
-"			    		2       2       DarkGreen
-"		        		3       6       DarkCyan
-"			    		4       1       DarkRed
-"			    		5       5       DarkMagenta
-"			    		6       3       Brown, DarkYellow
-"		        		7       7       LightGray, LightGrey, Gray, Grey
-"			    		8       0*      DarkGray, DarkGrey
-"			    		9       4*      Blue, LightBlue
-"		        		10      2*      Green, LightGreen
-"			    		11      6*      Cyan, LightCyan
-"			    		12      1*      Red, LightRed
-"			    		13      5*      Magenta, LightMagenta
-"			    		14      3*      Yellow, LightYellow
-"			    		15      7*      White
+"						0       0       Black
+"						1       4       DarkBlue
+"						2       2       DarkGreen
+"						3       6       DarkCyan
+"						4       1       DarkRed
+"						5       5       DarkMagenta
+"						6       3       Brown, DarkYellow
+"						7       7       LightGray, LightGrey, Gray, Grey
+"						8       0*      DarkGray, DarkGrey
+"						9       4*      Blue, LightBlue
+"						10      2*      Green, LightGreen
+"						11      6*      Cyan, LightCyan
+"						12      1*      Red, LightRed
+"						13      5*      Magenta, LightMagenta
+"						14      3*      Yellow, LightYellow
+"						15      7*      White
 "     guifg, guibg=   #000000, ...
                        
 
@@ -360,7 +362,7 @@ highlight Normal ctermbg=Black
                     " terminal = 'cterm' (color terminal)
 "highlight Comment ctermfg=Cyan ctermbg=Black cterm=underline
 					" Override 'Comment' group's color
-                    " Note: all but any one 'key=value' pair optional
+					" Note: all but any one 'key=value' pair optional
 
 
 " =========================
@@ -439,8 +441,8 @@ endif
 
 augroup resCur
   autocmd!
-                   " remove all autocmds from group 'resCur' every time
-                   " .vimrc is sourced.
+					" remove all autocmds from group 'resCur' every time
+					" .vimrc is sourced.
   if has('folding')
     autocmd BufWinEnter * if ResCur() | call UnfoldCur() | endif
   else
@@ -499,8 +501,6 @@ set dictionary+=~/.vim/dict/iab-dict
 " =========================
 " Sane text files
 " =========================
-set encoding=utf-8   " set utf-8 as standard encoding
-set termencoding=utf-8
 set fileformats=unix,dos,mac
 					" Specify globally which file formats will be tried when 
 					" Vim reads a file (i.e. how <EOL> detection will be done). 
@@ -550,10 +550,10 @@ let g:python_recommended_style = 0
 set tabstop=4		" Define nbr of space(s) to use for each step of (auto)indent.
 					" Used for 'cindent', >>, <<, etc.
 set shiftwidth=4
-set smarttab		" Insert nbr of space(s) equal to shiftwidths,
+"set smarttab		" Insert nbr of space(s) equal to shiftwidths,
 					" when <Tab> is inserted at line begin
 set softtabstop=4	" Set nbr of spaces counted by <Tab> or <BS> in editing operations
-set expandtab		" Convert tabs to spaces (for Python)
+"set expandtab		" Convert tabs to spaces (for Python)
 					" (inverse behavior: 'set noexpandtab')
 set cindent			" make indent rule stricter for C programs
 set cursorline		" highlight current line (where cursor is)
@@ -588,7 +588,8 @@ set statusline=%<\ %n\ %f\ %m%r%h\ %y%=\ Line:\ \%l/\%L\ (\%p%%)\ Column:\ \%c\
 " Search 
 " =========================
 set hlsearch
-command WR :let @/=""
+
+:command WR :let @/=""
 					" wipe register containing the last searched string. 
 					" make `:norm n` unavailable to search next occurrence.
 map <C-R> :noh<CR>:redraw!"<CR>
@@ -620,14 +621,20 @@ hi Search ctermfg=red ctermbg=grey cterm=none guisp=red gui=underline
 " Append suffix to 'map'
 "   !: insert & command-line
 " =========================
-let mapleader=',,r'	" <leader> mapped to '\' by default. 
 
 					" cmds only accepted if initial letter is capitalized
-:command WQ wq      " command mode: auto correction
-:command Wq wq      " command mode: auto correction
-:command W w        " command mode: auto correction
-:command Q q        " command mode: auto correction
+:command WQ	wq
+					" command mode: auto correction
+:command Wq	wq
+					" command mode: auto correction
+:command W	w
+					" command mode: auto correction
+:command Q	q
+					" command mode: auto correction
 					" ====================
+"inoremap ºº <Esc>2h 
+					" remap ºº to <Esc> in insert mode 
+
 inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk
 					" Insert mode mapping: make cursor move as expected with wrapped lines
@@ -654,6 +661,8 @@ vmap <C-x> "+d
 					" map CTRL+x to cut to clipboard in visual mode
 					" ====================
 noremap ,,fb <Esc>:tabnew .<CR>
+					" Open directory tree in second buffer.
+					" :q to close and come back to calling buffer
 
 " =========================
 " Check dynamic loading of python 2.x or 3.x at 'vim' launch 
@@ -670,6 +679,4 @@ noremap ,,fb <Esc>:tabnew .<CR>
 "    echo 'Python 3.x dynamically loaded'
 "  endif
 "endif
-
-
-
+"
