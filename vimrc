@@ -578,9 +578,9 @@ set wildmode=longest,list
 " =========================
 " Status line
 " =========================
-set showcmd			" Show cmd at bottom right hand corner of screen, left of cursor 
+set showcmd         " Show cmd at bottom right hand corner of screen, left of cursor 
 					" location. <leader> disappears after timeoutlen has expired.
-set showmode		" Show mode status n statusline at bottom of screen 
+set showmode        " Show mode status n statusline at bottom of screen 
 set statusline=%<\ %n\ %f\ %m%r%h\ %y%=\ Line:\ \%l/\%L\ (\%p%%)\ Column:\ \%c\ 
 					" Specify content of status line
 
@@ -597,7 +597,7 @@ map <silent> <leader><CR> :noh<CR>
 					" temporarily disable highlight when <leader><cr> is pressed
 nnoremap <CR> :noh<CR>
 					" Useful to disable highlighted search results
-hi clear Search		" Change default color for searched words
+hi clear Search     " Change default color for searched words
 hi Search ctermfg=red ctermbg=grey cterm=none guisp=red gui=underline
 
 
@@ -623,10 +623,10 @@ hi Search ctermfg=red ctermbg=grey cterm=none guisp=red gui=underline
 let mapleader=',,r'	" <leader> mapped to '\' by default. 
 
 					" cmds only accepted if initial letter is capitalized
-:command WQ wq		" command mode: auto correction
-:command Wq wq		" command mode: auto correction
-:command W w		" command mode: auto correction
-:command Q q		" command mode: auto correction
+:command WQ wq      " command mode: auto correction
+:command Wq wq      " command mode: auto correction
+:command W w        " command mode: auto correction
+:command Q q        " command mode: auto correction
 					" ====================
 inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk
@@ -646,7 +646,7 @@ map! <F2> <Esc>a<C-R>=strftime("%c")<CR><Esc>
 map <F2> a<C-R>=strftime("%c")<CR><Esc>   
 					" as above, in normal visual and operator-pending modes.
 					" ====================
-set go+=a			" enable automatic X11 primary `"*y` register copying just 
+set go+=a           " enable automatic X11 primary `"*y` register copying just 
 					" by highlighting with mouse in visual mode
 vmap <C-c> "+y		
 					" map CTRL+c to yank to clipboard in visual mode
