@@ -1,0 +1,99 @@
+
+
+
+x  ,,a}        *@<Esc>`>a}<Esc>`<i{<Esc>
+	Last set from ~/.vim/bundle/vim-autoclose/plugin/AutoClose.vim line 438
+x  ,,a{        *@<Esc>`>a}<Esc>`<i{<Esc>
+	Last set from ~/.vim/bundle/vim-autoclose/plugin/AutoClose.vim line 436
+x  ,,a)        *@<Esc>`>a)<Esc>`<i(<Esc>
+	Last set from ~/.vim/bundle/vim-autoclose/plugin/AutoClose.vim line 438
+x  ,,a(        *@<Esc>`>a)<Esc>`<i(<Esc>
+	Last set from ~/.vim/bundle/vim-autoclose/plugin/AutoClose.vim line 436
+x  ,,a'        *@<Esc>`>a'<Esc>`<i'<Esc>
+	Last set from ~/.vim/bundle/vim-autoclose/plugin/AutoClose.vim line 438
+x  ,,a]        *@<Esc>`>a]<Esc>`<i[<Esc>
+	Last set from ~/.vim/bundle/vim-autoclose/plugin/AutoClose.vim line 438
+x  ,,a[        *@<Esc>`>a]<Esc>`<i[<Esc>
+	Last set from ~/.vim/bundle/vim-autoclose/plugin/AutoClose.vim line 436
+x  ,,a"        *@<Esc>`>a"<Esc>`<i"<Esc>
+	Last set from ~/.vim/bundle/vim-autoclose/plugin/AutoClose.vim line 438
+x  ,,a`        *@<Esc>`>a`<Esc>`<i`<Esc>
+	Last set from ~/.vim/bundle/vim-autoclose/plugin/AutoClose.vim line 438
+v  <C-C>         "+y<Tab><Tab>
+	Last set from ~/.vimrc line 664
+v  <NL>          <Plug>IMAP_JumpForward
+	Last set from ~/.vim/bundle/LaTeX-Suite-aka-Vim-LaTeX/plugin/imaps.vim line 483
+n  <NL>          <Plug>IMAP_JumpForward
+	Last set from ~/.vim/bundle/LaTeX-Suite-aka-Vim-LaTeX/plugin/imaps.vim line 479
+o  <NL>          :bnext<CR>
+	Last set from ~/.vimrc line 643
+   <C-K>         :bprev<CR>
+	Last set from ~/.vimrc line 644
+n  <CR>        * :noh<CR>
+	Last set from ~/.vimrc line 599
+   <C-R>         :noh<CR>:redraw!"<CR>
+	Last set from ~/.vimrc line 595
+v  <C-X>         "+d<Tab>
+	Last set from ~/.vimrc line 666
+   <Space>       /<Tab><Tab>
+	Last set from ~/.vimrc line 649
+o  %           * v:<C-U>call <SNR>51_Match_wrapper('',1,'o') <CR>
+	Last set from /usr/share/vim/vim81/pack/dist/opt/matchit/plugin/matchit.vim line 57
+v  %           * :<C-U>call <SNR>51_Match_wrapper('',1,'v') <CR>m'gv``
+	Last set from /usr/share/vim/vim81/pack/dist/opt/matchit/plugin/matchit.vim line 55
+n  %           * :<C-U>call <SNR>51_Match_wrapper('',1,'n') <CR>
+	Last set from /usr/share/vim/vim81/pack/dist/opt/matchit/plugin/matchit.vim line 53
+n  ,,d         * :YcmShowDetailedDiagnostic<CR>
+	Last set from ~/.vim/bundle/YouCompleteMe/autoload/youcompleteme.vim line 290
+   ,,ft        * <Esc>:tabnew .<CR>
+	Last set from ~/.vimrc line 669
+n  ,,b         * :set nomore | :ls | :set more <CR>:b<Space>
+	Last set from ~/.vimrc line 646
+   ,,<CR>        :noh<CR>
+	Last set from ~/.vimrc line 597
+   ,,g           :YcmCompleter GoToDefinitionElseDeclaration<CR>
+	Last set from ~/.vimrc line 79
+o  [%          * v:<C-U>call <SNR>51_MultiMatch("bW", "o") <CR>
+	Last set from /usr/share/vim/vim81/pack/dist/opt/matchit/plugin/matchit.vim line 67
+v  [%            <Esc>[%m'gv``
+	Last set from /usr/share/vim/vim81/pack/dist/opt/matchit/plugin/matchit.vim line 63
+n  [%          * :<C-U>call <SNR>51_MultiMatch("bW", "n") <CR>
+	Last set from /usr/share/vim/vim81/pack/dist/opt/matchit/plugin/matchit.vim line 61
+o  ]%          * v:<C-U>call <SNR>51_MultiMatch("W",  "o") <CR>
+	Last set from /usr/share/vim/vim81/pack/dist/opt/matchit/plugin/matchit.vim line 68
+v  ]%            <Esc>]%m'gv``
+	Last set from /usr/share/vim/vim81/pack/dist/opt/matchit/plugin/matchit.vim line 64
+n  ]%          * :<C-U>call <SNR>51_MultiMatch("W",  "n") <CR>
+	Last set from /usr/share/vim/vim81/pack/dist/opt/matchit/plugin/matchit.vim line 62
+v  a%            <Esc>[%v]%
+	Last set from /usr/share/vim/vim81/pack/dist/opt/matchit/plugin/matchit.vim line 71
+o  g%          * v:<C-U>call <SNR>51_Match_wrapper('',0,'o') <CR>
+	Last set from /usr/share/vim/vim81/pack/dist/opt/matchit/plugin/matchit.vim line 58
+v  g%          * :<C-U>call <SNR>51_Match_wrapper('',0,'v') <CR>m'gv``
+	Last set from /usr/share/vim/vim81/pack/dist/opt/matchit/plugin/matchit.vim line 56
+n  g%          * :<C-U>call <SNR>51_Match_wrapper('',0,'n') <CR>
+	Last set from /usr/share/vim/vim81/pack/dist/opt/matchit/plugin/matchit.vim line 54
+v  gx            <Plug>NetrwBrowseXVis
+	Last set from /usr/share/vim/vim81/plugin/netrwPlugin.vim line 88
+n  gx            <Plug>NetrwBrowseX
+	Last set from /usr/share/vim/vim81/plugin/netrwPlugin.vim line 82
+v  <Plug>NetrwBrowseXVis * :<C-U>call netrw#BrowseXVis()<CR>
+	Last set from /usr/share/vim/vim81/plugin/netrwPlugin.vim line 90
+n  <Plug>NetrwBrowseX * :call netrw#BrowseX(expand((exists("g:netrw_gx")? g:netrw_gx : '<cfile>')),netrw#CheckIfRemote())<CR>
+	Last set from /usr/share/vim/vim81/plugin/netrwPlugin.vim line 84
+n  <Plug><+SelectRegion+> & `<v`>
+	Last set from ~/.vim/bundle/LaTeX-Suite-aka-Vim-LaTeX/plugin/imaps.vim line 492
+v  <Plug>IMAP_JumpBack   <C-\><C-N>`<i<C-R>=IMAP_Jumpfunc('b', 0)<CR>
+	Last set from ~/.vim/bundle/LaTeX-Suite-aka-Vim-LaTeX/plugin/imaps.vim line 467
+v  <Plug>IMAP_JumpForward   <C-\><C-N>i<C-R>=IMAP_Jumpfunc('', 0)<CR>
+	Last set from ~/.vim/bundle/LaTeX-Suite-aka-Vim-LaTeX/plugin/imaps.vim line 466
+v  <Plug>IMAP_DeleteAndJumpBack   "_<Del>i<C-R>=IMAP_Jumpfunc('b', 0)<CR>
+	Last set from ~/.vim/bundle/LaTeX-Suite-aka-Vim-LaTeX/plugin/imaps.vim line 463
+v  <Plug>IMAP_DeleteAndJumpForward   "_<Del>i<C-R>=IMAP_Jumpfunc('', 0)<CR>
+	Last set from ~/.vim/bundle/LaTeX-Suite-aka-Vim-LaTeX/plugin/imaps.vim line 462
+n  <Plug>IMAP_JumpBack   i<C-R>=IMAP_Jumpfunc('b', 0)<CR>
+	Last set from ~/.vim/bundle/LaTeX-Suite-aka-Vim-LaTeX/plugin/imaps.vim line 459
+n  <Plug>IMAP_JumpForward   i<C-R>=IMAP_Jumpfunc('', 0)<CR>
+	Last set from ~/.vim/bundle/LaTeX-Suite-aka-Vim-LaTeX/plugin/imaps.vim line 458
+   <F2>          a<C-R>=strftime("%c")<CR><Esc>  <Space>
+	Last set from ~/.vimrc line 659

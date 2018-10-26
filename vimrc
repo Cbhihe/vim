@@ -15,7 +15,7 @@ set nocompatible
 " :echo syntastic#util#system('echo "$PATH"')
 				" to see syntastic's idea of env-var $PATH
 filetype off
-set rtp+=~/.vim/bundle/vundle
+set rtp+=~/.vim/bundle/Vundle.vim
 				" set the runtime path for vundle, required
 call vundle#begin()
 				" Initialize Vundle, required
@@ -26,7 +26,7 @@ call vundle#begin()
 "  'user/repository.git' format
 " For vim scripts: reference the plugin by name as it appears on site
 
-Plugin 'gmarik/vundle'				
+Plugin 'VundleVim/Vundle.vim'				
 				" let Vundle manage vundle, required
 Plugin 'vim-syntastic/syntastic'
 				" syntax checker 
@@ -62,7 +62,10 @@ filetype plugin indent on
 				" (/usr/share/vim/vim81)
 				" Turn automatic filetype detection on
 
-let mapleader=',,'	" <leader> mapped to '\' by default. 
+let mapleader = ',,'	
+				" <leader> mapped to '\' by default. 
+let maplocalleader = ','	
+				" <localleader> mapped to '\' by default. 
 
 let g:ft_ignore_pat = '\.\(Z\|gz\|bz2\|zip\|tgz\)$'
 				" Ensure contents of compressed files not inspected.
@@ -228,7 +231,8 @@ let g:syntastic_html_checkers = ['tidy']
 
 let g:syntastic_vim_checkers = ['vint']
 				" Obtained directly from plugin repo
-				" Install with `sudo pip install vim-vint` 
+				" Installed from AUR
+"let g:syntastic_vim_vint_exec = '/home/ckb/.vim/bundle/vint/bin/vint'
 let g:no_vim_maps = 0
 				" Enable vim map
 				" Move to start and end of functions with [[ and ]].
@@ -292,17 +296,17 @@ let g:syntastic_ruby_mri_exec = '/user/bin/ruby'
 " =========================
 "syntax on			" Enable syntax highlighting using vim default highlight colors. 
 					" By default 'syntax on' also turns on filetype detection.
-				    " Overrule previously defined user highlight color settings.
+					" Overrule previously defined user highlight color settings.
  
-" Define dark or light terminal background color when detection not automatic
-"  (default) in case no automatic detection of terminal color takes place.
 if &term ==# 'xterm'
 	set background=dark  
 elseif &term ==# 'xterm-256color'
 	set background=dark  
     set t_Co=256
-endif               " Set term color to 256
-
+endif
+					" Define dark or light terminal background color when detection not automatic
+					"  (default) in case no automatic detection of terminal color takes place.
+					" Set term color to 256
 " See available color schemes in $VIMRUNTIME/colors/,
 "   currently at /usr/share/vim/vim81/colors/ (for vim v8.1)
 ":color default
@@ -387,7 +391,8 @@ set lazyredraw		" Don't allow redraw when using macros
 set ignorecase		" Make case insensitive
 set smartcase		" Use case/become case-sensitive if caps is used
 set mouse=a			" Allow normal mouse behavior in all 4 principal modes
-set number			" Place a number left of each line start.
+set number numberwidth=5
+					" Place a number left of each line start.
 set timeout			" Timeout on :mappings and key codes (when timeout off (default)) 
 set timeoutlen=1500 " Define time (ms) available to enter command after the <leader>
 					" or during entry of key combination. Default value is 1000.
@@ -523,6 +528,7 @@ set fileformat=unix	" Set file format locally
 
 packadd! matchit	" Make % cmd jump to matching HTML tags, if/else/endif 
 					" constructs, etc.
+
 set foldmethod=manual
 					" define fold automatically by indent w/ 'indent'
 set wrap			" Display word wrapped text; do not change text in buffer
@@ -537,7 +543,8 @@ set showbreak=>>\ 	" display string ">>" at start of wrapped lines
 "set wm=0			" Disable wrapmargin (counting from right border)
 					" 'wm=4' (e.g.) introduces <EOL> at breaks
 set whichwrap=b,s,<,>,[,]
-					" Traverse line breaks with arrow keys
+					" Traverse line breaks with arrow keys  
+
 set showmatch		" Briefly jump to matching bracket
 set autoindent		" Insert indent when starting new line with \<CR>, 
 					" when ending previous line with \{, etc.
@@ -603,6 +610,12 @@ hi Search ctermfg=red ctermbg=grey cterm=none guisp=red gui=underline
 
 
 " =========================
+" Sensitive content 
+" =========================
+source ~/.vim/sensitive.vim
+
+
+" =========================
 " Mappings 
 " =========================
 " Prepend prefix to 'map' 
@@ -616,13 +629,21 @@ hi Search ctermfg=red ctermbg=grey cterm=none guisp=red gui=underline
 "   c: command-line
 "   l: insert, command-line, regexp-search and others. 
 "      collectively called "Lang-Arg" pseudo-mode)
+"	t: terminal-job
+
+" Just before the {rhs} a special character can appear:
+"	*	indicates that it is not remappable
+"	&	indicates that only script-local mappings are remappable
+"	@	indicates a buffer-local mapping
+
 "nore: makes mapping non-recursive, i.e. lhs expands to rhs only
 "      even if rhs is already mapped to something else.
 " Append suffix to 'map'
 "   !: insert & command-line
 " =========================
-
-					" cmds only accepted if initial letter is capitalized
+set nopaste			" required for abbreviation and insertmode mapping to work
+					" in terminal
+" CMDS only accepted if initial letter is capitalized
 :command WQ	wq
 					" command mode: auto correction
 :command Wq	wq
@@ -632,37 +653,50 @@ hi Search ctermfg=red ctermbg=grey cterm=none guisp=red gui=underline
 :command Q	q
 					" command mode: auto correction
 					" ====================
-"inoremap ºº <Esc>2h 
+inoremap ºº <Esc>h 
 					" remap ºº to <Esc> in insert mode 
+					" need 'scriptencoding=utf-8' to allow non ASCII char 'º'
 
 inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk
-					" Insert mode mapping: make cursor move as expected with wrapped lines
+					" Insert mode: make cursor move as expected with wrapped lines
 					" Disallow mapping of rhs to avoid nested or recursive mapping.
-					" ====================
+nmap <Leader>j :bnext<CR>
+nmap <Leader>k :bprev<CR>
+"nnoremap <Leader>b :ls<CR>:b<Space>
+					" move among buffers with CTRL key
+nnoremap <Leader>b :set nomore <Bar> :ls <Bar> :set more <CR>:b<Space>
+					" list active buffers, prepare to switch to one
+					" either with buffer's partial name +TAB or with 
+					" buffer number
 map <space> /		
 					" (normal/command, visual, select, operator-pending modes)
 					" map <space> to forward search (/) in active window 
 "map <C-space> ?
 					" map Ctrl-<space> to backward search (?) in active window
 					" WARNING: ineffectual because <C-space> produces no ASCII character
-					" ====================
 map! <F2> <Esc>a<C-R>=strftime("%c")<CR><Esc>
 					" maps F2 to in-place time insertion, in insert and cmd-line modes.
 					" ex:  Sun 14 Oct 2018 01:06:19 CEST
 map <F2> a<C-R>=strftime("%c")<CR><Esc>   
 					" as above, in normal visual and operator-pending modes.
-					" ====================
 set go+=a           " enable automatic X11 primary `"*y` register copying just 
 					" by highlighting with mouse in visual mode
 vmap <C-c> "+y		
 					" map CTRL+c to yank to clipboard in visual mode
 vmap <C-x> "+d	
 					" map CTRL+x to cut to clipboard in visual mode
-					" ====================
-noremap ,,fb <Esc>:tabnew .<CR>
-					" Open directory tree in second buffer.
-					" :q to close and come back to calling buffer
+noremap <Leader>ft <Esc>:tabnew .<CR>
+					" OPEN directory tree in second buffer.
+					" :q to CLOSE and come back to calling buffer
+inoremap <C-u>	<Esc>ebveUea
+nnoremap <C-u>	ebveUe
+					" transform whole current word in uppercase
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+					" edit ~/.vimrc in a jiffy
+nnoremap <leader>sv :source $MYVIMRC<cr>
+					" source  ~/.vimrc in a jiffy 
+nnoremap <Leader>le <Esc>ddO--le
 
 " =========================
 " Check dynamic loading of python 2.x or 3.x at 'vim' launch 
