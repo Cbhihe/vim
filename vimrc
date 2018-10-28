@@ -387,11 +387,11 @@ hi Nonascii ctermbg=Black ctermfg=Red cterm=none
 augroup hlNonascii
 	autocmd!
 "	autocmd BufRead *.vim syntax match Nonascii "[^\u0000-\u007F]"  containedin=ALL
-"	autocmd BufReadPost * if  count(['vim','python'],&filetype) 
-"				\ | syntax match Nonascii "[^\u0000-\u007F]"  containedin=ALL 
-"				\ | endif
-	autocmd BufRead *.vim syntax match Nonascii "[^\x00-\x7F]" containedin=ALL
-	"autocmd BufRead * syntax match Nonascii "[^\d0-\d127]" containedin=ALL
+	autocmd BufReadPost * if  count(['vim','python'],&filetype) 
+				\ | syntax match Nonascii "[^\u0000-\u007F]"  containedin=ALL 
+				\ | endif
+"	autocmd BufRead *.vim syntax match Nonascii "[^\x00-\x7F]" containedin=ALL
+"	autocmd BufRead * syntax match Nonascii "[^\d0-\d127]" containedin=ALL
 					" Highlight non ASCII characters in Vim
 					" In ex mode, to find non ASCIIs: /[^[:alnum:][:punct:][:space:]]/
 augroup END
