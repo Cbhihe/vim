@@ -162,3 +162,6 @@ u007F
 autocmd
 BufRead
 containedin
+vim-autoclose
+delimitMate
+PluginInstall

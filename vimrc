@@ -9,7 +9,6 @@ set termencoding=utf-8
 				" Superfluous: vim automatically sets nocompatible if it finds 
 				" vimrc or gvimrc " at startup.
 
-
 " Plugins
 " =========================
 " :scriptnames
@@ -37,12 +36,16 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'Valloric/YouCompleteMe.git'	" 
 				" Compiled plugin 'youcompleteme.vim' in 
 				" '/usr/share/vim/vimfiles/autoload'
-Plugin 'Townk/vim-autoclose' 
+Plugin 'Raimondi/delimitMate'
+				" Unlike 'Townk/vim-autoclose' it takes syntax into account
+				" Installed directly from plugins' repo w/ 
+"Plugin 'Townk/vim-autoclose' 
 				" Create pairs of (,{,[,",` and ' automatically.
 				" Place cursor between them automatically.
 				" Delete with one keystroke by doing BS on first sign .
 				" Suppress creation of closing sign, by typing CTRL-V in
 				" insert mode immediately prior to typing the opening sign.
+				" PURGED 2018.10.28 for incompatibility reasons
 "Plugin 'vim/matchit.vim'
 				" part of vim standard distribution since v6.0 
 Plugin 'dougireton/vim-chef'
@@ -382,20 +385,17 @@ hi Normal ctermbg=Black
 
 hi Nonascii ctermbg=Black ctermfg=Red cterm=none
 					" guibg=Black guifg=Red
-"highlight Nonascii ctermbg=15 ctermfg=1 cterm=none
-					" guibg=Black guifg=Red
 augroup hlNonascii
 	autocmd!
-"	autocmd BufRead *.vim syntax match Nonascii "[^\u0000-\u007F]"  containedin=ALL
 	autocmd BufReadPost * if  count(['vim','python'],&filetype) 
 				\ | syntax match Nonascii "[^\u0000-\u007F]"  containedin=ALL 
 				\ | endif
+"	autocmd BufRead *.vim syntax match Nonascii "[^\u0000-\u007F]"  containedin=ALL
 "	autocmd BufRead *.vim syntax match Nonascii "[^\x00-\x7F]" containedin=ALL
 "	autocmd BufRead * syntax match Nonascii "[^\d0-\d127]" containedin=ALL
 					" Highlight non ASCII characters in Vim
 					" In ex mode, to find non ASCIIs: /[^[:alnum:][:punct:][:space:]]/
 augroup END
-echo 'inoremap <C-º> <Esc>' 
 
 " =========================
 " General settings
@@ -686,6 +686,7 @@ set nopaste			" required for abbreviation and insertmode mapping to work
 "	&	indicates that only script-local mappings are remappable
 "	@	indicates a buffer-local mapping
 
+inoremap <C-º> <Esc> 
 inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk
 					" Insert mode: make cursor move as expected with wrapped lines
@@ -726,6 +727,7 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 					" source  ~/.vimrc in a jiffy 
 nnoremap <Leader>le <Esc>ddO--le
+					" last edit author and date
 
 " =========================
 " Check dynamic loading of python 2.x or 3.x at 'vim' launch 
