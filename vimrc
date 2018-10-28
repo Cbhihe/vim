@@ -1,9 +1,13 @@
+" ==============================
+"    .VIMRC
+" ==============================
+
 set encoding=utf-8
 scriptencoding=utf-8
 set termencoding=utf-8
-set nocompatible
+"set nocompatible
 				" Superfluous: vim automatically sets nocompatible if it finds 
-				" vimrc or gvimrc " upon startup.
+				" vimrc or gvimrc " at startup.
 
 
 " Plugins
@@ -50,12 +54,16 @@ Plugin 'jimhester/lintr'
 Plugin 'vim-scripts/LaTeX-Suite-aka-Vim-LaTeX'
 				" Git cloned from:
 				" https://github.com/vim-scripts/LaTeX-Suite-aka-Vim-LaTeX.git
+Plugin 'syngan/vim-vimlint'
+				" Git cloned from https://github.com/syngan/vim-vimlint	
 Plugin 'Kuniwak/vint'
 				" Git cloned from https://github.com/Kuniwak/vint
+				"   or installed with `# pip install vim-vint`
+				"   or installed from AUR as 'python-vint'
 " ------------------------------------
 " All plugins must be added before above line
-
 call vundle#end()
+
 filetype plugin indent on
 				" Required
 				" Load ftplugin.vim and indent.vim from $VIMRUNTIME 
@@ -70,7 +78,7 @@ let maplocalleader = ','
 let g:ft_ignore_pat = '\.\(Z\|gz\|bz2\|zip\|tgz\)$'
 				" Ensure contents of compressed files not inspected.
 let rmd_include_html = 1
-				" Source 'ftplugin/html.vim'
+				" Source 'ftplugin/html.vim' plugin for R markdown
 
 " ==== YCM configuration
 "let g:ycm_server_keep_logfiles = 1
@@ -109,6 +117,8 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+"let g:syntastic_debug = 3
+"let g:syntastic_debug_file = '~/.vim/syntastic.log'
 let g:syntastic_shell = '/usr/bin/bash' 
 				" Specify shell which accepts Bourne compatible syntax
 let g:syntastic_java_checkers = []
@@ -125,8 +135,6 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_auto_jump = 0
 				" Jump automatically to 1st detected issue if !=0
-" let g:syntastic_enable_elixir_checker = 1
-" let g:syntastic_elixir_checkers = ["elixir"]
 
 let g:Syntastic_enable_signs = 1
 				" keep defaults margin signs
@@ -174,7 +182,8 @@ let g:syntastic_cursor_column = 1
 let g:syntastic_filetype_map = {
         \ 'plaintex': 'tex',
 		\ 'ruby.chef': 'chef'}
-				" file mapping dict to map unknown or composite file types to known ones
+				" file mapping dict to map unknown or composite file types 
+				" to known ones
 
 let g:syntastic_mode_map = {
         \ 'mode': 'active',
@@ -229,9 +238,10 @@ let g:syntastic_php_checkers = ['php', 'phplint']
 let g:syntastic_html_checkers = ['tidy']
 				" Install with pacman
 
-let g:syntastic_vim_checkers = ['vint']
+let g:syntastic_vim_checkers = ['vint', 'vimlint']
 				" Obtained directly from plugin repo
 				" Installed from AUR
+let g:syntastic_vim_vint_exec = '/usr/bin/vint'
 "let g:syntastic_vim_vint_exec = '/home/ckb/.vim/bundle/vint/bin/vint'
 let g:no_vim_maps = 0
 				" Enable vim map
@@ -248,6 +258,9 @@ let g:tex_flavor = 'latex'
 				" Otherwise, vim conducts kw-search in file to choose 
 				" context or tex. In the absence of kws, default is 'plaintex'.
 				" Default can be changed w/: " 'g:tex_flavor = '[format]'
+let g:plaintex_delimiters = 1
+				" to highlight brackets [] and braces {} in 'plaintex' format
+
  
 let g:syntastic_enable_r_lintr_checker = 1
 				" Required
@@ -360,14 +373,29 @@ endif
 "						15      7*      White
 "     guifg, guibg=   #000000, ...
                        
-
-highlight Normal ctermbg=Black
+hi Normal ctermbg=Black
                     " Assign black bg to 'Normal' group, if 
                     " terminal = 'cterm' (color terminal)
 "highlight Comment ctermfg=Cyan ctermbg=Black cterm=underline
 					" Override 'Comment' group's color
 					" Note: all but any one 'key=value' pair optional
 
+hi Nonascii ctermbg=Black ctermfg=Red cterm=none
+					" guibg=Black guifg=Red
+"highlight Nonascii ctermbg=15 ctermfg=1 cterm=none
+					" guibg=Black guifg=Red
+augroup hlNonascii
+	autocmd!
+"	autocmd BufRead *.vim syntax match Nonascii "[^\u0000-\u007F]"  containedin=ALL
+"	autocmd BufReadPost * if  count(['vim','python'],&filetype) 
+"				\ | syntax match Nonascii "[^\u0000-\u007F]"  containedin=ALL 
+"				\ | endif
+	autocmd BufRead *.vim syntax match Nonascii "[^\x00-\x7F]" containedin=ALL
+	"autocmd BufRead * syntax match Nonascii "[^\d0-\d127]" containedin=ALL
+					" Highlight non ASCII characters in Vim
+					" In ex mode, to find non ASCIIs: /[^[:alnum:][:punct:][:space:]]/
+augroup END
+echo 'inoremap <C-º> <Esc>' 
 
 " =========================
 " General settings
@@ -380,11 +408,11 @@ set visualbell
 					" bell (flash display 100ms)
 set title			" Set terminal title to opened file name and appends 'pwd'
 set magic			" Make characters have the same meaning as in grep regexp
-					" 'very magic': \v in front of a search pattern make 
-					"   every following character except 'a-zA-Z0-9' and '_' have 
+					" 'very magic': \v in front of a search pattern make
+					"   every following character except 'a-zA-Z0-9' and '_' have
 					"   special meaning
 					" 'anti very magic': \V has the opposite effect of \v. All 
-					"   characters are parsed literally and must be preceded by \ 
+					"   characters are parsed literally and must be preceded by \
 					"   to activate their special meaning.
 					" ':set nomagic' is the opposite of ':set magic'
 set lazyredraw		" Don't allow redraw when using macros
@@ -616,8 +644,25 @@ source ~/.vim/sensitive.vim
 
 
 " =========================
+" User defined commands
+" =========================
+" CMDS only accepted if initial letter is capitalized
+:command WQ	wq
+					" command mode: auto correction
+:command Wq	wq
+					" command mode: auto correction
+:command W	w
+					" command mode: auto correction
+:command Q	q
+					" command mode: auto correction
+
+
+" =========================
 " Mappings 
 " =========================
+set nopaste			" required for abbreviation and insertmode mapping to work
+					" in terminal
+
 " Prepend prefix to 'map' 
 "    : normal, visual, select, operator-pending
 "   n: normal only
@@ -630,32 +675,16 @@ source ~/.vim/sensitive.vim
 "   l: insert, command-line, regexp-search and others. 
 "      collectively called "Lang-Arg" pseudo-mode)
 "	t: terminal-job
+"nore: makes mapping non-recursive, i.e. lhs expands to rhs only
+"      even if rhs is already mapped to something else.
+
+" Append suffix to 'map'
+"   !: insert & command-line
 
 " Just before the {rhs} a special character can appear:
 "	*	indicates that it is not remappable
 "	&	indicates that only script-local mappings are remappable
 "	@	indicates a buffer-local mapping
-
-"nore: makes mapping non-recursive, i.e. lhs expands to rhs only
-"      even if rhs is already mapped to something else.
-" Append suffix to 'map'
-"   !: insert & command-line
-" =========================
-set nopaste			" required for abbreviation and insertmode mapping to work
-					" in terminal
-" CMDS only accepted if initial letter is capitalized
-:command WQ	wq
-					" command mode: auto correction
-:command Wq	wq
-					" command mode: auto correction
-:command W	w
-					" command mode: auto correction
-:command Q	q
-					" command mode: auto correction
-					" ====================
-inoremap ºº <Esc>h 
-					" remap ºº to <Esc> in insert mode 
-					" need 'scriptencoding=utf-8' to allow non ASCII char 'º'
 
 inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk

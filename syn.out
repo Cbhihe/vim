@@ -1,0 +1,49 @@
+
+
+--- Syntax items ---
+vimTodo        xxx contained COMBAK XXX FIXME TODO
+                   links to Todo
+vimCommand     xxx contained scriptencoding diffge
+                   nextgroup=@vimMenuList  skipwhite vunmenu
+                   contained menutranslate diffpatch buffers digra bNe lgetbuff abc lmak abo languag delfu lmake
+                   nextgroup=@vimMenuList  skipwhite ounmen
+                   contained optio a ptprevi c d e f g h i breakde k l m n o p q tprevi t u v w x redrawstatus edi
+                   contained packl imapc clos tablast fold cgetex xunmenu prin diffupdat unlockva ptse delcomma abov
+                   contained bdelet messages match cmapclear mzfi delc dele delf iabcle dell psearc iunab delp chang
+                   contained cgetfi cpre unsilent argument cgetbu rvimi cNfile language packload snoma spellre keeppat
+                   contained lockm lockv folddocl botr confir asci abclear mark redraws foldc foldd mzschem tabfin
+                   contained foldo iabclear abovelef qall delfun dsplit exusa sgc cmapcl tpr tabrewind ptprevious
+                   contained chist lgetexpr cunab filetype tmapclea sge sNe menutranslat la lfirs join und unh unl mke
+                   contained undolis mks mkv
+                   nextgroup=@vimMenuList  skipwhite anoreme
+                   contained bnext mksp pydo oldfiles lclos tunmap qal tabpre lhistory dju mzsch iju b lmapc ptre nbst
+                   contained blas unabbreviat mkspel spellun crewind j tunm luado clearjumps unabbrev omapcl packa
+                   contained ptNext swapna r cbuffer upd nbstart lhelpgre
+                   nextgroup=@vimMenuList  skipwhite omenu
+                   contained botrig keepjump y nbstar swa doau first
+                   nextgroup=@vimMenuList  skipwhite nnoreme
+                   contained helpclos profde hardcopy pyfi tabprev vimgrepadd endwhil cgetbuffer cfirst delma ili
+                   contained brewin psearch setloca sort xwininfo lbott lan disp iunabbr abovele scriptname spellwr
+                   contained argdelete diffof open stselec ladd quitall updat
+                   nextgroup=@vimMenuList  skipwhite cunmenu
+                   contained startrepla tsele
+                   nextgroup=@vimMenuList  skipwhite cmenu
+                   contained lvimgrepa display help tpre lockmark oldf langua sNext stag left helpclose sbnext star
+                   contained mod breakli spell diffpa dl mov sIc ptlast sIe sIg sunhi sIl diffpu caddbuf sIp sIr
+                   contained sblast cqu tunmen tjump lockmar setfile hardc iabclea tabclose nohl setglo eme lne color
+                   contained sunhid ptprev redraw omapc brewi lockma caddbuff debuggr sour
+                   nextgroup=@vimMenuList  skipwhite vme
+                   contained all clist cgetexp sfirst scriptna debuggree sbne tprevio profdel number end ene noautocmd
+                   nextgroup=@vimMenuList  skipwhite noremen
+                   contained cNext lwindo bpreviou lpreviou spellr helpfin startrep lgetbuffer funct slast spellu
+                   contained scscope mksession earlier noh setfilet thro scriptnames djump stsele slas scri foldclos
+                   contained lhelpg diffsp scripten nor profil belowrigh ispl visual tabNe lopen verbos
+                   nextgroup=@vimMenuList  skipwhite vnoremen
+                   contained wNe mz lhelp bdel lolde pedi tfirs history botrigh diffth tmap rewind stjump stopinser
+                   contained ope pack hardcop winsiz catch register vspli sbrewi diffthis las hist colorschem unab
+                   contained caddbu sunme diffup delcomm spel cre lrewi ise cadd change isp quital menutrans cwind
+                   contained vertical delm continu ver option pyfil crew endwh ch psear
+                   nextgroup=@vimMenuList  skipwhite onoremenu
+                   contained cNfil packloadall cmapcle exusag sbuff sbf cgetfil lefta nbc argu slee nbk stopins nbs
+                   contained scripte hard wsve viusag tabedi tear sargumen spellwro redr numbe arg bfir laddexp
+              
