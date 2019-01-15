@@ -57,7 +57,7 @@ Plugin 'jimhester/lintr'
 Plugin 'vim-scripts/LaTeX-Suite-aka-Vim-LaTeX'
 				" Git cloned from:
 				" https://github.com/vim-scripts/LaTeX-Suite-aka-Vim-LaTeX.git
-Plugin 'syngan/vim-vimlint'
+"Plugin 'syngan/vim-vimlint'
 				" Git cloned from https://github.com/syngan/vim-vimlint	
 Plugin 'Kuniwak/vint'
 				" Git cloned from https://github.com/Kuniwak/vint
@@ -686,7 +686,7 @@ set nopaste			" required for abbreviation and insertmode mapping to work
 "	&	indicates that only script-local mappings are remappable
 "	@	indicates a buffer-local mapping
 
-inoremap <C-º> <Esc> 
+inoremap ºº <Esc>h
 inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk
 					" Insert mode: make cursor move as expected with wrapped lines
