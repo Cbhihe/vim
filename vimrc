@@ -115,6 +115,10 @@ let g:ycm_global_ycm_extra_conf = '~/.config/ycm/python/global_extra_conf.py'
 let g:ycm_autoclose_preview_window_after_completion=1
 				" Ensure auto-complete window goes away when done with it
 
+" ==== pymode config for syntax checkers
+let g:pymode_python = 'python3'
+"let g:pymode_lint_on_write = 0
+                " if needed disable lint check in 'python-mode'
 " ==== Syntastic configuration
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -501,7 +505,7 @@ set directory=~/.vim/tmp
 " See ':help spell-quickstart'
 " After manual editing of ~/.vim/after/$USER-*.utf-8.add, recreate corresponding 
 " *.spl files, with: ':mkspell! ~/.vim/after/$USER-*.utf-8.add'
-set spell spelllang=en,fr,de,es,cjk	
+set spell spelllang=en_us,fr,de,es,cjk	
 					" enable spellchecking in English, French, German, Spanish
 					" cjk indicate Chinese, Japanese and Korean, but treatment
 					" of those three cases differs, in that none of the 3 Asian
@@ -509,7 +513,7 @@ set spell spelllang=en,fr,de,es,cjk
 
 augroup speLang
   autocmd!
-  autocmd FileType plaintext setlocal spell spelllang=en,fr,de,es,cj
+  autocmd FileType plaintext setlocal spell spelllang=en_us,fr,de,es,cjk
 augroup END
 
 set spellfile=/home/$USER/.vim/after/$USER-tech.utf-8.add,/home/$USER/.vim/after/$USER-plain.utf-8.add
@@ -556,7 +560,6 @@ set fileformat=unix	" Set file format locally
 
 packadd! matchit	" Make % cmd jump to matching HTML tags, if/else/endif 
 					" constructs, etc.
-
 set foldmethod=manual
 					" define fold automatically by indent w/ 'indent'
 set wrap			" Display word wrapped text; do not change text in buffer
@@ -588,7 +591,7 @@ set shiftwidth=4
 "set smarttab		" Insert nbr of space(s) equal to shiftwidths,
 					" when <Tab> is inserted at line begin
 set softtabstop=4	" Set nbr of spaces counted by <Tab> or <BS> in editing operations
-"set expandtab		" Convert tabs to spaces (for Python)
+set expandtab		" Convert tabs to spaces (for Python)
 					" (inverse behavior: 'set noexpandtab')
 set cindent			" make indent rule stricter for C programs
 set cursorline		" highlight current line (where cursor is)

@@ -9,13 +9,12 @@ non-recursive
 in-place
 spell-checker
 config
-archl
+arch
 archlinux
 3rd-party
 github
 syntastic's
 Ancker
-python2
 case-insensitive
 checker-specific
 sql
@@ -30,3 +29,5 @@ posix
 cedric
 bhihe
 Fuschia
+ckb-plain
+ckb-tech

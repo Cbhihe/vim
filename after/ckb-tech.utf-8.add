@@ -8,8 +8,6 @@ delek
 peachpuff
 pablo
 spell-quickstart
-spell
-spell
 VIMRUNTIME
 vim81
 usr
@@ -133,8 +131,6 @@ shopt
 nocasematch
 nocaseglob
 gnome-screenshot
-prints
-prints
 apt-cache
 pkgnames
 terminal-job
@@ -165,3 +161,8 @@ containedin
 vim-autoclose
 delimitMate
 PluginInstall
+argv
+Pseudo-randomly
+pseudo-randomly
+localleader
+spellinfo
