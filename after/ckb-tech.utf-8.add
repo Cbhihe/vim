@@ -166,3 +166,9 @@ Pseudo-randomly
 pseudo-randomly
 localleader
 spellinfo
+PEP8
+tabstop
+noexpandtab
+https
+html
+loc-list

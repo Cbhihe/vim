@@ -119,6 +119,18 @@ let g:ycm_autoclose_preview_window_after_completion=1
 let g:pymode_python = 'python3'
 "let g:pymode_lint_on_write = 0
                 " if needed disable lint check in 'python-mode'
+"let g:pymode_lint_ignore = 'E265,E266'
+                    " Disables PEP8 linting messages selectively // OLD
+
+
+" =========================
+" Sane linting
+" =========================
+let g:python_recommended_style = 0
+					" Do not follow PEP8 style recommendation for format
+					" (in particular 'tabstop=8')
+ 
+
 " ==== Syntastic configuration
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -234,7 +246,10 @@ let g:syntastic_python_python_use_codec = 0
 				" See https://docs.python.org/reference/lexical_analysis.html \
 				" \ #encoding-declarations such as:
 				" https://noseofyeti.readthedocs.org/en/latest/
-
+let g:syntastic_python_flake8_args = '--ignore=E265,E266'
+                " Suppress Flake8 messages:
+                "   E265: comment blocks should start with `# '
+                "   E266: doubled '#` as in '##` at line start are not standard
 let g:syntastic_fortran_checkers = ['gfortran']
 				" Checker ignores usual 'g:syntastic_fortran_gfortran_<option>' variables.
 				" See ':h syntastic-checkers' for more details and config tips
@@ -568,10 +583,10 @@ set linebreak		" Intelligent wrapping occurs at characters " ^I!@*-+;:,./?"
 					" Does not introduce <EOL> at wrapped line visual "break"
 set breakindent breakindentopt=min:25,shift:4
 set showbreak=>>\ 	" display string ">>" at start of wrapped lines
-"set tw=0			" Disable textwidth
+"set textwidth=0	" Disable textwidth
 					" 'tw=75' (e.g.) introduces <EOL> at breaks
 "set fo+=t			" Make default format setting in vim heed 'tw' change
-"set wm=0			" Disable wrapmargin (counting from right border)
+"set wrapmargin=0   " Disable wrapmargin (counting from right border)
 					" 'wm=4' (e.g.) introduces <EOL> at breaks
 set whichwrap=b,s,<,>,[,]
 					" Traverse line breaks with arrow keys  
@@ -581,10 +596,6 @@ set autoindent		" Insert indent when starting new line with \<CR>,
 					" when ending previous line with \{, etc.
 					" When vim compiled with '+cindent' feature, this behavior is modified
 set smartindent		" Copy previous indent, insert it on new line
-
-let g:python_recommended_style = 0
-					" Do not follow PEP8 style recommendation for format
-					" (in particular 'tabstop=8')
 set tabstop=4		" Define nbr of space(s) to use for each step of (auto)indent.
 					" Used for 'cindent', >>, <<, etc.
 set shiftwidth=4
