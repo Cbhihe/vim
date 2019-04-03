@@ -353,9 +353,9 @@ endif
 ":color zellner		" strange wine colors
 ":color delek
 ":color peachpuff
-color torte			" very similar to 'pablo'
+":color torte			" very similar to 'pablo'
 ":color pablo		" very similar to 'torte'
-":color desert
+color desert
 ":color elflord
 ":color solarized	" very similar to 'shine' and 'morning'
 ":color morning		" very similar to 'shine' and 'solarized'
@@ -534,7 +534,7 @@ augroup END
 set spellfile=/home/$USER/.vim/after/$USER-tech.utf-8.add,/home/$USER/.vim/after/$USER-plain.utf-8.add
 " Change default color for spell-checker to highlight words
 hi clear SpellBad
-hi SpellBad ctermfg=7 ctermbg=4 cterm=none guisp=Blue gui=undercurl
+hi SpellBad ctermfg=1* ctermbg=4 cterm=none guisp=Blue gui=undercurl
 "hi clear SpellCap
 "hi SpellCap ctermfg=00 ctermbg=06 cterm=none guifg=#000000 guibg=#008080
 "hi clear SpellRare
@@ -648,7 +648,7 @@ map <silent> <leader><CR> :noh<CR>
 nnoremap <CR> :noh<CR>
 					" Useful to disable highlighted search results
 hi clear Search     " Change default color for searched words
-hi Search ctermfg=red ctermbg=grey cterm=none guisp=red gui=underline
+hi Search ctermfg=DarkRed ctermbg=grey cterm=none guisp=red gui=underline
 
 
 " =========================
