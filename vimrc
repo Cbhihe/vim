@@ -505,6 +505,12 @@ augroup END
 				    " position to last line, at beginning of line
 
 " =========================
+" Undo
+" =========================
+set undodir=~/.vim/undodir
+set undofile
+
+" =========================
 " Buffer swap, backup, write-backup files, temporary working directory
 " =========================
 set noswapfile		" disable swap for vim buffers
@@ -534,7 +540,9 @@ augroup END
 set spellfile=/home/$USER/.vim/after/$USER-tech.utf-8.add,/home/$USER/.vim/after/$USER-plain.utf-8.add
 " Change default color for spell-checker to highlight words
 hi clear SpellBad
-hi SpellBad ctermfg=1* ctermbg=4 cterm=none guisp=Blue gui=undercurl
+"hi SpellBad ctermfg=1* ctermbg=3* cterm=underline guisp=Blue gui=undercurl
+hi SpellBad ctermfg=1* ctermbg=0* cterm=None guisp=Blue gui=undercurl
+"   above: 'guisp` is used for undercurl and strike through in gui mode
 "hi clear SpellCap
 "hi SpellCap ctermfg=00 ctermbg=06 cterm=none guifg=#000000 guibg=#008080
 "hi clear SpellRare
