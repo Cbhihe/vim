@@ -155,7 +155,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_auto_jump = 0
 				" Jump automatically to 1st detected issue if !=0
 
-let g:Syntastic_enable_signs = 1
+let g:syntastic_enable_signs = 1
 				" keep defaults margin signs
 set signcolumn=yes
 				" Ancker sign column permanently on
@@ -339,9 +339,13 @@ elseif &term ==# 'xterm-256color'
 	set background=dark  
     set t_Co=256
 endif
-					" Define dark or light terminal background color when detection not automatic
-					"  (default) in case no automatic detection of terminal color takes place.
+					" Define dark or light terminal background color when 
+                    " detection is not automatic (default) i.e. when no 
+                    " automatic detection of terminal color takes place.
 					" Set term color to 256
+set termguicolors
+                    " do not limit colors to 256, use all available terminal colors
+
 " See available color schemes in $VIMRUNTIME/colors/,
 "   currently at /usr/share/vim/vim81/colors/ (for vim v8.1)
 ":color default
@@ -367,7 +371,7 @@ endif
 					" Turn syntax highlighting on for different types of files
 					" equivalent to ':source $VIMRUNTIME/syntax/syntax.vim'
 					" Allow subsequent use of :highlight command to set user defined
-					" highlighting  color, i.e. preserve user defined highlight 
+					" highlighting  color, i.e. keep user defined highlight 
                     " color settings.
  
 " Highlight groups: " Normal, Special, Comment, Constant, Type, Error, Underlined, 
@@ -395,14 +399,21 @@ endif
 "						15      7*      White
 "     guifg, guibg=   #000000, ...
                        
-hi Normal ctermbg=Black
-                    " Assign black bg to 'Normal' group, if 
-                    " terminal = 'cterm' (color terminal)
+hi Normal ctermbg=Black guibg=#222222
+                    " Assign anthracite-black (#222222) bg to 'Normal'
+                    " group, if terminal = 'cterm' (color terminal)
 "highlight Comment ctermfg=Cyan ctermbg=Black cterm=underline
 					" Override 'Comment' group's color
 					" Note: all but any one 'key=value' pair optional
 
-hi Nonascii ctermbg=Black ctermfg=Red cterm=none
+set cursorline
+hi CursorLine term=bold cterm=bold ctermbg=Black guibg=#000000
+                    " Set cursor line highlight preferences
+
+hi clear SignColumn                
+hi SignColumn cterm=none ctermbg=Black guibg=#222222
+
+hi Nonascii cterm=none ctermbg=Black ctermfg=Red
 					" guibg=Black guifg=Red
 augroup hlNonascii
 	autocmd!
@@ -541,8 +552,9 @@ set spellfile=/home/$USER/.vim/after/$USER-tech.utf-8.add,/home/$USER/.vim/after
 " Change default color for spell-checker to highlight words
 hi clear SpellBad
 "hi SpellBad ctermfg=1* ctermbg=3* cterm=underline guisp=Blue gui=undercurl
-hi SpellBad ctermfg=1* ctermbg=0* cterm=None guisp=Blue gui=undercurl
+hi SpellBad ctermfg=1* ctermbg=0* cterm=none guisp=Blue gui=undercurl
 "   above: 'guisp` is used for undercurl and strike through in gui mode
+
 "hi clear SpellCap
 "hi SpellCap ctermfg=00 ctermbg=06 cterm=none guifg=#000000 guibg=#008080
 "hi clear SpellRare
