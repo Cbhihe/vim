@@ -60,3 +60,10 @@ cli
 eq
 DAC
 keep
+globals
+asci
+ascii
+everytime
+mvt
+delInBrackets
+Prepend

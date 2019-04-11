@@ -9,6 +9,20 @@ set termencoding=utf-8
 				" Superfluous: vim automatically sets nocompatible if it finds 
 				" vimrc or gvimrc " at startup.
 
+
+" =========================
+" Sensitive content 
+" =========================
+source ~/.vim/sensitive.vim
+
+
+" =========================
+" Function definitions
+" =========================
+source ~/.vim/functions.vim
+
+
+" =========================
 " Plugins
 " =========================
 " :scriptnames
@@ -37,8 +51,9 @@ Plugin 'Valloric/YouCompleteMe.git'	"
 				" Compiled plugin 'youcompleteme.vim' in 
 				" '/usr/share/vim/vimfiles/autoload'
 Plugin 'Raimondi/delimitMate'
-				" Unlike 'Townk/vim-autoclose' it takes syntax into account
-				" Installed directly from plugins' repo w/ 
+				" Replaces 'Townk/vim-autoclose' below
+                " Unlike 'Townk/vim-autoclose' it takes syntax into account
+				" Installed directly from plugins' repo
 "Plugin 'Townk/vim-autoclose' 
 				" Create pairs of (,{,[,",` and ' automatically.
 				" Place cursor between them automatically.
@@ -73,15 +88,130 @@ filetype plugin indent on
 				" (/usr/share/vim/vim81)
 				" Turn automatic filetype detection on
 
+let g:ft_ignore_pat = '\.\(Z\|gz\|bz2\|zip\|tgz\)$'
+				" Ensure contents of compressed files not inspected.
+let rmd_include_html = 1
+				" Source 'ftplugin/html.vim' plugin for R markdown
+
+
+" =========================
+" Mappings 
+" =========================
+set nopaste			" required for abbreviation and insertmode mapping to work
+					" in terminal
+
 let mapleader = ',,'	
 				" <leader> mapped to '\' by default. 
 let maplocalleader = ','	
 				" <localleader> mapped to '\' by default. 
 
-let g:ft_ignore_pat = '\.\(Z\|gz\|bz2\|zip\|tgz\)$'
-				" Ensure contents of compressed files not inspected.
-let rmd_include_html = 1
-				" Source 'ftplugin/html.vim' plugin for R markdown
+" Prepend prefix to 'map' 
+"    : normal, visual, select, operator-pending
+"   n: normal            -- cursor motions and basic editing operations
+"   o: operator-pending  -- cmd awaits motion instruction to execute (d,c,y,...)
+"   i: insert & replace  -- character insertion (i,I,o,O,a,A,r,R,s,cw,ce,cb,c$)
+"   x: (block) visual    -- select text (v,V,<C-V>)
+"   s: select
+"   v: visual + select
+"   c: command-line      -- everytime 'ESC:' has been issued
+"   l: insert & command-line & regexp-search & ...
+"      collectively called "Lang-Arg" pseudo-mode)
+"	t: terminal-job
+"nore: makes mapping non-recursive, i.e. lhs expands to rhs only
+"      even if rhs is already mapped to something else.
+
+" Append suffix to 'map'
+"   !: insert & command-line
+
+" Just before the {rhs} a special character can appear:
+"	*	indicates that it is not remappable
+"	&	indicates that only script-local mappings are remappable
+"	@	indicates a buffer-local mapping
+
+map <C-R> :noh<CR>:redraw!"<CR>
+					" Redraws session screen erasing all highlights
+map <silent> <leader><CR> :noh<CR>
+					" temporarily disable highlight when <leader><cr> is pressed
+nnoremap <CR> :noh<CR>
+					" Useful to disable highlighted search results
+
+noremap ºº <Esc>
+noremap! ºº <Esc>
+
+inoremap <Down> <C-o>gj
+inoremap <Up> <C-o>gk
+					" Insert mode: make cursor move as expected with wrapped lines
+					" Disallow mapping of rhs to avoid nested or recursive mapping.
+
+noremap! <Leader>< <Esc>:s/^    //<CR>:noh<CR>
+noremap! <Leader>> <Esc>:s/^/    /<CR>:noh<CR>
+vnoremap <Leader>< :s/^    //<CR>:noh<CR><Esc>
+vnoremap <Leader>> :s/^/    /<CR>:noh<CR><Esc>
+                    "  delete and insert 4 space indent at begining of line in
+                    "  visuals, insert and cmd modes
+
+"nmap <Leader>j :bnext<CR>
+        "nmap <Leader>k :bprev<CR>
+
+"nnoremap <Leader>b :ls<CR>:b<Space>
+					" move among buffers with CTRL key
+nnoremap <Leader>b :set nomore <Bar> :ls <Bar> :set more <CR>:b<Space>
+					" list active buffers, prepare to switch to one
+					" either with buffer's partial name +TAB or with 
+					" buffer number
+map <space> /
+					" (normal/command, visual, select, operator-pending modes)
+					" map <space> to forward search (/) in active window 
+"map <C-space> ?
+					" map Ctrl-<space> to backward search (?) in active window
+					" WARNING: ineffectual because <C-space> produces no ASCII character
+
+imap <F2> <Esc>a [ckb]  <Esc>a <C-R>=strftime("%c")<CR><Esc>
+cmap <F2> <Esc>a [ckb]  <Esc>a <C-R>=strftime("%c")<CR><Esc>
+nmap <F2> a [ckb]  <Esc>a <C-R>=strftime("%c")<CR><Esc>
+					" maps F2 for in-place insertion of time-stamp, 
+                    " in normal, insert and cmd modes.
+                    " [ckb]   Wed 10 Apr 2019 19:49:05 CEST
+ 
+set go+=a           " enable automatic X11 primary `"*y` register copying just 
+					" by highlighting with mouse in visual mode
+vmap <C-c> "+y		
+					" map CTRL+c to yank to clipboard in visual mode
+vmap <C-x> "+d	
+					" map CTRL+x to cut to clipboard in visual mode
+
+noremap <Leader>ft <Esc>:tabnew .<CR>
+noremap <C-t>  <Esc>:tabnew .<CR>
+					" OPEN directory tree in second buffer.
+					" :q to CLOSE and come back to calling buffer
+
+inoremap <C-u>	<Esc>ebveuea
+nnoremap <C-u>	ebveue
+					" transform whole current word in lowercase
+inoremap <C-U>	<Esc>ebveUea
+nnoremap <C-U>	ebveUe
+					" transform whole current word in uppercase
+
+" Function 'SelectMinTextObject()' defined in ~/.vim/functions.vim
+vnoremap ip <esc>:call SelectMinTextObject('({[<', 'i', 1)<cr>
+vnoremap ap <esc>:call SelectMinTextObject('({[<', 'a', 1)<cr>
+onoremap ip :call SelectMinTextObject('({[<', 'i', 0)<cr>
+onoremap ap :call SelectMinTextObject('({[<', 'a', 0)<cr>
+"onoremap p( i(
+                    " delete all text inside ()
+                    " respect order of embedding
+                    " use with 'dp' or 'cp'
+" =================================
+
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+					" edit ~/.vimrc in a jiffy
+nnoremap <leader>sv :source $MYVIMRC<cr>
+					" source  ~/.vimrc in a jiffy 
+nnoremap <Leader>le <Esc>ddO--le
+					" last edit author and date
+
+map <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
+				" Define a shortcut for YCM goto definition
 
 " ==== YCM configuration
 "let g:ycm_server_keep_logfiles = 1
@@ -90,8 +220,6 @@ let rmd_include_html = 1
 let g:ycm_server_python_interpreter = 'python3'
 				" NEEDED because YCM's server is compiled with Python 2.7
 				" Nevertheless YCM accepts vim clients with either py2 or py3
-map <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
-				" Define a shortcut for goto definition
 
 " ==== YCM extra for C/C++ projects
 " Default location is at project's root, extra location is:
@@ -339,12 +467,13 @@ elseif &term ==# 'xterm-256color'
 	set background=dark  
     set t_Co=256
 endif
-					" Define dark or light terminal background color when 
-                    " detection is not automatic (default) i.e. when no 
-                    " automatic detection of terminal color takes place.
-					" Set term color to 256
+					" Define dark or light terminal background and set term color
+                    " to 256 color, if no automatic detection of terminal color 
+                    " takes place (default).
 set termguicolors
-                    " do not limit colors to 256, use all available terminal colors
+                    " Override the above. Do not limit colors to 256.
+                    " Instead, use all available terminal colors.
+                    " Set BEFORE color scheme below.
 
 " See available color schemes in $VIMRUNTIME/colors/,
 "   currently at /usr/share/vim/vim81/colors/ (for vim v8.1)
@@ -661,20 +790,8 @@ set hlsearch
 :command WR :let @/=""
 					" wipe register containing the last searched string. 
 					" make `:norm n` unavailable to search next occurrence.
-map <C-R> :noh<CR>:redraw!"<CR>
-					" Redraws session screen erasing all highlights
-map <silent> <leader><CR> :noh<CR>
-					" temporarily disable highlight when <leader><cr> is pressed
-nnoremap <CR> :noh<CR>
-					" Useful to disable highlighted search results
 hi clear Search     " Change default color for searched words
 hi Search ctermfg=DarkRed ctermbg=grey cterm=none guisp=red gui=underline
-
-
-" =========================
-" Sensitive content 
-" =========================
-source ~/.vim/sensitive.vim
 
 
 " =========================
@@ -690,78 +807,6 @@ source ~/.vim/sensitive.vim
 :command Q	q
 					" command mode: auto correction
 
-
-" =========================
-" Mappings 
-" =========================
-set nopaste			" required for abbreviation and insertmode mapping to work
-					" in terminal
-
-" Prepend prefix to 'map' 
-"    : normal, visual, select, operator-pending
-"   n: normal only
-"   v: visual and select
-"   o: operator-pending
-"   x: visual only
-"   s: select only
-"   i: insert
-"   c: command-line
-"   l: insert, command-line, regexp-search and others. 
-"      collectively called "Lang-Arg" pseudo-mode)
-"	t: terminal-job
-"nore: makes mapping non-recursive, i.e. lhs expands to rhs only
-"      even if rhs is already mapped to something else.
-
-" Append suffix to 'map'
-"   !: insert & command-line
-
-" Just before the {rhs} a special character can appear:
-"	*	indicates that it is not remappable
-"	&	indicates that only script-local mappings are remappable
-"	@	indicates a buffer-local mapping
-
-inoremap ºº <Esc>h
-inoremap <Down> <C-o>gj
-inoremap <Up> <C-o>gk
-					" Insert mode: make cursor move as expected with wrapped lines
-					" Disallow mapping of rhs to avoid nested or recursive mapping.
-nmap <Leader>j :bnext<CR>
-nmap <Leader>k :bprev<CR>
-"nnoremap <Leader>b :ls<CR>:b<Space>
-					" move among buffers with CTRL key
-nnoremap <Leader>b :set nomore <Bar> :ls <Bar> :set more <CR>:b<Space>
-					" list active buffers, prepare to switch to one
-					" either with buffer's partial name +TAB or with 
-					" buffer number
-map <space> /		
-					" (normal/command, visual, select, operator-pending modes)
-					" map <space> to forward search (/) in active window 
-"map <C-space> ?
-					" map Ctrl-<space> to backward search (?) in active window
-					" WARNING: ineffectual because <C-space> produces no ASCII character
-map! <F2> <Esc>a<C-R>=strftime("%c")<CR><Esc>
-					" maps F2 to in-place time insertion, in insert and cmd-line modes.
-					" ex:  Sun 14 Oct 2018 01:06:19 CEST
-map <F2> a<C-R>=strftime("%c")<CR><Esc>   
-					" as above, in normal visual and operator-pending modes.
-set go+=a           " enable automatic X11 primary `"*y` register copying just 
-					" by highlighting with mouse in visual mode
-vmap <C-c> "+y		
-					" map CTRL+c to yank to clipboard in visual mode
-vmap <C-x> "+d	
-					" map CTRL+x to cut to clipboard in visual mode
-noremap <Leader>ft <Esc>:tabnew .<CR>
-					" OPEN directory tree in second buffer.
-					" :q to CLOSE and come back to calling buffer
-inoremap <C-u>	<Esc>ebveUea
-nnoremap <C-u>	ebveUe
-					" transform whole current word in uppercase
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-					" edit ~/.vimrc in a jiffy
-nnoremap <leader>sv :source $MYVIMRC<cr>
-					" source  ~/.vimrc in a jiffy 
-nnoremap <Leader>le <Esc>ddO--le
-					" last edit author and date
 
 " =========================
 " Check dynamic loading of python 2.x or 3.x at 'vim' launch 
