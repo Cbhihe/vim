@@ -1,0 +1,9 @@
+sensitive.vim
+viminfo
+backups/
+.netrwhist/
+swap/
+pack/
+bundle/
+after/**
+!after/ftplugin/
