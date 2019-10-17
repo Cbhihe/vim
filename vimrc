@@ -1,6 +1,7 @@
 " ==============================
 "    .VIMRC
 " ==============================
+" Last edit   : ckb, on Thu 11 Apr 2019 09:37:30 CEST
 
 set encoding=utf-8
 scriptencoding=utf-8

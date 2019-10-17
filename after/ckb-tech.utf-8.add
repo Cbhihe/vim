@@ -254,3 +254,5 @@ nmap
 nnoremap
 vmap
 omap
+nameStrFun
+virtualenvwrapper
