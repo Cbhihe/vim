@@ -48,7 +48,7 @@ Plugin 'VundleVim/Vundle.vim'
 				" let Vundle manage vundle, required
 Plugin 'vim-syntastic/syntastic'
 				" syntax checker 
-Plugin 'Valloric/YouCompleteMe.git'	" 
+Plugin 'ycm-core/YouCompleteMe' 
 				" Compiled plugin 'youcompleteme.vim' in 
 				" '/usr/share/vim/vimfiles/autoload'
 Plugin 'Raimondi/delimitMate'
