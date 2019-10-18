@@ -21,7 +21,7 @@ $
 
 # Command Line History (newest to oldest):
 :wq
-|2,0,1571404200,,"wq"
+|2,0,1571404768,,"wq"
 :q
 |2,0,1571403877,,"q"
 :PluginList
@@ -236,13 +236,17 @@ $
 # Debug Line History (newest to oldest):
 
 # Registers:
-"0	LINE	0
+""0	LINE	0
 	
 	
 	" =========================
-	" Colors
+	" Status line
 	" =========================
-|3,0,0,1,5,0,1571404049,"","","\" =========================","\" Colors","\" ========================="
+	let g:streamline_minimal_ui = 1
+	                " Enable minimalist mode for status line
+	let g:strealine_show_ale_status = 1
+	                " show ALE errors and warnings in status line
+|3,1,0,1,9,0,1571404327,"","","\" =========================","\" Status line","\" =========================","let g:streamline_minimal_ui = 1","                \" Enable minimalist mode for status line","let g:strealine_show_ale_status = 1","                \" show ALE errors and warnings in status line"
 "1	LINE	0
 	               
 |3,0,1,1,1,0,1571404162,"               "
@@ -294,41 +298,65 @@ $
 "z	CHAR	0
 	t
 |3,0,35,0,1,0,1540560835,"t"
-""-	CHAR	0
-	s
-|3,1,36,0,1,0,1571404196,"s"
+"-	CHAR	0
+	 
+|3,0,36,0,1,0,1571404315," "
 
 # File marks:
-'0  466  33  ~/.vim/vimrc
-|4,48,466,33,1571404200,"~/.vim/vimrc"
-'1  1  16  ~/.vim/test.py
-|4,49,1,16,1571403634,"~/.vim/test.py"
-'2  3  0  ~/.vim/test.py
-|4,50,3,0,1571401679,"~/.vim/test.py"
-'3  3  0  ~/.vim/test.py
-|4,51,3,0,1571401679,"~/.vim/test.py"
-'4  1  7  ~/.vim/test.py
-|4,52,1,7,1571401612,"~/.vim/test.py"
-'5  1  7  ~/.vim/test.py
-|4,53,1,7,1571401612,"~/.vim/test.py"
-'6  1  7  ~/.vim/test.py
-|4,54,1,7,1571401612,"~/.vim/test.py"
-'7  3  11  ~/.vim/test.py
-|4,55,3,11,1571401512,"~/.vim/test.py"
-'8  3  11  ~/.vim/test.py
-|4,56,3,11,1571401512,"~/.vim/test.py"
-'9  3  11  ~/.vim/test.py
-|4,57,3,11,1571401512,"~/.vim/test.py"
+'0  484  3  ~/.vim/vimrc
+|4,48,484,3,1571404768,"~/.vim/vimrc"
+'1  484  16  ~/.vim/vimrc
+|4,49,484,16,1571404737,"~/.vim/vimrc"
+'2  466  33  ~/.vim/vimrc
+|4,50,466,33,1571404200,"~/.vim/vimrc"
+'3  466  33  ~/.vim/vimrc
+|4,51,466,33,1571404200,"~/.vim/vimrc"
+'4  466  33  ~/.vim/vimrc
+|4,52,466,33,1571404200,"~/.vim/vimrc"
+'5  466  33  ~/.vim/vimrc
+|4,53,466,33,1571404200,"~/.vim/vimrc"
+'6  1  16  ~/.vim/test.py
+|4,54,1,16,1571403634,"~/.vim/test.py"
+'7  1  16  ~/.vim/test.py
+|4,55,1,16,1571403634,"~/.vim/test.py"
+'8  1  16  ~/.vim/test.py
+|4,56,1,16,1571403634,"~/.vim/test.py"
+'9  1  16  ~/.vim/test.py
+|4,57,1,16,1571403634,"~/.vim/test.py"
 
 # Jumplist (newest first):
+-'  484  3  ~/.vim/vimrc
+|4,39,484,3,1571404768,"~/.vim/vimrc"
+-'  484  16  ~/.vim/vimrc
+|4,39,484,16,1571404737,"~/.vim/vimrc"
+-'  458  0  ~/.vim/vimrc
+|4,39,458,0,1571404339,"~/.vim/vimrc"
+-'  458  0  ~/.vim/vimrc
+|4,39,458,0,1571404339,"~/.vim/vimrc"
+-'  466  33  ~/.vim/vimrc
+|4,39,466,33,1571404252,"~/.vim/vimrc"
+-'  466  33  ~/.vim/vimrc
+|4,39,466,33,1571404252,"~/.vim/vimrc"
 -'  466  33  ~/.vim/vimrc
 |4,39,466,33,1571404200,"~/.vim/vimrc"
+-'  1  0  ~/.vim/vimrc
+|4,39,1,0,1571403668,"~/.vim/vimrc"
+-'  1  0  ~/.vim/vimrc
+|4,39,1,0,1571403668,"~/.vim/vimrc"
 -'  1  0  ~/.vim/vimrc
 |4,39,1,0,1571403668,"~/.vim/vimrc"
 -'  1  16  ~/.vim/test.py
 |4,39,1,16,1571403634,"~/.vim/test.py"
 -'  1  16  ~/.vim/test.py
 |4,39,1,16,1571403634,"~/.vim/test.py"
+-'  1  16  ~/.vim/test.py
+|4,39,1,16,1571403634,"~/.vim/test.py"
+-'  1  16  ~/.vim/test.py
+|4,39,1,16,1571403634,"~/.vim/test.py"
+-'  3  0  ~/.vim/test.py
+|4,39,3,0,1571401683,"~/.vim/test.py"
+-'  3  0  ~/.vim/test.py
+|4,39,3,0,1571401683,"~/.vim/test.py"
 -'  3  0  ~/.vim/test.py
 |4,39,3,0,1571401683,"~/.vim/test.py"
 -'  3  0  ~/.vim/test.py
@@ -345,6 +373,10 @@ $
 |4,39,1,7,1571401612,"~/.vim/test.py"
 -'  1  7  ~/.vim/test.py
 |4,39,1,7,1571401612,"~/.vim/test.py"
+-'  4  11  ~/.vim/test.py
+|4,39,4,11,1571401531,"~/.vim/test.py"
+-'  4  11  ~/.vim/test.py
+|4,39,4,11,1571401531,"~/.vim/test.py"
 -'  4  11  ~/.vim/test.py
 |4,39,4,11,1571401531,"~/.vim/test.py"
 -'  4  11  ~/.vim/test.py
@@ -390,7 +422,89 @@ $
 -'  51  15  ~/.vimrc
 |4,39,51,15,1571401138,"~/.vimrc"
 -'  51  15  ~/.vimrc
-|4,39,51,15,1571401109,"~/.vimrc"
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
+-'  51  15  ~/.vimrc
+|4,39,51,15,1571401138,"~/.vimrc"
 -'  51  15  ~/.vimrc
 |4,39,51,15,1571401109,"~/.vimrc"
 -'  51  15  ~/.vimrc
@@ -406,132 +520,22 @@ $
 -'  51  15  ~/.vimrc
 |4,39,51,15,1571401109,"~/.vimrc"
 -'  51  15  ~/.vimrc
-|4,39,51,15,1571400701,"~/.vimrc"
+|4,39,51,15,1571401109,"~/.vimrc"
 -'  51  15  ~/.vimrc
-|4,39,51,15,1571400701,"~/.vimrc"
+|4,39,51,15,1571401109,"~/.vimrc"
 -'  51  15  ~/.vimrc
-|4,39,51,15,1571400701,"~/.vimrc"
--'  51  15  ~/.vimrc
-|4,39,51,15,1571400701,"~/.vimrc"
--'  51  15  ~/.vimrc
-|4,39,51,15,1571400701,"~/.vimrc"
--'  51  15  ~/.vimrc
-|4,39,51,15,1571400701,"~/.vimrc"
--'  51  15  ~/.vimrc
-|4,39,51,15,1571400701,"~/.vimrc"
--'  51  15  ~/.vimrc
-|4,39,51,15,1571400701,"~/.vimrc"
--'  1  0  /tmp/bash-fc.xYDTXt
-|4,39,1,0,1571400416,"/tmp/bash-fc.xYDTXt"
--'  1  0  /tmp/bash-fc.xYDTXt
-|4,39,1,0,1571400416,"/tmp/bash-fc.xYDTXt"
--'  1  0  /tmp/bash-fc.xYDTXt
-|4,39,1,0,1571400416,"/tmp/bash-fc.xYDTXt"
--'  1  0  /tmp/bash-fc.xYDTXt
-|4,39,1,0,1571400416,"/tmp/bash-fc.xYDTXt"
--'  1  0  /tmp/bash-fc.xYDTXt
-|4,39,1,0,1571400416,"/tmp/bash-fc.xYDTXt"
--'  1  0  /tmp/bash-fc.xYDTXt
-|4,39,1,0,1571400416,"/tmp/bash-fc.xYDTXt"
--'  1  0  /tmp/bash-fc.xYDTXt
-|4,39,1,0,1571400416,"/tmp/bash-fc.xYDTXt"
--'  1  0  /tmp/bash-fc.xYDTXt
-|4,39,1,0,1571400416,"/tmp/bash-fc.xYDTXt"
--'  1  0  /tmp/bash-fc.xYDTXt
-|4,39,1,0,1571400416,"/tmp/bash-fc.xYDTXt"
--'  1  0  /tmp/bash-fc.xYDTXt
-|4,39,1,0,1571400416,"/tmp/bash-fc.xYDTXt"
--'  1  0  /tmp/bash-fc.xYDTXt
-|4,39,1,0,1571400416,"/tmp/bash-fc.xYDTXt"
--'  1  0  /tmp/bash-fc.xYDTXt
-|4,39,1,0,1571400416,"/tmp/bash-fc.xYDTXt"
--'  1  0  /tmp/bash-fc.xYDTXt
-|4,39,1,0,1571400416,"/tmp/bash-fc.xYDTXt"
--'  1  0  /tmp/bash-fc.xYDTXt
-|4,39,1,0,1571400416,"/tmp/bash-fc.xYDTXt"
--'  1  0  /tmp/bash-fc.xYDTXt
-|4,39,1,0,1571400416,"/tmp/bash-fc.xYDTXt"
--'  1  0  /tmp/bash-fc.xYDTXt
-|4,39,1,0,1571400416,"/tmp/bash-fc.xYDTXt"
--'  1  0  /tmp/bash-fc.xYDTXt
-|4,39,1,0,1571400416,"/tmp/bash-fc.xYDTXt"
--'  1  0  /tmp/bash-fc.xYDTXt
-|4,39,1,0,1571400416,"/tmp/bash-fc.xYDTXt"
--'  1  0  /tmp/bash-fc.xYDTXt
-|4,39,1,0,1571400416,"/tmp/bash-fc.xYDTXt"
--'  1  0  /tmp/bash-fc.xYDTXt
-|4,39,1,0,1571400416,"/tmp/bash-fc.xYDTXt"
--'  1  0  /tmp/bash-fc.xYDTXt
-|4,39,1,0,1571400416,"/tmp/bash-fc.xYDTXt"
--'  1  0  /tmp/bash-fc.xYDTXt
-|4,39,1,0,1571400416,"/tmp/bash-fc.xYDTXt"
--'  1  0  /tmp/bash-fc.xYDTXt
-|4,39,1,0,1571400416,"/tmp/bash-fc.xYDTXt"
--'  1  0  /tmp/bash-fc.xYDTXt
-|4,39,1,0,1571400416,"/tmp/bash-fc.xYDTXt"
--'  1  0  /tmp/bash-fc.xYDTXt
-|4,39,1,0,1571400416,"/tmp/bash-fc.xYDTXt"
--'  1  0  /tmp/bash-fc.xYDTXt
-|4,39,1,0,1571400416,"/tmp/bash-fc.xYDTXt"
--'  1  0  /tmp/bash-fc.xYDTXt
-|4,39,1,0,1571400416,"/tmp/bash-fc.xYDTXt"
--'  1  0  /tmp/bash-fc.xYDTXt
-|4,39,1,0,1571400416,"/tmp/bash-fc.xYDTXt"
--'  1  0  /tmp/bash-fc.xYDTXt
-|4,39,1,0,1571400416,"/tmp/bash-fc.xYDTXt"
--'  1  0  /tmp/bash-fc.xYDTXt
-|4,39,1,0,1571400416,"/tmp/bash-fc.xYDTXt"
--'  52  36  ~/.vimrc
-|4,39,52,36,1571400067,"~/.vimrc"
--'  52  36  ~/.vimrc
-|4,39,52,36,1571400067,"~/.vimrc"
--'  52  36  ~/.vimrc
-|4,39,52,36,1571400067,"~/.vimrc"
--'  52  36  ~/.vimrc
-|4,39,52,36,1571400067,"~/.vimrc"
--'  52  36  ~/.vimrc
-|4,39,52,36,1571400067,"~/.vimrc"
--'  52  36  ~/.vimrc
-|4,39,52,36,1571400067,"~/.vimrc"
--'  52  36  ~/.vimrc
-|4,39,52,36,1571400067,"~/.vimrc"
--'  52  36  ~/.vimrc
-|4,39,52,36,1571400067,"~/.vimrc"
--'  52  36  ~/.vimrc
-|4,39,52,36,1571400067,"~/.vimrc"
--'  52  36  ~/.vimrc
-|4,39,52,36,1571400067,"~/.vimrc"
--'  52  36  ~/.vimrc
-|4,39,52,36,1571400067,"~/.vimrc"
--'  52  36  ~/.vimrc
-|4,39,52,36,1571400067,"~/.vimrc"
--'  52  36  ~/.vimrc
-|4,39,52,36,1571400067,"~/.vimrc"
--'  52  36  ~/.vimrc
-|4,39,52,36,1571400067,"~/.vimrc"
--'  52  36  ~/.vimrc
-|4,39,52,36,1571400067,"~/.vimrc"
--'  52  36  ~/.vimrc
-|4,39,52,36,1571400067,"~/.vimrc"
--'  52  36  ~/.vimrc
-|4,39,52,36,1571400067,"~/.vimrc"
--'  52  36  ~/.vimrc
-|4,39,52,36,1571400067,"~/.vimrc"
--'  52  36  ~/.vimrc
-|4,39,52,36,1571400067,"~/.vimrc"
--'  52  36  ~/.vimrc
-|4,39,52,36,1571400067,"~/.vimrc"
+|4,39,51,15,1571401109,"~/.vimrc"
 
 # Buffer list:
-%~/.vim/vimrc	466	33
+%~/.vim/vimrc	484	3
 
 # History of marks within files (newest to oldest):
 
 > ~/.vim/vimrc
-	*	1571404198	0
-	"	466	33
-	^	466	58
-	.	466	33
+	*	1571404766	0
+	"	484	3
+	^	510	4
+	.	484	16
 	+	54	31
 	+	55	17
 	+	484	0
@@ -543,6 +547,8 @@ $
 	+	466	16
 	+	465	36
 	+	466	33
+	+	465	0
+	+	484	16
 
 > ~/.vim/test.py
 	*	1571403631	0

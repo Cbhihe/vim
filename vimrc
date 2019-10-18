@@ -481,7 +481,7 @@ endif
 					" Define dark or light terminal background and set term color
                     " to 256 color, if no automatic detection of terminal color 
                     " takes place (default).
-
+set termguicolors
                     " Override the above. Do not limit colors to 256.
                     " Instead, use all available terminal colors.
                     " Set BEFORE color scheme below.
