@@ -51,6 +51,8 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'ycm-core/YouCompleteMe' 
 				" Compiled plugin 'youcompleteme.vim' in 
 				" '/usr/share/vim/vimfiles/autoload'
+Plugin 'KaraMCC/vim-streamline'
+                " statusline changes to adapt to theme
 Plugin 'Raimondi/delimitMate'
 				" Replaces 'Townk/vim-autoclose' below
                 " Unlike 'Townk/vim-autoclose' it takes syntax into account
@@ -456,6 +458,14 @@ let g:syntastic_ruby_mri_exec = '/user/bin/ruby'
 
 
 " =========================
+" Status line
+" =========================
+let g:streamline_minimal_ui = 1
+                " Enable minimalist mode for status line
+ let g:strealine_show_ale_status = 1
+                " show ALE errors and warnings in status line
+
+" =========================
 " Colors
 " =========================
 "syntax on			" Enable syntax highlighting using vim default highlight colors. 
@@ -471,7 +481,7 @@ endif
 					" Define dark or light terminal background and set term color
                     " to 256 color, if no automatic detection of terminal color 
                     " takes place (default).
-set termguicolors
+
                     " Override the above. Do not limit colors to 256.
                     " Instead, use all available terminal colors.
                     " Set BEFORE color scheme below.
