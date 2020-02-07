@@ -11,33 +11,81 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/dssd
+~MSle0~/bind
 
 # Last Substitute Search Pattern:
-~MSle0&BU_HD1
+~MSle0&^
 
 # Last Substitute String:
-$BU_HD2
+$
 
 # Command Line History (newest to oldest):
-:q!
-|2,0,1578842101,,"q!"
-:$
-|2,0,1578842094,,"$"
 :wq
-|2,0,1578755406,,"wq"
+|2,0,1581114480,,"wq"
+:q!
+|2,0,1581113659,,"q!"
 :q
-|2,0,1578753869,,"q"
-:1
-|2,0,1578753835,,"1"
+|2,0,1581113657,,"q"
+:w!
+|2,0,1581113654,,"w!"
 :w
-|2,0,1578314747,,"w"
+|2,0,1581113649,,"w"
+:39
+|2,0,1581077124,,"39"
+:13,17fo
+|2,0,1580939976,,"13,17fo"
+:n
+|2,0,1580939809,,"n"
+:h fold
+|2,0,1580939758,,"h fold"
+:zR
+|2,0,1580939734,,"zR"
+:zM
+|2,0,1580939729,,"zM"
+:mode() == 'R' ? a=1: a=2
+|2,0,1580938873,,"mode() == 'R' ? a=1: a=2"
+:mode() == 'R'
+|2,0,1580938846,,"mode() == 'R'"
+:$
+|2,0,1580674606,,"$"
+:w how-to-git.md
+|2,0,1580674437,,"w how-to-git.md"
+:1
+|2,0,1580284326,,"1"
+:s
+|2,0,1579993557,,"s"
+:10
+|2,0,1579990920,,"10"
+:'<,'>s/^/#/
+|2,0,1579774922,,"'<,'>s/^/#/"
+:%s/^//ng
+|2,0,1579550441,,"%s/^//ng"
+:%/^/n
+|2,0,1579550423,,"%/^/n"
+:/^/n
+|2,0,1579550408,,"/^/n"
+:s/^//n
+|2,0,1579550372,,"s/^//n"
+:%s/^//n
+|2,0,1579550350,,"%s/^//n"
+:help ls
+|2,0,1579426523,,"help ls"
+:ls! t
+|2,0,1579426799,,"ls! t"
+:ls!t
+|2,0,1579426765,,"ls!t"
+:ls!
+|2,0,1579426511,,"ls!"
+:ls
+|2,0,1579426493,,"ls"
+:ls h
+|2,0,1579426343,,"ls h"
+:21,27s/^/#/
+|2,0,1579212195,,"21,27s/^/#/"
 :w data2
 |2,0,1578306228,,"w data2"
 :w data1
 |2,0,1578306190,,"w data1"
-:w!
-|2,0,1577028877,,"w!"
 :w! /opt/bin/bckitup2
 |2,0,1577018270,,"w! /opt/bin/bckitup2"
 :w /opr/bin/bckitup2
@@ -50,16 +98,12 @@ $BU_HD2
 |2,0,1577018037,,"w! /opt/bin/bckitup1"
 :w /opt/bin/bckitup1
 |2,0,1577017419,,"w /opt/bin/bckitup1"
-:w how-to-git.md
-|2,0,1575879243,,"w how-to-git.md"
 :r !ls
 |2,0,1575842089,,"r !ls"
 :r !lsa
 |2,0,1575842073,,"r !lsa"
 :103
 |2,0,1575128787,,"103"
-:'<,'>s/^/#/
-|2,0,1575057429,,"'<,'>s/^/#/"
 :'<,'>s/^/^#/
 |2,0,1575057301,,"'<,'>s/^/^#/"
 :20
@@ -76,64 +120,54 @@ $BU_HD2
 |2,0,1571403844,,"PluginList"
 :PluginSearch streamline
 |2,0,1571403816,,"PluginSearch streamline"
-:PluginSearch
-|2,0,1571401767,,"PluginSearch"
-:PluginUpdate
-|2,0,1571401128,,"PluginUpdate"
-:PluginInstall
-|2,0,1571400036,,"PluginInstall"
-:Update
-|2,0,1571387697,,"Update"
-:PluginClean
-|2,0,1571384543,,"PluginClean"
-:echo has('python') || has('python3')
-|2,0,1571384355,,"echo has('python') || has('python3')"
-:10
-|2,0,1571385865,,"10"
-:57
-|2,0,1571385723,,"57"
-:s
-|2,0,1570872384,,"s"
-:r !cat /etc/netctl/wifi_DieGrubeinBarcelona
-|2,0,1570468620,,"r !cat /etc/netctl/wifi_DieGrubeinBarcelona"
-:250
-|2,0,1570310116,,"250"
-:1,12Y
-|2,0,1570001157,,"1,12Y"
-:r !cat test.sh
-|2,0,1570001310,,"r !cat test.sh"
-:'<,'>q
-|2,0,1569835594,,"'<,'>q"
-:,$d
-|2,0,1556913386,,",$d"
-:!ls
-|2,0,1556258609,,"!ls"
-:60
-|2,0,1555949035,,"60"
-:2
-|2,0,1555949020,,"2"
-:r !which vim
-|2,0,1555919838,,"r !which vim"
-:'<,'>
-|2,0,1555881591,,"'<,'>"
-:'<,'>u
-|2,0,1555758330,,"'<,'>u"
-:'<,'>s/^/
-|2,0,1555752366,,"'<,'>s/^/"
 
 # Search String History (newest to oldest):
+?/bind
+|2,1,1581111891,47,"bind"
+?/git
+|2,1,1581089895,47,"git"
+?/gitº
+|2,1,1580680794,47,"gitº"
+?/history
+|2,1,1580111654,47,"history"
+?/2>/dev/null
+|2,1,1579995163,47,"2>/dev/null"
+?/sdsss
+|2,1,1579774934,47,"sdsss"
+? ^
+|2,1,1579774922,,"^"
+?/vpn
+|2,1,1579773918,47,"vpn"
+?/q
+|2,1,1579426792,47,"q"
+?/jnkjwon:q
+|2,1,1579426783,47,"jnkjwon:q"
+?/\.profile
+|2,1,1579212223,47,"\\.profile"
+?/jnkjwon
+|2,1,1579212212,47,"jnkjwon"
+?/\*\*
+|2,1,1578994280,47,"\\*\\*"
+?/clean
+|2,1,1578993862,47,"clean"
+?/pathclean
+|2,1,1578993855,47,"pathclean"
+?/init
+|2,1,1578990165,47,"init"
+?/pyenv
+|2,1,1578989318,47,"pyenv"
+?/º.profile
+|2,1,1578989243,47,"º.profile"
+?/.profile
+|2,1,1578989199,47,".profile"
 ?/p
 |2,1,1578755326,47,"p"
 ?/dssd
 |2,1,1578754243,47,"dssd"
-?/pyenv
-|2,1,1578753887,47,"pyenv"
 ?/ 
 |2,1,1578680648,47," "
 ?/cdv
 |2,1,1578667072,47,"cdv"
-?/vpn
-|2,1,1578665182,47,"vpn"
 ?/ip
 |2,1,1578314458,47,"ip"
 ?/i
@@ -166,8 +200,6 @@ $BU_HD2
 |2,1,1575057443,47,"lkl"
 ?/kjnd
 |2,1,1575057438,47,"kjnd"
-? ^
-|2,1,1575057429,,"^"
 ?/ss
 |2,1,1575057312,47,"ss"
 ? \<shellcheck\>
@@ -180,8 +212,6 @@ $BU_HD2
 |2,1,1575055632,47,"in PATH"
 ?/Gnome login manager
 |2,1,1575051709,47,"Gnome login manager"
-?/pathclean
-|2,1,1575042863,47,"pathclean"
 ?/5678
 |2,1,1575039653,47,"5678"
 ?/echo
@@ -192,36 +222,6 @@ $BU_HD2
 |2,1,1574984306,47,"echon"
 ?/PATH
 |2,1,1574946028,47,"PATH"
-?/  
-|2,1,1574946537,47,"  "
-?/ sds
-|2,1,1574946517,47," sds"
-?/:.bash_aliases
-|2,1,1574945216,47,":.bash_aliases"
-?/echo ok
-|2,1,1574944910,47,"echo ok"
-?/echo ok-
-|2,1,1574944900,47,"echo ok-"
-?/\.bash_aliases
-|2,1,1574943036,47,"\\.bash_aliases"
-?/ \/usr\/share\/terminfo
-|2,1,1574942276,47," \\/usr\\/share\\/terminfo"
-?/xterm\?256color
-|2,1,1574942220,47,"xterm\\?256color"
-?/ls
-|2,1,1574007548,47,"ls"
-?/or python3
-|2,1,1571508138,47,"or python3"
-?/error
-|2,1,1571503445,47,"error"
-?/warn
-|2,1,1571503136,47,"warn"
-?/global
-|2,1,1571485305,47,"global"
-?/below
-|2,1,1571484710,47,"below"
-?/vim-streamline
-|2,1,1571403865,47,"vim-streamline"
 
 # Expression History (newest to oldest):
 
@@ -237,47 +237,35 @@ $BU_HD2
 
 # Registers:
 "0	LINE	0
-	alias basetisvpn='sudo /usr/bin/openvpn --config /etc/openvpn/vpn.basetis.com.ovpn'
-|3,0,0,1,1,0,1578665189,"alias basetisvpn='sudo /usr/bin/openvpn --config /etc/openvpn/vpn.basetis.com.ovpn'"
+	alias gitlog='git log --pretty=format:"%>|(<9>)%Cgreen%h%Creset: Author: %Cblue%an%Creset | Committer: %Cblue%cn%Creset | Time: %ad%n         Note: %s" --graph --date=format:%Y-%M-%d %H:%m:%S'
+|3,0,0,1,1,0,1581094844,"alias gitlog='git log --pretty=format:\"%>|(<9>)%Cgreen%h%Creset: Author: %Cblue%an%Creset | Committer: %Cblue%cn%Creset | Time: %ad%n         Note: %s\" --graph --date=format:%Y-%M-%d %H:%m:%S'"
 "1	LINE	0
 	
-|3,0,1,1,1,0,1578755229,""
+|3,0,1,1,1,0,1580939938,""
 "2	LINE	0
-	param.asd.com 236
-|3,0,2,1,1,0,1578306199,"param.asd.com 236"
+	#!/usr/bin/vim
+|3,0,2,1,1,0,1580939937,"#!/usr/bin/vim"
 "3	LINE	0
-	param.avarge.com 3443
-	param.no.com 43
-	param.lol.com 54
-	param.tis.com 24
-	param.er.com 254
-	param.nh.com 13
-	param.pl.com 456
-	param.nm.com 534
-|3,0,3,1,8,0,1578306199,"param.avarge.com 3443","param.no.com 43","param.lol.com 54","param.tis.com 24","param.er.com 254","param.nh.com 13","param.pl.com 456","param.nm.com 534"
+	# When login occurs via a login shell, this file is not read by bash(1), 
+|3,0,3,1,1,0,1580932515,"# When login occurs via a login shell, this file is not read by bash(1), "
 "4	LINE	0
-	ID|NAME|S1|BQ|S2|VN|D1
-	1|vimal|10.12|12.4|56.2|12.2|11.22
-	2|vilas|10.12|12.4|56.2|12.2|11.22
-	3|viky|10.12|12.4|56.2|12.2|11.22
-|3,0,4,1,4,0,1578306170,"ID|NAME|S1|BQ|S2|VN|D1","1|vimal|10.12|12.4|56.2|12.2|11.22","2|vilas|10.12|12.4|56.2|12.2|11.22","3|viky|10.12|12.4|56.2|12.2|11.22"
+	Guillem Olivé, [29.01.20 09:53]
+|3,0,4,1,1,0,1580814683,"Guillem Olivé, [29.01.20 09:53]"
 "5	LINE	0
 	
-|3,0,5,1,1,0,1577879279,""
+|3,0,5,1,1,0,1580814682,""
 "6	LINE	0
-	5240703 racon-3/utg001564l-racon-3.fasta  H   1     1   0     10.0   0.0    150   :03
-	5241418 racon-3/utg002276l-racon-3.fasta  H   1     1   0     10.0   0.0    150   :02   
-	5241902 racon-3/utg002759l-racon-3.fasta  H   1     1   0     10.0   0.0    150   :03
-|3,0,6,1,3,0,1577879273,"5240703 racon-3/utg001564l-racon-3.fasta  H   1     1   0     10.0   0.0    150   :03","5241418 racon-3/utg002276l-racon-3.fasta  H   1     1   0     10.0   0.0    150   :02   ","5241902 racon-3/utg002759l-racon-3.fasta  H   1     1   0     10.0   0.0    150   :03"
+	Guillem Olivé, [29.01.20 09:53]
+|3,0,6,1,1,0,1580814679,"Guillem Olivé, [29.01.20 09:53]"
 "7	LINE	0
-	    mkdir -p /mnt/BU_HD1/_usr_share_x11
-|3,0,7,1,1,0,1577054187,"    mkdir -p /mnt/BU_HD1/_usr_share_x11"
+	ACTION=="add",SUBSYSTEMS=="usb",ATTRS{idVendor}=="1d6b",ATTRS{idProduct}=="0003" , ENV{DISPLAY}=":0",ENV{XAUTHORITY}="/home/ckb/.Xauthority",RUN+="meme=$(/usr/bin/whoami); /usr/bin/notify-send \"$meme -- BU_HD1 recognized\""
+|3,0,7,1,1,0,1580680745,"ACTION==\"add\",SUBSYSTEMS==\"usb\",ATTRS{idVendor}==\"1d6b\",ATTRS{idProduct}==\"0003\" , ENV{DISPLAY}=\":0\",ENV{XAUTHORITY}=\"/home/ckb/.Xauthority\",RUN+=\"meme=$(/usr/bin/whoami); /usr/bin/notify-send \\\"$meme -- BU_HD1 recognized\\\"\""
 "8	LINE	0
-	# ACTION=="add",KERNEL=="sd?",ENV{ID_FS_UUID}=="cd9f3fc4-f67f-42c4-8190-21d2766d2b65",...
-|3,0,8,1,1,0,1577051873,"# ACTION==\"add\",KERNEL==\"sd?\",ENV{ID_FS_UUID}==\"cd9f3fc4-f67f-42c4-8190-21d2766d2b65\",..."
+	#echo $DISPLAY
+|3,0,8,1,1,0,1580675068,"#echo $DISPLAY"
 "9	LINE	0
-	UUID=b64fe092-ada1-45f5-9c97-cdbed39b65cc /mnt/CLONE_SSD auto nosuid,nodev,nofail,noauto,x-gvfs-show 0 0
-|3,0,9,1,1,0,1577030748,"UUID=b64fe092-ada1-45f5-9c97-cdbed39b65cc /mnt/CLONE_SSD auto nosuid,nodev,nofail,noauto,x-gvfs-show 0 0"
+	
+|3,0,9,1,1,0,1580675064,""
 "a	CHAR	0
 	989
 |3,0,10,0,1,0,1554973116,"989"
@@ -298,453 +286,460 @@ $BU_HD2
 	t
 |3,0,35,0,1,0,1540560835,"t"
 ""-	CHAR	0
-	pyenv install 
-|3,1,36,0,1,0,1578755394,"pyenv install "
+	 
+|3,1,36,0,1,0,1581113589," "
 
 # File marks:
-'0  664  0  ~/Documents/Pictures/20191225_bcn_abc-02.jpg
-|4,48,664,0,1578842101,"~/Documents/Pictures/20191225_bcn_abc-02.jpg"
-'1  274  44  ~/.bashrc
-|4,49,274,44,1578755406,"~/.bashrc"
-'2  79  37  ~/.bash_aliases
-|4,50,79,37,1578753869,"~/.bash_aliases"
-'3  350  98  ~/.bash_aliases
-|4,51,350,98,1578681620,"~/.bash_aliases"
-'4  350  98  ~/.bash_aliases
-|4,52,350,98,1578681620,"~/.bash_aliases"
-'5  22  0  ~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/initDC
-|4,53,22,0,1578680322,"~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/initDC"
-'6  22  0  ~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/initDC
-|4,54,22,0,1578680322,"~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/initDC"
-'7  1  0  ~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/test.sh
-|4,55,1,0,1578680196,"~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/test.sh"
-'8  1  0  ~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/test.sh
-|4,56,1,0,1578680196,"~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/test.sh"
-'9  52  1  ~/.bash_aliases
-|4,57,52,1,1578667131,"~/.bash_aliases"
+'0  192  25  ~/.bash_aliases
+|4,48,192,25,1581114480,"~/.bash_aliases"
+'1  45  10  /etc/postfix/main.cf
+|4,49,45,10,1581113659,"/etc/postfix/main.cf"
+'2  337  187  ~/.bash_aliases
+|4,50,337,187,1581096932,"~/.bash_aliases"
+'3  334  187  ~/.bash_aliases
+|4,51,334,187,1581096932,"~/.bash_aliases"
+'4  50  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/controller/company_request_controller.py
+|4,52,50,0,1581096926,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/controller/company_request_controller.py"
+'5  50  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/controller/company_request_controller.py
+|4,53,50,0,1581096926,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/controller/company_request_controller.py"
+'6  336  121  ~/.bash_aliases
+|4,54,336,121,1581095409,"~/.bash_aliases"
+'7  333  121  ~/.bash_aliases
+|4,55,333,121,1581095409,"~/.bash_aliases"
+'8  47  30  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
+|4,56,47,30,1581089597,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
+'9  47  30  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
+|4,57,47,30,1581089597,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
 
 # Jumplist (newest first):
--'  664  0  ~/Documents/Pictures/20191225_bcn_abc-02.jpg
-|4,39,664,0,1578842101,"~/Documents/Pictures/20191225_bcn_abc-02.jpg"
--'  1  0  ~/Documents/Pictures/20191225_bcn_abc-02.jpg
-|4,39,1,0,1578842085,"~/Documents/Pictures/20191225_bcn_abc-02.jpg"
--'  274  44  ~/.bashrc
-|4,39,274,44,1578755406,"~/.bashrc"
--'  274  44  ~/.bashrc
-|4,39,274,44,1578755406,"~/.bashrc"
--'  1  0  ~/.bashrc
-|4,39,1,0,1578753887,"~/.bashrc"
--'  1  0  ~/.bashrc
-|4,39,1,0,1578753887,"~/.bashrc"
--'  79  37  ~/.bash_aliases
-|4,39,79,37,1578753869,"~/.bash_aliases"
--'  79  37  ~/.bash_aliases
-|4,39,79,37,1578753869,"~/.bash_aliases"
--'  79  37  ~/.bash_aliases
-|4,39,79,37,1578753869,"~/.bash_aliases"
--'  79  37  ~/.bash_aliases
-|4,39,79,37,1578753869,"~/.bash_aliases"
--'  84  14  ~/.bash_aliases
-|4,39,84,14,1578753845,"~/.bash_aliases"
--'  84  14  ~/.bash_aliases
-|4,39,84,14,1578753845,"~/.bash_aliases"
--'  84  14  ~/.bash_aliases
-|4,39,84,14,1578753845,"~/.bash_aliases"
--'  84  14  ~/.bash_aliases
-|4,39,84,14,1578753845,"~/.bash_aliases"
+-'  192  25  ~/.bash_aliases
+|4,39,192,25,1581114480,"~/.bash_aliases"
+-'  45  10  /etc/postfix/main.cf
+|4,39,45,10,1581113659,"/etc/postfix/main.cf"
+-'  1  0  /etc/postfix/main.cf
+|4,39,1,0,1581113524,"/etc/postfix/main.cf"
+-'  343  155  ~/.bash_aliases
+|4,39,343,155,1581111265,"~/.bash_aliases"
+-'  337  187  ~/.bash_aliases
+|4,39,337,187,1581111214,"~/.bash_aliases"
+-'  334  187  ~/.bash_aliases
+|4,39,334,187,1581096932,"~/.bash_aliases"
+-'  334  187  ~/.bash_aliases
+|4,39,334,187,1581096932,"~/.bash_aliases"
+-'  50  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/controller/company_request_controller.py
+|4,39,50,0,1581096926,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/controller/company_request_controller.py"
+-'  50  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/controller/company_request_controller.py
+|4,39,50,0,1581096926,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/controller/company_request_controller.py"
+-'  50  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/controller/company_request_controller.py
+|4,39,50,0,1581096926,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/controller/company_request_controller.py"
+-'  336  121  ~/.bash_aliases
+|4,39,336,121,1581095409,"~/.bash_aliases"
+-'  333  121  ~/.bash_aliases
+|4,39,333,121,1581095409,"~/.bash_aliases"
+-'  333  121  ~/.bash_aliases
+|4,39,333,121,1581095409,"~/.bash_aliases"
+-'  189  38  ~/.bash_aliases
+|4,39,189,38,1581094599,"~/.bash_aliases"
+-'  186  38  ~/.bash_aliases
+|4,39,186,38,1581094599,"~/.bash_aliases"
+-'  186  38  ~/.bash_aliases
+|4,39,186,38,1581094599,"~/.bash_aliases"
+-'  186  38  ~/.bash_aliases
+|4,39,186,38,1581094599,"~/.bash_aliases"
+-'  186  38  ~/.bash_aliases
+|4,39,186,38,1581094599,"~/.bash_aliases"
+-'  128  46  ~/.bash_aliases
+|4,39,128,46,1581089899,"~/.bash_aliases"
+-'  128  46  ~/.bash_aliases
+|4,39,128,46,1581089899,"~/.bash_aliases"
+-'  128  46  ~/.bash_aliases
+|4,39,128,46,1581089899,"~/.bash_aliases"
+-'  128  46  ~/.bash_aliases
+|4,39,128,46,1581089899,"~/.bash_aliases"
+-'  128  46  ~/.bash_aliases
+|4,39,128,46,1581089899,"~/.bash_aliases"
+-'  125  16  ~/.bash_aliases
+|4,39,125,16,1581089898,"~/.bash_aliases"
+-'  125  16  ~/.bash_aliases
+|4,39,125,16,1581089898,"~/.bash_aliases"
+-'  125  16  ~/.bash_aliases
+|4,39,125,16,1581089898,"~/.bash_aliases"
+-'  125  16  ~/.bash_aliases
+|4,39,125,16,1581089898,"~/.bash_aliases"
+-'  125  16  ~/.bash_aliases
+|4,39,125,16,1581089898,"~/.bash_aliases"
+-'  4  0  ~/.bash_aliases
+|4,39,4,0,1581089895,"~/.bash_aliases"
+-'  4  0  ~/.bash_aliases
+|4,39,4,0,1581089895,"~/.bash_aliases"
+-'  4  0  ~/.bash_aliases
+|4,39,4,0,1581089895,"~/.bash_aliases"
+-'  4  0  ~/.bash_aliases
+|4,39,4,0,1581089895,"~/.bash_aliases"
+-'  4  0  ~/.bash_aliases
+|4,39,4,0,1581089895,"~/.bash_aliases"
 -'  1  0  ~/.bash_aliases
-|4,39,1,0,1578753841,"~/.bash_aliases"
+|4,39,1,0,1581089891,"~/.bash_aliases"
 -'  1  0  ~/.bash_aliases
-|4,39,1,0,1578753841,"~/.bash_aliases"
+|4,39,1,0,1581089891,"~/.bash_aliases"
 -'  1  0  ~/.bash_aliases
-|4,39,1,0,1578753841,"~/.bash_aliases"
+|4,39,1,0,1581089891,"~/.bash_aliases"
 -'  1  0  ~/.bash_aliases
-|4,39,1,0,1578753841,"~/.bash_aliases"
--'  350  98  ~/.bash_aliases
-|4,39,350,98,1578753816,"~/.bash_aliases"
--'  350  98  ~/.bash_aliases
-|4,39,350,98,1578753816,"~/.bash_aliases"
--'  350  98  ~/.bash_aliases
-|4,39,350,98,1578753816,"~/.bash_aliases"
--'  350  98  ~/.bash_aliases
-|4,39,350,98,1578753816,"~/.bash_aliases"
--'  350  98  ~/.bash_aliases
-|4,39,350,98,1578681620,"~/.bash_aliases"
--'  350  98  ~/.bash_aliases
-|4,39,350,98,1578681620,"~/.bash_aliases"
--'  350  98  ~/.bash_aliases
-|4,39,350,98,1578681620,"~/.bash_aliases"
--'  350  98  ~/.bash_aliases
-|4,39,350,98,1578681620,"~/.bash_aliases"
--'  22  0  ~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/initDC
-|4,39,22,0,1578680322,"~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/initDC"
--'  22  0  ~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/initDC
-|4,39,22,0,1578680322,"~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/initDC"
--'  22  0  ~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/initDC
-|4,39,22,0,1578680322,"~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/initDC"
--'  22  0  ~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/initDC
-|4,39,22,0,1578680322,"~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/initDC"
--'  22  0  ~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/initDC
-|4,39,22,0,1578680322,"~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/initDC"
--'  22  0  ~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/initDC
-|4,39,22,0,1578680322,"~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/initDC"
--'  22  0  ~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/initDC
-|4,39,22,0,1578680322,"~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/initDC"
--'  22  0  ~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/initDC
-|4,39,22,0,1578680322,"~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/initDC"
--'  1  0  ~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/initDC
-|4,39,1,0,1578680245,"~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/initDC"
--'  1  0  ~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/initDC
-|4,39,1,0,1578680245,"~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/initDC"
--'  1  0  ~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/initDC
-|4,39,1,0,1578680245,"~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/initDC"
--'  1  0  ~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/initDC
-|4,39,1,0,1578680245,"~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/initDC"
--'  1  0  ~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/initDC
-|4,39,1,0,1578680245,"~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/initDC"
--'  1  0  ~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/initDC
-|4,39,1,0,1578680245,"~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/initDC"
--'  1  0  ~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/initDC
-|4,39,1,0,1578680245,"~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/initDC"
--'  1  0  ~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/initDC
-|4,39,1,0,1578680245,"~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/initDC"
--'  1  0  ~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/test.sh
-|4,39,1,0,1578680196,"~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/test.sh"
--'  1  0  ~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/test.sh
-|4,39,1,0,1578680196,"~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/test.sh"
--'  1  0  ~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/test.sh
-|4,39,1,0,1578680196,"~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/test.sh"
--'  1  0  ~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/test.sh
-|4,39,1,0,1578680196,"~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/test.sh"
--'  1  0  ~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/test.sh
-|4,39,1,0,1578680196,"~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/test.sh"
--'  1  0  ~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/test.sh
-|4,39,1,0,1578680196,"~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/test.sh"
--'  1  0  ~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/test.sh
-|4,39,1,0,1578680196,"~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/test.sh"
--'  1  0  ~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/test.sh
-|4,39,1,0,1578680196,"~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/test.sh"
--'  1  0  ~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/test.sh
-|4,39,1,0,1578680196,"~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/test.sh"
--'  1  0  ~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/test.sh
-|4,39,1,0,1578680196,"~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/test.sh"
--'  1  0  ~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/test.sh
-|4,39,1,0,1578680196,"~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/test.sh"
--'  1  0  ~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/test.sh
-|4,39,1,0,1578680196,"~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/test.sh"
--'  52  1  ~/.bash_aliases
-|4,39,52,1,1578678734,"~/.bash_aliases"
--'  52  1  ~/.bash_aliases
-|4,39,52,1,1578678734,"~/.bash_aliases"
--'  52  1  ~/.bash_aliases
-|4,39,52,1,1578678734,"~/.bash_aliases"
--'  52  1  ~/.bash_aliases
-|4,39,52,1,1578678734,"~/.bash_aliases"
--'  52  1  ~/.bash_aliases
-|4,39,52,1,1578678734,"~/.bash_aliases"
--'  52  1  ~/.bash_aliases
-|4,39,52,1,1578678734,"~/.bash_aliases"
--'  52  1  ~/.bash_aliases
-|4,39,52,1,1578678734,"~/.bash_aliases"
--'  52  1  ~/.bash_aliases
-|4,39,52,1,1578678734,"~/.bash_aliases"
--'  52  1  ~/.bash_aliases
-|4,39,52,1,1578667131,"~/.bash_aliases"
--'  52  1  ~/.bash_aliases
-|4,39,52,1,1578667131,"~/.bash_aliases"
--'  52  1  ~/.bash_aliases
-|4,39,52,1,1578667131,"~/.bash_aliases"
--'  52  1  ~/.bash_aliases
-|4,39,52,1,1578667131,"~/.bash_aliases"
--'  52  1  ~/.bash_aliases
-|4,39,52,1,1578667131,"~/.bash_aliases"
--'  52  1  ~/.bash_aliases
-|4,39,52,1,1578667131,"~/.bash_aliases"
--'  52  1  ~/.bash_aliases
-|4,39,52,1,1578667131,"~/.bash_aliases"
--'  52  1  ~/.bash_aliases
-|4,39,52,1,1578667131,"~/.bash_aliases"
--'  52  1  ~/.bash_aliases
-|4,39,52,1,1578667131,"~/.bash_aliases"
--'  52  1  ~/.bash_aliases
-|4,39,52,1,1578667131,"~/.bash_aliases"
--'  52  1  ~/.bash_aliases
-|4,39,52,1,1578667131,"~/.bash_aliases"
--'  52  1  ~/.bash_aliases
-|4,39,52,1,1578667131,"~/.bash_aliases"
--'  52  1  ~/.bash_aliases
-|4,39,52,1,1578667131,"~/.bash_aliases"
--'  52  1  ~/.bash_aliases
-|4,39,52,1,1578667131,"~/.bash_aliases"
--'  52  1  ~/.bash_aliases
-|4,39,52,1,1578667131,"~/.bash_aliases"
--'  52  1  ~/.bash_aliases
-|4,39,52,1,1578667131,"~/.bash_aliases"
--'  380  0  ~/.bash_aliases
-|4,39,380,0,1578667072,"~/.bash_aliases"
--'  376  0  ~/.bash_aliases
-|4,39,376,0,1578667072,"~/.bash_aliases"
--'  380  0  ~/.bash_aliases
-|4,39,380,0,1578667072,"~/.bash_aliases"
--'  376  0  ~/.bash_aliases
-|4,39,376,0,1578667072,"~/.bash_aliases"
--'  376  0  ~/.bash_aliases
-|4,39,376,0,1578667072,"~/.bash_aliases"
--'  376  0  ~/.bash_aliases
-|4,39,376,0,1578667072,"~/.bash_aliases"
--'  376  0  ~/.bash_aliases
-|4,39,376,0,1578667072,"~/.bash_aliases"
--'  380  0  ~/.bash_aliases
-|4,39,380,0,1578667072,"~/.bash_aliases"
--'  376  0  ~/.bash_aliases
-|4,39,376,0,1578667072,"~/.bash_aliases"
--'  380  0  ~/.bash_aliases
-|4,39,380,0,1578667072,"~/.bash_aliases"
--'  376  0  ~/.bash_aliases
-|4,39,376,0,1578667072,"~/.bash_aliases"
--'  376  0  ~/.bash_aliases
-|4,39,376,0,1578667072,"~/.bash_aliases"
--'  376  0  ~/.bash_aliases
-|4,39,376,0,1578667072,"~/.bash_aliases"
--'  376  0  ~/.bash_aliases
-|4,39,376,0,1578667072,"~/.bash_aliases"
--'  380  0  ~/.bash_aliases
-|4,39,380,0,1578667072,"~/.bash_aliases"
--'  376  0  ~/.bash_aliases
-|4,39,376,0,1578667072,"~/.bash_aliases"
--'  380  0  ~/.bash_aliases
-|4,39,380,0,1578667072,"~/.bash_aliases"
--'  376  0  ~/.bash_aliases
-|4,39,376,0,1578667072,"~/.bash_aliases"
--'  376  0  ~/.bash_aliases
-|4,39,376,0,1578667072,"~/.bash_aliases"
--'  376  0  ~/.bash_aliases
-|4,39,376,0,1578667072,"~/.bash_aliases"
--'  376  0  ~/.bash_aliases
-|4,39,376,0,1578667072,"~/.bash_aliases"
--'  380  0  ~/.bash_aliases
-|4,39,380,0,1578667072,"~/.bash_aliases"
+|4,39,1,0,1581089891,"~/.bash_aliases"
+-'  1  0  ~/.bash_aliases
+|4,39,1,0,1581089891,"~/.bash_aliases"
+-'  47  30  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
+|4,39,47,30,1581089597,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
+-'  47  30  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
+|4,39,47,30,1581089597,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
+-'  47  30  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
+|4,39,47,30,1581089597,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
+-'  47  30  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
+|4,39,47,30,1581089597,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
+-'  47  30  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
+|4,39,47,30,1581089597,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
+-'  47  30  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
+|4,39,47,30,1581089597,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
+-'  47  30  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
+|4,39,47,30,1581089597,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
+-'  47  30  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
+|4,39,47,30,1581079807,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
+-'  47  30  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
+|4,39,47,30,1581079807,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
+-'  47  30  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
+|4,39,47,30,1581079807,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
+-'  47  30  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
+|4,39,47,30,1581079807,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
+-'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/controller/company_request_controller.py
+|4,39,1,0,1581077270,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/controller/company_request_controller.py"
+-'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/controller/company_request_controller.py
+|4,39,1,0,1581077270,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/controller/company_request_controller.py"
+-'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/controller/company_request_controller.py
+|4,39,1,0,1581077270,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/controller/company_request_controller.py"
+-'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
+|4,39,1,0,1581077091,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
+-'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
+|4,39,1,0,1581077091,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
+-'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
+|4,39,1,0,1581077091,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
+-'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
+|4,39,1,0,1581077091,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
+-'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
+|4,39,1,0,1581077091,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
+-'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
+|4,39,1,0,1581077091,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
+-'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
+|4,39,1,0,1581077091,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
+-'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
+|4,39,1,0,1581077091,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
+-'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
+|4,39,1,0,1581077091,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
+-'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
+|4,39,1,0,1581077091,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
+-'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
+|4,39,1,0,1581077091,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
+-'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
+|4,39,1,0,1581077082,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
+-'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
+|4,39,1,0,1581077082,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
+-'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
+|4,39,1,0,1581077082,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
+-'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
+|4,39,1,0,1581077082,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
+-'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
+|4,39,1,0,1581077082,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
+-'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
+|4,39,1,0,1581077082,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
+-'  13  0  ~/.profile_bak
+|4,39,13,0,1580940027,"~/.profile_bak"
+-'  13  0  ~/.profile_bak
+|4,39,13,0,1580940027,"~/.profile_bak"
+-'  13  0  ~/.profile_bak
+|4,39,13,0,1580940027,"~/.profile_bak"
+-'  13  0  ~/.profile_bak
+|4,39,13,0,1580940027,"~/.profile_bak"
+-'  13  0  ~/.profile_bak
+|4,39,13,0,1580940027,"~/.profile_bak"
+-'  13  0  ~/.profile_bak
+|4,39,13,0,1580940027,"~/.profile_bak"
+-'  13  0  ~/.profile_bak
+|4,39,13,0,1580940027,"~/.profile_bak"
+-'  13  0  ~/.profile_bak
+|4,39,13,0,1580940027,"~/.profile_bak"
+-'  13  0  ~/.profile_bak
+|4,39,13,0,1580940027,"~/.profile_bak"
+-'  13  0  ~/.profile_bak
+|4,39,13,0,1580940027,"~/.profile_bak"
+-'  13  0  ~/.profile_bak
+|4,39,13,0,1580940027,"~/.profile_bak"
+-'  13  0  ~/.profile_bak
+|4,39,13,0,1580940027,"~/.profile_bak"
+-'  13  0  ~/.profile_bak
+|4,39,13,0,1580940027,"~/.profile_bak"
+-'  13  0  ~/.profile_bak
+|4,39,13,0,1580940027,"~/.profile_bak"
+-'  13  0  ~/.profile_bak
+|4,39,13,0,1580940027,"~/.profile_bak"
+-'  13  0  ~/.profile_bak
+|4,39,13,0,1580940027,"~/.profile_bak"
+-'  13  0  ~/.profile_bak
+|4,39,13,0,1580940027,"~/.profile_bak"
+-'  13  0  ~/.profile_bak
+|4,39,13,0,1580940027,"~/.profile_bak"
+-'  13  0  ~/.profile_bak
+|4,39,13,0,1580940027,"~/.profile_bak"
+-'  13  0  ~/.profile_bak
+|4,39,13,0,1580940027,"~/.profile_bak"
+-'  13  0  ~/.profile_bak
+|4,39,13,0,1580940027,"~/.profile_bak"
+-'  13  0  ~/.profile_bak
+|4,39,13,0,1580940027,"~/.profile_bak"
+-'  13  0  ~/.profile_bak
+|4,39,13,0,1580940027,"~/.profile_bak"
+-'  13  0  ~/.profile_bak
+|4,39,13,0,1580940027,"~/.profile_bak"
+-'  13  0  ~/.profile_bak
+|4,39,13,0,1580940027,"~/.profile_bak"
+-'  13  0  ~/.profile_bak
+|4,39,13,0,1580940027,"~/.profile_bak"
+-'  13  0  ~/.profile_bak
+|4,39,13,0,1580940027,"~/.profile_bak"
+-'  18  0  ~/.profile_bak
+|4,39,18,0,1580939993,"~/.profile_bak"
+-'  18  0  ~/.profile_bak
+|4,39,18,0,1580939993,"~/.profile_bak"
+-'  18  0  ~/.profile_bak
+|4,39,18,0,1580939993,"~/.profile_bak"
+-'  18  0  ~/.profile_bak
+|4,39,18,0,1580939993,"~/.profile_bak"
 
 # Buffer list:
-%~/Documents/Pictures/20191225_bcn_abc-02.jpg	664	0
+%~/.bash_aliases	192	25
 
 # History of marks within files (newest to oldest):
 
-> ~/Documents/Pictures/20191225_bcn_abc-02.jpg
-	*	1578842094	0
-	"	664	0
-
-> ~/.bashrc
-	*	1578755405	0
-	"	274	44
-	^	271	45
-	.	271	44
-	+	269	94
-	+	269	41
-	+	272	0
-	+	273	0
-	+	274	84
-	+	275	24
-	+	276	0
-	+	275	8
-	+	270	88
-	+	271	44
+> /etc/postfix/main.cf
+	*	1581113657	0
+	"	45	10
+	^	23	2
+	.	23	1
+	+	19	53
+	+	20	59
+	+	22	61
+	+	24	0
+	+	22	71
+	+	23	1
 
 > ~/.bash_aliases
-	*	1578753859	0
-	"	79	37
-	^	350	99
-	.	350	98
-	+	79	13
-	+	40	59
-	+	391	8
-	+	95	0
-	+	109	0
-	+	95	0
-	+	109	0
-	+	197	0
-	+	199	112
-	+	378	61
-	+	379	76
-	+	378	68
-	+	178	39
-	+	380	72
-	+	48	4
-	+	346	52
-	+	345	45
-	+	346	9
-	+	347	37
-	+	348	16
-	+	349	18
-	+	350	10
-	+	346	13
-	+	348	11
-	+	346	14
-	+	348	7
-	+	349	7
-	+	350	13
-	+	350	98
+	*	1581112909	0
+	"	192	25
+	^	189	26
+	.	189	25
+	+	338	0
+	+	337	22
+	+	338	23
+	+	337	151
+	+	337	55
+	+	337	149
+	+	338	84
+	+	337	133
+	+	337	46
+	+	337	139
+	+	337	46
+	+	337	94
+	+	334	149
+	+	337	180
+	+	337	39
+	+	337	45
+	+	335	0
+	+	337	39
+	+	337	167
+	+	335	193
+	+	335	0
+	+	337	0
+	+	335	0
+	+	337	0
+	+	337	121
+	+	336	31
+	+	334	124
+	+	337	187
+	+	189	6
+	+	192	20
+	+	186	91
+	+	187	96
+	+	188	33
+	+	189	25
 
-> ~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/initDC
-	*	1578680319	0
-	"	22	0
+> ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/controller/company_request_controller.py
+	*	1581096922	0
+	"	50	0
 
-> ~/Documents/Academic/UPC/MIRI/Subjects/DS_decentralized-systems/Project/test.sh
-	*	1578680177	0
-	"	1	0
+> ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
+	*	1581089583	0
+	"	47	30
 
-> ~/Documents/Scripts/data_file
-	*	1578306217	0
-	"	9	15
-	^	9	16
-	.	9	15
-	+	1	91
-	+	1	84
+> ~/.profile_bak
+	*	1580939995	0
+	"	13	0
+	.	1	0
+	+	2	0
+	+	15	0
+	+	13	0
+	+	1	1
 	+	1	0
-	+	1	22
-	+	1	33
-	+	1	21
-	+	1	15
-	+	9	15
 
-> ~/Documents/Scripts/test.sh
-	*	1577434465	0
-	"	1	0
+> /usr/share/vim/vim82/doc/fold.txt
+	*	1580939821	0
+	"	300	27
 
-> ~/Documents/Work/Projects/Kubik-data/Src/kubik-prov/QueryMgr/__init__.py
-	*	1577116542	0
-	"	1	0
-
-> ~/.local/share/run-spool/bu1_last
-	*	1577055468	0
+> ~/file.txt
+	*	1580938161	0
 	"	1	9
-	^	1	12
+	^	1	10
 	.	1	9
 	+	1	9
 
+> /etc/pacman.conf
+	*	1580891523	0
+	"	22	18
+	^	26	20
+	.	26	15
+	+	26	15
+
+> ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-crudspii/.git/config
+	*	1580817943	0
+	"	11	25
+
+> ~/.vimrc
+	*	1580815649	0
+	"	599	0
+
+> ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/readme.txt
+	*	1580814825	0
+	"	1	56
+	^	1	45
+	.	1	44
+	+	4	48
+	+	3	0
+	+	4	3
+	+	3	7
+	+	9	66
+	+	8	0
+	+	7	0
+	+	6	59
+	+	7	59
+	+	8	62
+	+	7	62
+	+	6	70
+	+	7	70
+	+	8	71
+	+	1	44
+
+> ~/Documents/Work/Projects/Kubik-data/Src/kubik-prov/CrudPII/main/config.py
+	*	1580810641	0
+	"	41	0
+
+> /etc/udev/rules.d/99-ckb-exe.rules
+	*	1580680868	0
+	"	8	114
+	^	8	82
+	.	8	81
+	+	7	200
+	+	7	0
+	+	8	53
+	+	14	0
+	+	15	0
+	+	16	0
+	+	15	92
+	+	8	0
+	+	8	81
+
+> ~/Documents/Scripts/currentdispl.sh
+	*	1580675134	0
+	"	4	5
+	^	4	20
+	.	4	5
+	+	1	2
+	+	2	0
+	+	3	0
+	+	8	24
+	+	4	13
+	+	4	5
+
+> /opt/bin/bckitup1
+	*	1580675072	0
+	"	28	0
+	.	28	0
+	+	79	13
+	+	80	56
+	+	79	0
+	+	9	0
+	+	10	8
+	+	11	11
+	+	10	12
+	+	12	11
+	+	13	11
+	+	27	94
+	+	27	0
+	+	27	136
+	+	27	4
+	+	20	0
+	+	27	0
+	+	27	1
+	+	27	0
+	+	20	6
+	+	27	0
+	+	60	17
+	+	20	7
+	+	27	0
+	+	60	18
+	+	20	56
+	+	28	12
+	+	28	0
+	+	27	32
+	+	21	20
+	+	21	0
+	+	21	8
+	+	21	0
+	+	27	0
+	+	20	0
+	+	21	0
+	+	28	0
+	+	21	0
+	+	27	0
+	+	21	0
+	+	28	0
+
+> /opt/bin/bckitup2
+	*	1580674930	0
+	"	19	0
+
 > /opt/scripts/run_oncedaily
-	*	1577055285	0
-	"	33	23
-	^	31	24
-	.	31	23
+	*	1580674470	0
+	"	31	24
+	^	40	11
+	.	40	10
 	+	42	32
 	+	45	4
 	+	40	8
 	+	20	23
 	+	31	23
+	+	40	10
 
-> /etc/udev/rules.d/99-ckb-exe.rules
-	*	1577054833	0
-	"	14	162
-	^	17	115
-	.	17	114
-	+	10	12
-	+	14	200
-	+	17	200
-	+	13	0
-	+	13	10
-	+	16	0
-	+	17	0
-	+	16	0
-	+	13	11
-	+	12	33
-	+	14	114
-	+	17	114
-
-> /opt/bin/bckitup1
-	*	1577054528	0
-	"	102	4
-	.	77	0
-	+	77	13
-	+	78	56
-	+	77	0
-
-> /tmp/bash-fc.LPOYRY
-	*	1577053043	0
+> /opt/scripts/bckitup1
+	*	1580666672	0
 	"	1	0
 
-> /etc/udev/rules.d/88-ckb-mnt.rules
-	*	1577051678	0
-	"	8	34
-	^	8	35
-	.	8	34
-	+	12	0
-	+	6	0
-	+	9	0
-	+	7	11
-	+	10	11
-	+	8	34
+> /etc/netctl/wifi_basetis-guest
+	*	1580371245	0
+	"	7	16
+	^	7	17
+	.	7	16
+	+	7	16
 
-> /etc/fstab
-	*	1577049802	0
-	"	32	40
-	^	32	41
-	.	32	40
-	+	33	55
-	+	34	54
-	+	33	63
-	+	34	62
-	+	33	159
-	+	33	40
-	+	38	0
-	+	32	0
-	+	37	0
-	+	32	63
-	+	33	182
-	+	32	40
-
-> /opt/scripts/mount_by
-	*	1577028369	0
-	"	21	2
-	^	1	6
-	.	1	5
-	+	1	5
-
-> /opt/scripts/run_once
-	*	1577028200	0
-	"	1	0
-
-> /tmp/bash-fc.P3jbmN
-	*	1577028146	0
-	"	1	0
-	^	1	1
-	.	1	0
-	+	1	0
-
-> /opt/bin/bckitup2
-	*	1577018270	0
-	"	26	0
-	^	46	31
-	.	45	0
-	+	1	6
-	+	3	17
-	+	6	22
-	+	27	68
-	+	29	60
-	+	45	67
-	+	46	30
-	+	48	53
-	+	49	40
-	+	53	24
-	+	56	37
-	+	78	40
-	+	80	40
-	+	83	39
-	+	86	47
-	+	87	48
-	+	88	48
-	+	91	39
-	+	94	33
-	+	74	22
-	+	3	17
-	+	27	68
-	+	29	60
-	+	45	0
-
-> ~/Documents/Scripts/data
-	*	1576930437	0
-	"	1	0
-	^	1	5
-	.	1	0
-	+	4	1
-	+	1	0
+> /etc/netctl/wifi_basetis-pedrera
+	*	1580370733	0
+	"	8	19
+	^	8	20
+	.	8	19
+	+	8	19

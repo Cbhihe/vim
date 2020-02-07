@@ -273,3 +273,8 @@ sys-admin
 machine-session
 SYSTEMD
 visudo
+U
+UDP
+keyring
+bc
+PATHNAME
