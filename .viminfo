@@ -11,7 +11,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/bind
+~MSle0~/\<date\>
 
 # Last Substitute Search Pattern:
 ~MSle0&^
@@ -20,16 +20,46 @@
 $
 
 # Command Line History (newest to oldest):
-:wq
-|2,0,1581114480,,"wq"
 :q!
-|2,0,1581113659,,"q!"
+|2,0,1586193842,,"q!"
+:wq
+|2,0,1586193369,,"wq"
 :q
-|2,0,1581113657,,"q"
+|2,0,1586192885,,"q"
+:1g
+|2,0,1586189799,,"1g"
+:w
+|2,0,1585909636,,"w"
+:help netrw
+|2,0,1584090935,,"help netrw"
+:set nonu
+|2,0,1583841172,,"set nonu"
+:1
+|2,0,1583693049,,"1"
+:1,$d
+|2,0,1582996497,,"1,$d"
+:r !cat wifi_kubik-guest
+|2,0,1582816151,,"r !cat wifi_kubik-guest"
+:r cat wifi_kubik-guest
+|2,0,1582816141,,"r cat wifi_kubik-guest"
+:w /etc/netctl/wifi_pybcn
+|2,0,1582369073,,"w /etc/netctl/wifi_pybcn"
+:w wifi_pybcn
+|2,0,1582365834,,"w wifi_pybcn"
+:w! lx-sign_ckb2.html
+|2,0,1582049560,,"w! lx-sign_ckb2.html"
+:w utctime.py
+|2,0,1581883992,,"w utctime.py"
+:w datetime2utc.py
+|2,0,1581883967,,"w datetime2utc.py"
+:$
+|2,0,1581491832,,"$"
+:!pwd
+|2,0,1581429449,,"!pwd"
+:PluginSearch streamlineº
+|2,0,1581428915,,"PluginSearch streamlineº"
 :w!
 |2,0,1581113654,,"w!"
-:w
-|2,0,1581113649,,"w"
 :39
 |2,0,1581077124,,"39"
 :13,17fo
@@ -46,12 +76,8 @@ $
 |2,0,1580938873,,"mode() == 'R' ? a=1: a=2"
 :mode() == 'R'
 |2,0,1580938846,,"mode() == 'R'"
-:$
-|2,0,1580674606,,"$"
 :w how-to-git.md
 |2,0,1580674437,,"w how-to-git.md"
-:1
-|2,0,1580284326,,"1"
 :s
 |2,0,1579993557,,"s"
 :10
@@ -94,34 +120,40 @@ $
 |2,0,1577018225,,"44,$s/BU_HD1/BU_HD2/g"
 :s/bu_hd1/bu_hd2/g
 |2,0,1577018150,,"s/bu_hd1/bu_hd2/g"
-:w! /opt/bin/bckitup1
-|2,0,1577018037,,"w! /opt/bin/bckitup1"
-:w /opt/bin/bckitup1
-|2,0,1577017419,,"w /opt/bin/bckitup1"
-:r !ls
-|2,0,1575842089,,"r !ls"
-:r !lsa
-|2,0,1575842073,,"r !lsa"
-:103
-|2,0,1575128787,,"103"
-:'<,'>s/^/^#/
-|2,0,1575057301,,"'<,'>s/^/^#/"
-:20
-|2,0,1575039941,,"20"
-:1,$ d
-|2,0,1574978329,,"1,$ d"
-:w wifi_basetis-guest
-|2,0,1571644671,,"w wifi_basetis-guest"
-:33
-|2,0,1571508323,,"33"
-:680
-|2,0,1571508315,,"680"
-:PluginList
-|2,0,1571403844,,"PluginList"
-:PluginSearch streamline
-|2,0,1571403816,,"PluginSearch streamline"
 
 # Search String History (newest to oldest):
+?/\<date\>
+|2,1,1586189840,47,"\\<date\\>"
+?/date
+|2,1,1586189816,47,"date"
+?/basetis
+|2,1,1584038628,47,"basetis"
+?/PS1
+|2,1,1583744032,47,"PS1"
+?/cd
+|2,1,1583693708,47,"cd"
+?/cd\ 
+|2,1,1583692994,47,"cd\\ "
+?/cd 
+|2,1,1583692981,47,"cd "
+?/vpn
+|2,1,1583053906,47,"vpn"
+?/weather
+|2,1,1581668032,47,"weather"
+?/2
+|2,1,1581667520,47,"2"
+? @$
+|2,1,1581587331,,"@$"
+?/hist
+|2,1,1581586783,47,"hist"
+?/=
+|2,1,1581498022,47,"="
+?/MongoClient
+|2,1,1581428737,47,"MongoClient"
+? \<openvpn\>
+|2,1,1581414178,,"\\<openvpn\\>"
+?/always
+|2,1,1581113881,47,"always"
 ?/bind
 |2,1,1581111891,47,"bind"
 ?/git
@@ -136,8 +168,6 @@ $
 |2,1,1579774934,47,"sdsss"
 ? ^
 |2,1,1579774922,,"^"
-?/vpn
-|2,1,1579773918,47,"vpn"
 ?/q
 |2,1,1579426792,47,"q"
 ?/jnkjwon:q
@@ -188,40 +218,10 @@ $
 |2,1,1575877119,47,"i##"
 ? \<Project\>
 |2,1,1575877113,,"\\<Project\\>"
-? @$
-|2,1,1575840766,,"@$"
 ?/HAD
 |2,1,1575630236,47,"HAD"
 ?/alert
 |2,1,1575232484,47,"alert"
-?/aliases
-|2,1,1575058068,47,"aliases"
-?/lkl
-|2,1,1575057443,47,"lkl"
-?/kjnd
-|2,1,1575057438,47,"kjnd"
-?/ss
-|2,1,1575057312,47,"ss"
-? \<shellcheck\>
-|2,1,1575053191,,"\\<shellcheck\\>"
-?/dds
-|2,1,1575056367,47,"dds"
-? #
-|2,1,1575056355,,"#"
-?/in PATH
-|2,1,1575055632,47,"in PATH"
-?/Gnome login manager
-|2,1,1575051709,47,"Gnome login manager"
-?/5678
-|2,1,1575039653,47,"5678"
-?/echo
-|2,1,1575039636,47,"echo"
-?/lknsdkds
-|2,1,1575039243,47,"lknsdkds"
-?/echon
-|2,1,1574984306,47,"echon"
-?/PATH
-|2,1,1574946028,47,"PATH"
 
 # Expression History (newest to oldest):
 
@@ -237,35 +237,36 @@ $
 
 # Registers:
 "0	LINE	0
-	alias gitlog='git log --pretty=format:"%>|(<9>)%Cgreen%h%Creset: Author: %Cblue%an%Creset | Committer: %Cblue%cn%Creset | Time: %ad%n         Note: %s" --graph --date=format:%Y-%M-%d %H:%m:%S'
-|3,0,0,1,1,0,1581094844,"alias gitlog='git log --pretty=format:\"%>|(<9>)%Cgreen%h%Creset: Author: %Cblue%an%Creset | Committer: %Cblue%cn%Creset | Time: %ad%n         Note: %s\" --graph --date=format:%Y-%M-%d %H:%m:%S'"
+	nameserver 
+|3,0,0,1,1,0,1584039188,"nameserver "
 "1	LINE	0
-	
-|3,0,1,1,1,0,1580939938,""
+	namespace
+|3,0,1,1,1,0,1586193326,"namespace"
 "2	LINE	0
-	#!/usr/bin/vim
-|3,0,2,1,1,0,1580939937,"#!/usr/bin/vim"
+	runtime
+|3,0,2,1,1,0,1586193326,"runtime"
 "3	LINE	0
-	# When login occurs via a login shell, this file is not read by bash(1), 
-|3,0,3,1,1,0,1580932515,"# When login occurs via a login shell, this file is not read by bash(1), "
+	Hadoop
+|3,0,3,1,1,0,1586193319,"Hadoop"
 "4	LINE	0
-	Guillem Olivé, [29.01.20 09:53]
-|3,0,4,1,1,0,1580814683,"Guillem Olivé, [29.01.20 09:53]"
+	AWS
+|3,0,4,1,1,0,1586193304,"AWS"
 "5	LINE	0
-	
-|3,0,5,1,1,0,1580814682,""
+	fromNbr
+|3,0,5,1,1,0,1586193141,"fromNbr"
 "6	LINE	0
-	Guillem Olivé, [29.01.20 09:53]
-|3,0,6,1,1,0,1580814679,"Guillem Olivé, [29.01.20 09:53]"
+	func
+|3,0,6,1,1,0,1586193135,"func"
 "7	LINE	0
-	ACTION=="add",SUBSYSTEMS=="usb",ATTRS{idVendor}=="1d6b",ATTRS{idProduct}=="0003" , ENV{DISPLAY}=":0",ENV{XAUTHORITY}="/home/ckb/.Xauthority",RUN+="meme=$(/usr/bin/whoami); /usr/bin/notify-send \"$meme -- BU_HD1 recognized\""
-|3,0,7,1,1,0,1580680745,"ACTION==\"add\",SUBSYSTEMS==\"usb\",ATTRS{idVendor}==\"1d6b\",ATTRS{idProduct}==\"0003\" , ENV{DISPLAY}=\":0\",ENV{XAUTHORITY}=\"/home/ckb/.Xauthority\",RUN+=\"meme=$(/usr/bin/whoami); /usr/bin/notify-send \\\"$meme -- BU_HD1 recognized\\\"\""
+	cli
+|3,0,7,1,1,0,1586193130,"cli"
 "8	LINE	0
-	#echo $DISPLAY
-|3,0,8,1,1,0,1580675068,"#echo $DISPLAY"
+	asci
+|3,0,8,1,1,0,1586193123,"asci"
 "9	LINE	0
-	
-|3,0,9,1,1,0,1580675064,""
+	echo $!
+	sleep 20
+|3,0,9,1,2,0,1584909460,"echo $!","sleep 20"
 "a	CHAR	0
 	989
 |3,0,10,0,1,0,1554973116,"989"
@@ -286,460 +287,505 @@ $
 	t
 |3,0,35,0,1,0,1540560835,"t"
 ""-	CHAR	0
-	 
-|3,1,36,0,1,0,1581113589," "
+	a
+|3,1,36,0,1,0,1586193337,"a"
 
 # File marks:
-'0  192  25  ~/.bash_aliases
-|4,48,192,25,1581114480,"~/.bash_aliases"
-'1  45  10  /etc/postfix/main.cf
-|4,49,45,10,1581113659,"/etc/postfix/main.cf"
-'2  337  187  ~/.bash_aliases
-|4,50,337,187,1581096932,"~/.bash_aliases"
-'3  334  187  ~/.bash_aliases
-|4,51,334,187,1581096932,"~/.bash_aliases"
-'4  50  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/controller/company_request_controller.py
-|4,52,50,0,1581096926,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/controller/company_request_controller.py"
-'5  50  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/controller/company_request_controller.py
-|4,53,50,0,1581096926,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/controller/company_request_controller.py"
-'6  336  121  ~/.bash_aliases
-|4,54,336,121,1581095409,"~/.bash_aliases"
-'7  333  121  ~/.bash_aliases
-|4,55,333,121,1581095409,"~/.bash_aliases"
-'8  47  30  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
-|4,56,47,30,1581089597,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
-'9  47  30  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
-|4,57,47,30,1581089597,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
+'0  122  1  ~/.vim/after/ckb-tech.utf-8.add
+|4,48,122,1,1586193369,"~/.vim/after/ckb-tech.utf-8.add"
+'1  122  1  ~/.vim/after/ckb-tech.utf-8.add
+|4,49,122,1,1586193369,"~/.vim/after/ckb-tech.utf-8.add"
+'2  122  1  ~/.vim/after/ckb-tech.utf-8.add
+|4,50,122,1,1586193369,"~/.vim/after/ckb-tech.utf-8.add"
+'3  122  1  ~/.vim/after/ckb-tech.utf-8.add
+|4,51,122,1,1586193369,"~/.vim/after/ckb-tech.utf-8.add"
+'4  66  0  ~/.vim/after/ckb-plain.utf-8.add
+|4,52,66,0,1586193188,"~/.vim/after/ckb-plain.utf-8.add"
+'5  1  0  ~/.vim/after/ckb-plain.utf-8.add.spl
+|4,53,1,0,1586193073,"~/.vim/after/ckb-plain.utf-8.add.spl"
+'6  814  13  ~/.vimrc
+|4,54,814,13,1586192885,"~/.vimrc"
+'7  227  15  ~/.bash_aliases
+|4,55,227,15,1586190244,"~/.bash_aliases"
+'8  227  16  ~/.bash_aliases
+|4,56,227,16,1586190198,"~/.bash_aliases"
+'9  227  25  ~/.bash_aliases
+|4,57,227,25,1586190178,"~/.bash_aliases"
 
 # Jumplist (newest first):
--'  192  25  ~/.bash_aliases
-|4,39,192,25,1581114480,"~/.bash_aliases"
--'  45  10  /etc/postfix/main.cf
-|4,39,45,10,1581113659,"/etc/postfix/main.cf"
--'  1  0  /etc/postfix/main.cf
-|4,39,1,0,1581113524,"/etc/postfix/main.cf"
--'  343  155  ~/.bash_aliases
-|4,39,343,155,1581111265,"~/.bash_aliases"
--'  337  187  ~/.bash_aliases
-|4,39,337,187,1581111214,"~/.bash_aliases"
--'  334  187  ~/.bash_aliases
-|4,39,334,187,1581096932,"~/.bash_aliases"
--'  334  187  ~/.bash_aliases
-|4,39,334,187,1581096932,"~/.bash_aliases"
--'  50  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/controller/company_request_controller.py
-|4,39,50,0,1581096926,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/controller/company_request_controller.py"
--'  50  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/controller/company_request_controller.py
-|4,39,50,0,1581096926,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/controller/company_request_controller.py"
--'  50  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/controller/company_request_controller.py
-|4,39,50,0,1581096926,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/controller/company_request_controller.py"
--'  336  121  ~/.bash_aliases
-|4,39,336,121,1581095409,"~/.bash_aliases"
--'  333  121  ~/.bash_aliases
-|4,39,333,121,1581095409,"~/.bash_aliases"
--'  333  121  ~/.bash_aliases
-|4,39,333,121,1581095409,"~/.bash_aliases"
--'  189  38  ~/.bash_aliases
-|4,39,189,38,1581094599,"~/.bash_aliases"
--'  186  38  ~/.bash_aliases
-|4,39,186,38,1581094599,"~/.bash_aliases"
--'  186  38  ~/.bash_aliases
-|4,39,186,38,1581094599,"~/.bash_aliases"
--'  186  38  ~/.bash_aliases
-|4,39,186,38,1581094599,"~/.bash_aliases"
--'  186  38  ~/.bash_aliases
-|4,39,186,38,1581094599,"~/.bash_aliases"
--'  128  46  ~/.bash_aliases
-|4,39,128,46,1581089899,"~/.bash_aliases"
--'  128  46  ~/.bash_aliases
-|4,39,128,46,1581089899,"~/.bash_aliases"
--'  128  46  ~/.bash_aliases
-|4,39,128,46,1581089899,"~/.bash_aliases"
--'  128  46  ~/.bash_aliases
-|4,39,128,46,1581089899,"~/.bash_aliases"
--'  128  46  ~/.bash_aliases
-|4,39,128,46,1581089899,"~/.bash_aliases"
--'  125  16  ~/.bash_aliases
-|4,39,125,16,1581089898,"~/.bash_aliases"
--'  125  16  ~/.bash_aliases
-|4,39,125,16,1581089898,"~/.bash_aliases"
--'  125  16  ~/.bash_aliases
-|4,39,125,16,1581089898,"~/.bash_aliases"
--'  125  16  ~/.bash_aliases
-|4,39,125,16,1581089898,"~/.bash_aliases"
--'  125  16  ~/.bash_aliases
-|4,39,125,16,1581089898,"~/.bash_aliases"
--'  4  0  ~/.bash_aliases
-|4,39,4,0,1581089895,"~/.bash_aliases"
--'  4  0  ~/.bash_aliases
-|4,39,4,0,1581089895,"~/.bash_aliases"
--'  4  0  ~/.bash_aliases
-|4,39,4,0,1581089895,"~/.bash_aliases"
--'  4  0  ~/.bash_aliases
-|4,39,4,0,1581089895,"~/.bash_aliases"
--'  4  0  ~/.bash_aliases
-|4,39,4,0,1581089895,"~/.bash_aliases"
--'  1  0  ~/.bash_aliases
-|4,39,1,0,1581089891,"~/.bash_aliases"
--'  1  0  ~/.bash_aliases
-|4,39,1,0,1581089891,"~/.bash_aliases"
--'  1  0  ~/.bash_aliases
-|4,39,1,0,1581089891,"~/.bash_aliases"
--'  1  0  ~/.bash_aliases
-|4,39,1,0,1581089891,"~/.bash_aliases"
--'  1  0  ~/.bash_aliases
-|4,39,1,0,1581089891,"~/.bash_aliases"
--'  47  30  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
-|4,39,47,30,1581089597,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
--'  47  30  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
-|4,39,47,30,1581089597,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
--'  47  30  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
-|4,39,47,30,1581089597,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
--'  47  30  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
-|4,39,47,30,1581089597,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
--'  47  30  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
-|4,39,47,30,1581089597,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
--'  47  30  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
-|4,39,47,30,1581089597,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
--'  47  30  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
-|4,39,47,30,1581089597,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
--'  47  30  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
-|4,39,47,30,1581079807,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
--'  47  30  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
-|4,39,47,30,1581079807,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
--'  47  30  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
-|4,39,47,30,1581079807,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
--'  47  30  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
-|4,39,47,30,1581079807,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
--'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/controller/company_request_controller.py
-|4,39,1,0,1581077270,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/controller/company_request_controller.py"
--'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/controller/company_request_controller.py
-|4,39,1,0,1581077270,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/controller/company_request_controller.py"
--'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/controller/company_request_controller.py
-|4,39,1,0,1581077270,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/controller/company_request_controller.py"
--'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
-|4,39,1,0,1581077091,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
--'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
-|4,39,1,0,1581077091,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
--'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
-|4,39,1,0,1581077091,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
--'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
-|4,39,1,0,1581077091,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
--'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
-|4,39,1,0,1581077091,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
--'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
-|4,39,1,0,1581077091,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
--'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
-|4,39,1,0,1581077091,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
--'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
-|4,39,1,0,1581077091,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
--'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
-|4,39,1,0,1581077091,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
--'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
-|4,39,1,0,1581077091,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
--'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
-|4,39,1,0,1581077091,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
--'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
-|4,39,1,0,1581077082,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
--'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
-|4,39,1,0,1581077082,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
--'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
-|4,39,1,0,1581077082,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
--'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
-|4,39,1,0,1581077082,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
--'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
-|4,39,1,0,1581077082,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
--'  1  0  ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
-|4,39,1,0,1581077082,"~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py"
--'  13  0  ~/.profile_bak
-|4,39,13,0,1580940027,"~/.profile_bak"
--'  13  0  ~/.profile_bak
-|4,39,13,0,1580940027,"~/.profile_bak"
--'  13  0  ~/.profile_bak
-|4,39,13,0,1580940027,"~/.profile_bak"
--'  13  0  ~/.profile_bak
-|4,39,13,0,1580940027,"~/.profile_bak"
--'  13  0  ~/.profile_bak
-|4,39,13,0,1580940027,"~/.profile_bak"
--'  13  0  ~/.profile_bak
-|4,39,13,0,1580940027,"~/.profile_bak"
--'  13  0  ~/.profile_bak
-|4,39,13,0,1580940027,"~/.profile_bak"
--'  13  0  ~/.profile_bak
-|4,39,13,0,1580940027,"~/.profile_bak"
--'  13  0  ~/.profile_bak
-|4,39,13,0,1580940027,"~/.profile_bak"
--'  13  0  ~/.profile_bak
-|4,39,13,0,1580940027,"~/.profile_bak"
--'  13  0  ~/.profile_bak
-|4,39,13,0,1580940027,"~/.profile_bak"
--'  13  0  ~/.profile_bak
-|4,39,13,0,1580940027,"~/.profile_bak"
--'  13  0  ~/.profile_bak
-|4,39,13,0,1580940027,"~/.profile_bak"
--'  13  0  ~/.profile_bak
-|4,39,13,0,1580940027,"~/.profile_bak"
--'  13  0  ~/.profile_bak
-|4,39,13,0,1580940027,"~/.profile_bak"
--'  13  0  ~/.profile_bak
-|4,39,13,0,1580940027,"~/.profile_bak"
--'  13  0  ~/.profile_bak
-|4,39,13,0,1580940027,"~/.profile_bak"
--'  13  0  ~/.profile_bak
-|4,39,13,0,1580940027,"~/.profile_bak"
--'  13  0  ~/.profile_bak
-|4,39,13,0,1580940027,"~/.profile_bak"
--'  13  0  ~/.profile_bak
-|4,39,13,0,1580940027,"~/.profile_bak"
--'  13  0  ~/.profile_bak
-|4,39,13,0,1580940027,"~/.profile_bak"
--'  13  0  ~/.profile_bak
-|4,39,13,0,1580940027,"~/.profile_bak"
--'  13  0  ~/.profile_bak
-|4,39,13,0,1580940027,"~/.profile_bak"
--'  13  0  ~/.profile_bak
-|4,39,13,0,1580940027,"~/.profile_bak"
--'  13  0  ~/.profile_bak
-|4,39,13,0,1580940027,"~/.profile_bak"
--'  13  0  ~/.profile_bak
-|4,39,13,0,1580940027,"~/.profile_bak"
--'  13  0  ~/.profile_bak
-|4,39,13,0,1580940027,"~/.profile_bak"
--'  18  0  ~/.profile_bak
-|4,39,18,0,1580939993,"~/.profile_bak"
--'  18  0  ~/.profile_bak
-|4,39,18,0,1580939993,"~/.profile_bak"
--'  18  0  ~/.profile_bak
-|4,39,18,0,1580939993,"~/.profile_bak"
--'  18  0  ~/.profile_bak
-|4,39,18,0,1580939993,"~/.profile_bak"
+-'  122  1  ~/.vim/after/ckb-tech.utf-8.add
+|4,39,122,1,1586193369,"~/.vim/after/ckb-tech.utf-8.add"
+-'  122  1  ~/.vim/after/ckb-tech.utf-8.add
+|4,39,122,1,1586193369,"~/.vim/after/ckb-tech.utf-8.add"
+-'  122  1  ~/.vim/after/ckb-tech.utf-8.add
+|4,39,122,1,1586193369,"~/.vim/after/ckb-tech.utf-8.add"
+-'  222  1  ~/.vim/after/ckb-tech.utf-8.add
+|4,39,222,1,1586193344,"~/.vim/after/ckb-tech.utf-8.add"
+-'  222  1  ~/.vim/after/ckb-tech.utf-8.add
+|4,39,222,1,1586193344,"~/.vim/after/ckb-tech.utf-8.add"
+-'  222  1  ~/.vim/after/ckb-tech.utf-8.add
+|4,39,222,1,1586193344,"~/.vim/after/ckb-tech.utf-8.add"
+-'  1  0  ~/.vim/after/ckb-tech.utf-8.add
+|4,39,1,0,1586193210,"~/.vim/after/ckb-tech.utf-8.add"
+-'  1  0  ~/.vim/after/ckb-tech.utf-8.add
+|4,39,1,0,1586193210,"~/.vim/after/ckb-tech.utf-8.add"
+-'  1  0  ~/.vim/after/ckb-tech.utf-8.add
+|4,39,1,0,1586193210,"~/.vim/after/ckb-tech.utf-8.add"
+-'  66  0  ~/.vim/after/ckb-plain.utf-8.add
+|4,39,66,0,1586193188,"~/.vim/after/ckb-plain.utf-8.add"
+-'  66  0  ~/.vim/after/ckb-plain.utf-8.add
+|4,39,66,0,1586193188,"~/.vim/after/ckb-plain.utf-8.add"
+-'  66  0  ~/.vim/after/ckb-plain.utf-8.add
+|4,39,66,0,1586193188,"~/.vim/after/ckb-plain.utf-8.add"
+-'  66  0  ~/.vim/after/ckb-plain.utf-8.add
+|4,39,66,0,1586193188,"~/.vim/after/ckb-plain.utf-8.add"
+-'  66  0  ~/.vim/after/ckb-plain.utf-8.add
+|4,39,66,0,1586193188,"~/.vim/after/ckb-plain.utf-8.add"
+-'  66  0  ~/.vim/after/ckb-plain.utf-8.add
+|4,39,66,0,1586193188,"~/.vim/after/ckb-plain.utf-8.add"
+-'  66  0  ~/.vim/after/ckb-plain.utf-8.add
+|4,39,66,0,1586193188,"~/.vim/after/ckb-plain.utf-8.add"
+-'  66  0  ~/.vim/after/ckb-plain.utf-8.add
+|4,39,66,0,1586193188,"~/.vim/after/ckb-plain.utf-8.add"
+-'  1  0  ~/.vim/after/ckb-plain.utf-8.add
+|4,39,1,0,1586193089,"~/.vim/after/ckb-plain.utf-8.add"
+-'  1  0  ~/.vim/after/ckb-plain.utf-8.add
+|4,39,1,0,1586193089,"~/.vim/after/ckb-plain.utf-8.add"
+-'  1  0  ~/.vim/after/ckb-plain.utf-8.add
+|4,39,1,0,1586193089,"~/.vim/after/ckb-plain.utf-8.add"
+-'  1  0  ~/.vim/after/ckb-plain.utf-8.add
+|4,39,1,0,1586193089,"~/.vim/after/ckb-plain.utf-8.add"
+-'  1  0  ~/.vim/after/ckb-plain.utf-8.add
+|4,39,1,0,1586193089,"~/.vim/after/ckb-plain.utf-8.add"
+-'  1  0  ~/.vim/after/ckb-plain.utf-8.add
+|4,39,1,0,1586193089,"~/.vim/after/ckb-plain.utf-8.add"
+-'  1  0  ~/.vim/after/ckb-plain.utf-8.add
+|4,39,1,0,1586193089,"~/.vim/after/ckb-plain.utf-8.add"
+-'  1  0  ~/.vim/after/ckb-plain.utf-8.add
+|4,39,1,0,1586193089,"~/.vim/after/ckb-plain.utf-8.add"
+-'  1  0  ~/.vim/after/ckb-plain.utf-8.add.spl
+|4,39,1,0,1586193073,"~/.vim/after/ckb-plain.utf-8.add.spl"
+-'  1  0  ~/.vim/after/ckb-plain.utf-8.add.spl
+|4,39,1,0,1586193073,"~/.vim/after/ckb-plain.utf-8.add.spl"
+-'  1  0  ~/.vim/after/ckb-plain.utf-8.add.spl
+|4,39,1,0,1586193073,"~/.vim/after/ckb-plain.utf-8.add.spl"
+-'  1  0  ~/.vim/after/ckb-plain.utf-8.add.spl
+|4,39,1,0,1586193073,"~/.vim/after/ckb-plain.utf-8.add.spl"
+-'  1  0  ~/.vim/after/ckb-plain.utf-8.add.spl
+|4,39,1,0,1586193073,"~/.vim/after/ckb-plain.utf-8.add.spl"
+-'  1  0  ~/.vim/after/ckb-plain.utf-8.add.spl
+|4,39,1,0,1586193073,"~/.vim/after/ckb-plain.utf-8.add.spl"
+-'  1  0  ~/.vim/after/ckb-plain.utf-8.add.spl
+|4,39,1,0,1586193073,"~/.vim/after/ckb-plain.utf-8.add.spl"
+-'  1  0  ~/.vim/after/ckb-plain.utf-8.add.spl
+|4,39,1,0,1586193073,"~/.vim/after/ckb-plain.utf-8.add.spl"
+-'  1  0  ~/.vim/after/ckb-plain.utf-8.add.spl
+|4,39,1,0,1586193073,"~/.vim/after/ckb-plain.utf-8.add.spl"
+-'  1  0  ~/.vim/after/ckb-plain.utf-8.add.spl
+|4,39,1,0,1586193073,"~/.vim/after/ckb-plain.utf-8.add.spl"
+-'  1  0  ~/.vim/after/ckb-plain.utf-8.add.spl
+|4,39,1,0,1586193073,"~/.vim/after/ckb-plain.utf-8.add.spl"
+-'  1  0  ~/.vim/after/ckb-plain.utf-8.add.spl
+|4,39,1,0,1586193073,"~/.vim/after/ckb-plain.utf-8.add.spl"
+-'  1  0  ~/.vim/after/ckb-plain.utf-8.add.spl
+|4,39,1,0,1586193073,"~/.vim/after/ckb-plain.utf-8.add.spl"
+-'  1  0  ~/.vim/after/ckb-plain.utf-8.add.spl
+|4,39,1,0,1586193073,"~/.vim/after/ckb-plain.utf-8.add.spl"
+-'  1  0  ~/.vim/after/ckb-plain.utf-8.add.spl
+|4,39,1,0,1586193073,"~/.vim/after/ckb-plain.utf-8.add.spl"
+-'  1  0  ~/.vim/after/ckb-plain.utf-8.add.spl
+|4,39,1,0,1586193073,"~/.vim/after/ckb-plain.utf-8.add.spl"
+-'  814  13  ~/.vimrc
+|4,39,814,13,1586192885,"~/.vimrc"
+-'  814  13  ~/.vimrc
+|4,39,814,13,1586192885,"~/.vimrc"
+-'  814  13  ~/.vimrc
+|4,39,814,13,1586192885,"~/.vimrc"
+-'  814  13  ~/.vimrc
+|4,39,814,13,1586192885,"~/.vimrc"
+-'  814  13  ~/.vimrc
+|4,39,814,13,1586192885,"~/.vimrc"
+-'  814  13  ~/.vimrc
+|4,39,814,13,1586192885,"~/.vimrc"
+-'  814  13  ~/.vimrc
+|4,39,814,13,1586192885,"~/.vimrc"
+-'  814  13  ~/.vimrc
+|4,39,814,13,1586192885,"~/.vimrc"
+-'  814  13  ~/.vimrc
+|4,39,814,13,1586192885,"~/.vimrc"
+-'  814  13  ~/.vimrc
+|4,39,814,13,1586192885,"~/.vimrc"
+-'  814  13  ~/.vimrc
+|4,39,814,13,1586192885,"~/.vimrc"
+-'  814  13  ~/.vimrc
+|4,39,814,13,1586192885,"~/.vimrc"
+-'  814  13  ~/.vimrc
+|4,39,814,13,1586192885,"~/.vimrc"
+-'  814  13  ~/.vimrc
+|4,39,814,13,1586192885,"~/.vimrc"
+-'  814  13  ~/.vimrc
+|4,39,814,13,1586192885,"~/.vimrc"
+-'  814  13  ~/.vimrc
+|4,39,814,13,1586192885,"~/.vimrc"
+-'  814  13  ~/.vimrc
+|4,39,814,13,1586192885,"~/.vimrc"
+-'  814  13  ~/.vimrc
+|4,39,814,13,1586192885,"~/.vimrc"
+-'  814  13  ~/.vimrc
+|4,39,814,13,1586192885,"~/.vimrc"
+-'  814  13  ~/.vimrc
+|4,39,814,13,1586192885,"~/.vimrc"
+-'  814  13  ~/.vimrc
+|4,39,814,13,1586192885,"~/.vimrc"
+-'  814  13  ~/.vimrc
+|4,39,814,13,1586192885,"~/.vimrc"
+-'  814  13  ~/.vimrc
+|4,39,814,13,1586192885,"~/.vimrc"
+-'  814  13  ~/.vimrc
+|4,39,814,13,1586192885,"~/.vimrc"
+-'  814  13  ~/.vimrc
+|4,39,814,13,1586192885,"~/.vimrc"
+-'  814  13  ~/.vimrc
+|4,39,814,13,1586192885,"~/.vimrc"
+-'  814  13  ~/.vimrc
+|4,39,814,13,1586192885,"~/.vimrc"
+-'  814  13  ~/.vimrc
+|4,39,814,13,1586192885,"~/.vimrc"
+-'  814  13  ~/.vimrc
+|4,39,814,13,1586192885,"~/.vimrc"
+-'  814  13  ~/.vimrc
+|4,39,814,13,1586192885,"~/.vimrc"
+-'  814  13  ~/.vimrc
+|4,39,814,13,1586192885,"~/.vimrc"
+-'  814  13  ~/.vimrc
+|4,39,814,13,1586192885,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1586190974,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1586190974,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1586190974,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1586190974,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1586190974,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1586190974,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1586190974,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1586190974,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1586190974,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1586190974,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1586190974,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1586190974,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1586190974,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1586190974,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1586190974,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1586190974,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1586190974,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1586190974,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1586190974,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1586190974,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1586190974,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1586190974,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1586190974,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1586190974,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1586190974,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1586190974,"~/.vimrc"
 
 # Buffer list:
-%~/.bash_aliases	192	25
+%~/.vim/after/ckb-tech.utf-8.add	122	1
 
 # History of marks within files (newest to oldest):
 
-> /etc/postfix/main.cf
-	*	1581113657	0
-	"	45	10
-	^	23	2
-	.	23	1
-	+	19	53
-	+	20	59
-	+	22	61
-	+	24	0
-	+	22	71
-	+	23	1
+> ~/.vim/after/ckb-tech.utf-8.add
+	*	1586193368	0
+	"	122	1
+	.	222	0
+	+	262	0
+	+	246	0
+	+	247	0
+	+	222	0
 
-> ~/.bash_aliases
-	*	1581112909	0
-	"	192	25
-	^	189	26
-	.	189	25
-	+	338	0
-	+	337	22
-	+	338	23
-	+	337	151
-	+	337	55
-	+	337	149
-	+	338	84
-	+	337	133
-	+	337	46
-	+	337	139
-	+	337	46
-	+	337	94
-	+	334	149
-	+	337	180
-	+	337	39
-	+	337	45
-	+	335	0
-	+	337	39
-	+	337	167
-	+	335	193
-	+	335	0
-	+	337	0
-	+	335	0
-	+	337	0
-	+	337	121
-	+	336	31
-	+	334	124
-	+	337	187
-	+	189	6
-	+	192	20
-	+	186	91
-	+	187	96
-	+	188	33
-	+	189	25
+> ~/.vim/after/ckb-plain.utf-8.add
+	*	1586193185	0
+	"	66	0
+	.	71	0
+	+	63	0
+	+	59	0
+	+	70	0
+	+	71	0
 
-> ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/controller/company_request_controller.py
-	*	1581096922	0
-	"	50	0
-
-> ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-querymgr/query_mgr/main/service/spark_queries.py
-	*	1581089583	0
-	"	47	30
-
-> ~/.profile_bak
-	*	1580939995	0
-	"	13	0
-	.	1	0
-	+	2	0
-	+	15	0
-	+	13	0
-	+	1	1
-	+	1	0
-
-> /usr/share/vim/vim82/doc/fold.txt
-	*	1580939821	0
-	"	300	27
-
-> ~/file.txt
-	*	1580938161	0
-	"	1	9
-	^	1	10
-	.	1	9
-	+	1	9
-
-> /etc/pacman.conf
-	*	1580891523	0
-	"	22	18
-	^	26	20
-	.	26	15
-	+	26	15
-
-> ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/basdev-crudspii/.git/config
-	*	1580817943	0
-	"	11	25
-
-> ~/.vimrc
-	*	1580815649	0
-	"	599	0
-
-> ~/Documents/Work/Projects/Kubik-data/Src/kubik-codcom/readme.txt
-	*	1580814825	0
-	"	1	56
-	^	1	45
-	.	1	44
-	+	4	48
-	+	3	0
-	+	4	3
-	+	3	7
-	+	9	66
-	+	8	0
-	+	7	0
-	+	6	59
-	+	7	59
-	+	8	62
-	+	7	62
-	+	6	70
-	+	7	70
-	+	8	71
-	+	1	44
-
-> ~/Documents/Work/Projects/Kubik-data/Src/kubik-prov/CrudPII/main/config.py
-	*	1580810641	0
-	"	41	0
-
-> /etc/udev/rules.d/99-ckb-exe.rules
-	*	1580680868	0
-	"	8	114
-	^	8	82
-	.	8	81
-	+	7	200
-	+	7	0
-	+	8	53
-	+	14	0
-	+	15	0
-	+	16	0
-	+	15	92
-	+	8	0
-	+	8	81
-
-> ~/Documents/Scripts/currentdispl.sh
-	*	1580675134	0
-	"	4	5
-	^	4	20
-	.	4	5
-	+	1	2
-	+	2	0
-	+	3	0
-	+	8	24
-	+	4	13
-	+	4	5
-
-> /opt/bin/bckitup1
-	*	1580675072	0
-	"	28	0
-	.	28	0
-	+	79	13
-	+	80	56
-	+	79	0
-	+	9	0
-	+	10	8
-	+	11	11
-	+	10	12
-	+	12	11
-	+	13	11
-	+	27	94
-	+	27	0
-	+	27	136
-	+	27	4
-	+	20	0
-	+	27	0
-	+	27	1
-	+	27	0
-	+	20	6
-	+	27	0
-	+	60	17
-	+	20	7
-	+	27	0
-	+	60	18
-	+	20	56
-	+	28	12
-	+	28	0
-	+	27	32
-	+	21	20
-	+	21	0
-	+	21	8
-	+	21	0
-	+	27	0
-	+	20	0
-	+	21	0
-	+	28	0
-	+	21	0
-	+	27	0
-	+	21	0
-	+	28	0
-
-> /opt/bin/bckitup2
-	*	1580674930	0
-	"	19	0
-
-> /opt/scripts/run_oncedaily
-	*	1580674470	0
-	"	31	24
-	^	40	11
-	.	40	10
-	+	42	32
-	+	45	4
-	+	40	8
-	+	20	23
-	+	31	23
-	+	40	10
-
-> /opt/scripts/bckitup1
-	*	1580666672	0
+> ~/.vim/after/ckb-plain.utf-8.add.spl
+	*	1586193069	0
 	"	1	0
 
-> /etc/netctl/wifi_basetis-guest
-	*	1580371245	0
-	"	7	16
-	^	7	17
-	.	7	16
-	+	7	16
+> ~/.vimrc
+	*	1586192879	0
+	"	814	13
 
-> /etc/netctl/wifi_basetis-pedrera
-	*	1580370733	0
-	"	8	19
-	^	8	20
-	.	8	19
-	+	8	19
+> ~/.bash_aliases
+	*	1586190243	0
+	"	227	15
+	^	221	18
+	.	227	12
+	+	360	121
+	+	359	31
+	+	357	124
+	+	360	187
+	+	196	6
+	+	199	20
+	+	193	91
+	+	194	96
+	+	195	33
+	+	196	25
+	+	409	88
+	+	410	0
+	+	409	13
+	+	264	23
+	+	265	44
+	+	266	44
+	+	268	15
+	+	273	0
+	+	268	28
+	+	272	7
+	+	269	5
+	+	268	6
+	+	267	14
+	+	269	32
+	+	270	14
+	+	271	21
+	+	267	16
+	+	269	62
+	+	268	16
+	+	269	43
+	+	270	12
+	+	269	53
+	+	275	0
+	+	264	13
+	+	322	27
+	+	323	0
+	+	322	10
+	+	408	80
+	+	50	28
+	+	50	14
+	+	50	28
+	+	50	0
+	+	50	30
+	+	50	0
+	+	4	1
+	+	29	34
+	+	4	18
+	+	50	32
+	+	33	0
+	+	50	65
+	+	50	4
+	+	50	7
+	+	66	18
+	+	50	63
+	+	38	0
+	+	37	0
+	+	27	0
+	+	28	0
+	+	50	0
+	+	27	6
+	+	50	0
+	+	50	26
+	+	50	90
+	+	50	0
+	+	68	0
+	+	69	0
+	+	70	0
+	+	71	0
+	+	72	0
+	+	73	0
+	+	74	0
+	+	75	3
+	+	76	0
+	+	75	3
+	+	74	3
+	+	71	5
+	+	75	11
+	+	66	0
+	+	73	14
+	+	50	0
+	+	59	0
+	+	55	0
+	+	56	12
+	+	78	0
+	+	72	17
+	+	75	18
+	+	75	0
+	+	72	0
+	+	70	15
+	+	75	59
+	+	70	0
+	+	75	61
+	+	330	21
+	+	331	22
+	+	227	25
+	+	228	0
+	+	227	16
+	+	221	17
+	+	222	17
+	+	227	12
+
+> ~/.bashrc
+	*	1586189901	0
+	"	69	11
+	^	119	43
+	.	119	42
+	+	222	119
+	+	230	49
+	+	222	118
+	+	230	49
+	+	108	36
+	+	118	9
+	+	119	42
+
+> ~/.profile
+	*	1585909636	0
+	"	64	33
+	^	64	27
+	.	64	26
+	+	64	26
+
+> ~/.bash_profile
+	*	1585909353	0
+	"	58	0
+
+> ~/.pyrc
+	*	1585907803	0
+	"	30	4
+	^	11	18
+	.	30	4
+	+	1	19
+	+	11	12
+	+	25	11
+	+	30	4
+	+	25	13
+	+	11	17
+	+	30	4
+	+	25	16
+	+	11	17
+	+	30	4
+
+> ~/rel_code_enpoints
+	*	1585137561	0
+	"	3	0
+	^	3	0
+	.	3	0
+	+	9	46
+	+	1	0
+	+	2	38
+	+	3	0
+
+> ~/Documents/Scripts/hilite
+	*	1584909464	0
+	"	23	0
+	^	23	0
+	.	23	0
+	+	24	0
+	+	23	0
+
+> /tmp/crontab.TtTIoN
+	*	1584637951	0
+	"	13	0
+
+> ~/Documents/Scripts/data3
+	*	1584565172	0
+	"	2	32
+	^	2	33
+	.	2	32
+	+	2	32
+
+> ~/Documents/Work/Projects/Kubik-data/Src/gleanip.sh
+	*	1584484448	0
+	"	2	0
+	^	2	0
+	.	1	2
+	+	1	2
+
+> /etc/ssh/sshd_config
+	*	1584220122	0
+	"	37	14
+
+> /usr/share/vim/vim82/doc/pi_netrw.txt
+	*	1584092046	0
+	"	50	64
+
+> /etc/resolv.conf
+	*	1584039892	0
+	"	5	0
+	^	4	1
+	.	4	0
+	+	6	10
+	+	11	0
+	+	6	0
+	+	10	0
+	+	6	0
+	+	10	1
+	+	6	0
+	+	10	0
+	+	6	37
+	+	9	12
+	+	10	0
+	+	7	9
+	+	4	0
+	+	7	10
+	+	3	1
+	+	5	34
+	+	8	0
+	+	9	0
+	+	8	22
+	+	3	0
+	+	4	0
+	+	5	10
+	+	6	0
+	+	4	0
+	+	3	0
+	+	5	0
+	+	6	21
+	+	5	0
+	+	6	0
+	+	5	21
+	+	6	0
+	+	3	0
+	+	4	0
+
+> /etc/resolv.conf_bak_dac-vpn
+	*	1584028983	0
+	"	5	1
+	^	5	5
+	.	5	0
+	+	5	0
+
+> /etc/resolv.conf.bak
+	*	1584028121	0
+	"	6	0
+
+> /etc/openvpn/vpn.basetis-pedrera.ovpn
+	*	1584026547	0
+	"	15	21
+	^	15	22
+	.	15	21
+	+	15	21

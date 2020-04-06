@@ -243,10 +243,7 @@ x86-64
 BUILDENV
 torsocks
 bashrc
-Hadoop
 verNbr
-runtime
-namespace
 cvs
 C-V
 cb
@@ -262,7 +259,6 @@ assuming
 shellcheck
 debian
 Anaconda2
-AWS
 anaconda2
 defs
 pam

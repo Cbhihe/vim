@@ -56,12 +56,10 @@ PYTHON
 linux
 visualCity
 instantiation
-cli
 eq
 DAC
 keep
 globals
-asci
 ascii
 everytime
 mvt
@@ -69,8 +67,6 @@ delInBrackets
 Prepend
 Memozize
 Memoization
-func
 parametrized
-fromNbr
 slowDown
 Stateful
