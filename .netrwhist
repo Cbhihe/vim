@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/ckb/.vim'
 let g:netrw_dirhist_3='/home/ckb/.thunderbird'
 let g:netrw_dirhist_2='/home/ckb/Documents/Work/Projects/Kubik-data/Src/kubik-prov/.git'
 let g:netrw_dirhist_1='/etc/netctl'

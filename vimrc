@@ -179,20 +179,22 @@ nmap <F2> a [ckb]  <Esc>a <C-R>=strftime("%c")<CR><Esc>
 set go+=a           " enable automatic X11 primary `"*y` register copying just 
 					" by highlighting with mouse in visual mode
 vmap <C-c> "+y		
-					" map CTRL+c to yank to clipboard in visual mode
+					" map CTRL+c to yank to system's clipboard in visual mode
 vmap <C-x> "+d	
-					" map CTRL+x to cut to clipboard in visual mode
+					" map CTRL+x to cut to system's clipboard in visual mode
 
 noremap <Leader>ft <Esc>:tabnew .<CR>
-noremap <C-t>  <Esc>:tabnew .<CR>
-					" OPEN directory tree in second buffer.
-					" :q to CLOSE and come back to calling buffer
+noremap <C-t> <Esc>:tabnew .<CR>
+					" open new buffer with pwd's file tree (ft | t)
+					" ':q' to CLOSE and come back to calling buffer
 
-inoremap <C-u>	<Esc>ebveuea
-nnoremap <C-u>	ebveue
+inoremap <C-u> <Esc>ebveuea
+inoremap <Leader>u <Esc>ebveuea
+nnoremap <C-u> ebveue
 					" transform whole current word in lowercase
-inoremap <C-U>	<Esc>ebveUea
-nnoremap <C-U>	ebveUe
+inoremap <C-U> <Esc>ebveUea
+inoremap <Leader>U <Esc>ebveUea
+nnoremap <C-U> ebveUe
 					" transform whole current word in uppercase
 
 " Function 'SelectMinTextObject()' defined in ~/.vim/functions.vim
@@ -458,15 +460,23 @@ let g:syntastic_ruby_mri_exec = '/user/bin/ruby'
 
 
 " =========================
-" Status line
+" Status line {{{1
 " =========================
+set showcmd         " Show cmd at bottom right hand corner of screen, left of cursor 
+					" location. <leader> disappears after timeoutlen has expired.
+set showmode        " Show mode status n statusline at bottom of screen 
+set statusline=%<\ %n\ %f\ %m%r%h\ %y%=\ Line:\ \%l/\%L\ (\%p%%)\ Column:\ \%c\ 
+					" Specify content of status line
+set laststatus=2    " Always set status line of last window on
 let g:streamline_minimal_ui = 1
                 " Enable minimalist mode for status line
- let g:strealine_show_ale_status = 1
+let g:strealine_show_ale_status = 1
                 " show ALE errors and warnings in status line
+"}}}1
+
 
 " =========================
-" Colors
+" Colors   {{{1
 " =========================
 "syntax on			" Enable syntax highlighting using vim default highlight colors. 
 					" By default 'syntax on' also turns on filetype detection.
@@ -566,9 +576,11 @@ augroup hlNonascii
 					" Highlight non ASCII characters in Vim
 					" In ex mode, to find non ASCIIs: /[^[:alnum:][:punct:][:space:]]/
 augroup END
+"1}}}
+
 
 " =========================
-" General settings
+" General settings   {{{1
 " =========================
 set showmode		" Show mode (vim default) on last line of buffer window
 set noerrorbells	" Turn off audible error bells
@@ -586,8 +598,6 @@ set magic			" Make characters have the same meaning as in grep regexp
 					"   to activate their special meaning.
 					" ':set nomagic' is the opposite of ':set magic'
 set lazyredraw		" Don't allow redraw when using macros
-set ignorecase		" Make case insensitive
-set smartcase		" Use case/become case-sensitive if caps is used
 set mouse=a			" Allow normal mouse behavior in all 4 principal modes
 set number numberwidth=5
 					" Place a number left of each line start.
@@ -595,11 +605,11 @@ set timeout			" Timeout on :mappings and key codes (when timeout off (default))
 set timeoutlen=1500 " Define time (ms) available to enter command after the <leader>
 					" or during entry of key combination. Default value is 1000.
 					" synonym of 'set tm=1500'
-set incsearch		" Show match as search proceeds
+"}}}1
 
 
 " =========================
-" viminfo + last cursor position
+" viminfo + last cursor position   {{{1
 " =========================
 " :help 'viminfo'	for more details
 " :set viminfo?		to inspect parameter values
@@ -654,25 +664,30 @@ augroup resCur
 augroup END
 				    " at 3rd line in above block, make g`" into g'" to restore cursor 
 				    " position to last line, at beginning of line
+"}}}1
+
 
 " =========================
-" Undo
+" Undo  {{{1
 " =========================
 set undodir=~/.vim/undodir
 set undofile
+"}}}1
+
 
 " =========================
-" Buffer swap, backup, write-backup files, temporary working directory
+" Buffer swap, backup, write-backup files, temporary working directory  {{{1
 " =========================
 set noswapfile		" disable swap for vim buffers
 set nobackup		" don't make ~ file backups
 set writebackup		" save a temporary backup of file(s) being edited with vim 
 set backupdir=~/.vim/backups
 set directory=~/.vim/tmp
+"}}}1
 
 
 " =========================
-" Spell checking
+" Spell checking  {{{1
 " =========================
 " See ':help spell-quickstart'
 " After manual editing of ~/.vim/after/$USER-*.utf-8.add, recreate corresponding 
@@ -701,17 +716,19 @@ hi SpellBad ctermfg=1* ctermbg=0* cterm=none guisp=Blue gui=undercurl
 "hi SpellRare ctermfg=00 ctermbg=06 cterm=none guifg=#000000 guibg=#008080
 "hi clear SpellLocal
 "hi SpellLocal ctermfg=00 ctermbg=06 cterm=none guifg=#000000 guibg=#008080
+"}}}1
 
 
 " =========================
-" Input completion
+" Input completion  {{{1
 " =========================
 set complete+=k		" 'k' = scan the files given in 'set dict=...' option below
 set dictionary+=~/.vim/dict/iab-dict   
+"}}}1
 
 
 " =========================
-" Sane text files
+" Sane text files {{{1
 " =========================
 set fileformats=unix,dos,mac
 					" Specify globally which file formats will be tried when 
@@ -727,16 +744,15 @@ set fileformats=unix,dos,mac
 					" When not empty 'fileformat' is ignored.
 set fileformat=unix	" Set file format locally
 					" :ff=unix to act locally on active buffer
+"}}}1
 
 
 " =========================
-" Sane editing
+" Sane editing {{{1
 " =========================
 
 packadd! matchit	" Make % cmd jump to matching HTML tags, if/else/endif 
 					" constructs, etc.
-set foldmethod=manual
-					" define fold automatically by indent w/ 'indent'
 set wrap			" Display word wrapped text; do not change text in buffer
 set linebreak		" Intelligent wrapping occurs at characters " ^I!@*-+;:,./?"
 					" (per vim default) or by 'breakat' option
@@ -782,31 +798,27 @@ set wildignorecase
 set wildmode=longest,list  
 					" When more than 1 match occurs, list all matches 
 					" and complete till longest common string.
+"}}}1
 
 
 " =========================
-" Status line
+" Search {{{1
 " =========================
-set showcmd         " Show cmd at bottom right hand corner of screen, left of cursor 
-					" location. <leader> disappears after timeoutlen has expired.
-set showmode        " Show mode status n statusline at bottom of screen 
-set statusline=%<\ %n\ %f\ %m%r%h\ %y%=\ Line:\ \%l/\%L\ (\%p%%)\ Column:\ \%c\ 
-					" Specify content of status line
-
-" =========================
-" Search 
-" =========================
+set incsearch		" Show match incrementally as search proceeds
+set ignorecase		" Make case insensitive
+set smartcase		" Use case/become case-sensitive if caps is used
 set hlsearch
 
 :command WR :let @/=""
-					" wipe register containing the last searched string. 
-					" make `:norm n` unavailable to search next occurrence.
+					" Wipe register containing the last searched string. 
+					" Make `:norm n` unavailable to search next occurrence.
 hi clear Search     " Change default color for searched words
 hi Search ctermfg=DarkRed ctermbg=grey cterm=none guisp=red gui=underline
+"}}}1
 
 
 " =========================
-" User defined commands
+" User defined commands {{{1
 " =========================
 " CMDS only accepted if initial letter is capitalized
 :command WQ	wq
@@ -817,6 +829,7 @@ hi Search ctermfg=DarkRed ctermbg=grey cterm=none guisp=red gui=underline
 					" command mode: auto correction
 :command Q	q
 					" command mode: auto correction
+"}}}1
 
 
 " =========================
@@ -834,4 +847,34 @@ hi Search ctermfg=DarkRed ctermbg=grey cterm=none guisp=red gui=underline
 "    echo 'Python 3.x dynamically loaded'
 "  endif
 "endif
+
+
+" ========================
+" Folding modes, method, text and pattern {{{1
+" ========================
+" vim:ft=vim:fdl=0:fdc=1
+set filetype=vim 
+"set foldmethod=marker     " defined for vim only in ~/.vim/after/plugin/vim.vim
+"set foldmethod=manual     " define fold automatically by indent w/ 'indent'
+set foldlevel=0 
+set foldcolumn=1
+
+" Function MyfoldText() {{{2
+"function! MyFoldText()
+"    let line = getline(v:foldstart)
+
+"    let nucolwidth = &foldcolumn + &number * &numberwidth
+"    let windowwidth = winwidth(0) - nucolwidth - 4
+"    let foldedlinecount = v:foldend - v:foldstart
+
+"    " expand tabs into spaces
+"    let chunks = split(line, "\t", 1)
+"    let line = join(map(chunks[:-2], 'v:val . repeat(" ", &tabstop - strwidth(v:val) % &tabstop)'), '') . chunks[-1]
 "
+"    let line = strpart(line, 0, windowwidth - 2 - len(foldedlinecount))
+"    let fillcharcount = windowwidth - len(line) - len(foldedlinecount) - 1
+"    return line . ' ...' . repeat(' ', fillcharcount) . foldedlinecount . ' '
+"endfunction
+"2}}}2
+"set foldtext=MyFoldText()
+"}}}1
