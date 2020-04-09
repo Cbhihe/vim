@@ -70,3 +70,6 @@ Memoization
 parametrized
 slowDown
 Stateful
+prepending
+lhs
+timestamp

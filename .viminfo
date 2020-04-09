@@ -11,23 +11,57 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/linebreak
+~MSle0/linebreak
 
 # Last Substitute Search Pattern:
-~MSle0&^
+~MSle0~&^    
 
 # Last Substitute String:
-$"
+$
 
 # Command Line History (newest to oldest):
 :wq
-|2,0,1586382591,,"wq"
+|2,0,1586429850,,"wq"
+:ls
+|2,0,1586429229,,"ls"
+:b 1
+|2,0,1586429225,,"b 1"
+:set cpoptions?
+|2,0,1586428771,,"set cpoptions?"
+:help cpoptions
+|2,0,1586428628,,"help cpoptions"
+:bnext
+|2,0,1586428172,,"bnext"
+:w
+|2,0,1586428141,,"w"
+:help mapleader
+|2,0,1586427402,,"help mapleader"
 :q
-|2,0,1586382300,,"q"
+|2,0,1586427389,,"q"
+:set paste?
+|2,0,1586427343,,"set paste?"
+:help nopaste
+|2,0,1586427111,,"help nopaste"
+:set nopaste?
+|2,0,1586427103,,"set nopaste?"
+:set mapleader?
+|2,0,1586425967,,"set mapleader?"
+:set Leader?
+|2,0,1586425913,,"set Leader?"
+:scriptnames
+|2,0,1586425072,,"scriptnames"
+:set runtimepath?
+|2,0,1586424965,,"set runtimepath?"
+:r !lastmod.sh
+|2,0,1586424526,,"r !lastmod.sh"
+:!datestamp
+|2,0,1586424496,,"!datestamp"
+:r
+|2,0,1586424388,,"r"
+:set viminfo?
+|2,0,1586423808,,"set viminfo?"
 :help breakat
 |2,0,1586382166,,"help breakat"
-:w
-|2,0,1586382161,,"w"
 :help atb
 |2,0,1586381891,,"help atb"
 :help atbreak
@@ -86,42 +120,10 @@ $"
 |2,0,1586194702,,"tabnew"
 :w foobar2
 |2,0,1586195173,,"w foobar2"
-:help tabnew
-|2,0,1586194781,,"help tabnew"
-:tabnew .
-|2,0,1586194770,,"tabnew ."
-:1g
-|2,0,1586189799,,"1g"
-:help netrw
-|2,0,1584090935,,"help netrw"
-:1
-|2,0,1583693049,,"1"
-:1,$d
-|2,0,1582996497,,"1,$d"
-:r !cat wifi_kubik-guest
-|2,0,1582816151,,"r !cat wifi_kubik-guest"
-:r cat wifi_kubik-guest
-|2,0,1582816141,,"r cat wifi_kubik-guest"
-:w /etc/netctl/wifi_pybcn
-|2,0,1582369073,,"w /etc/netctl/wifi_pybcn"
-:w wifi_pybcn
-|2,0,1582365834,,"w wifi_pybcn"
-:w! lx-sign_ckb2.html
-|2,0,1582049560,,"w! lx-sign_ckb2.html"
-:w utctime.py
-|2,0,1581883992,,"w utctime.py"
-:w datetime2utc.py
-|2,0,1581883967,,"w datetime2utc.py"
-:$
-|2,0,1581491832,,"$"
-:!pwd
-|2,0,1581429449,,"!pwd"
-:PluginSearch streamlineº
-|2,0,1581428915,,"PluginSearch streamlineº"
-:w!
-|2,0,1581113654,,"w!"
 
 # Search String History (newest to oldest):
+? ^    
+|2,1,1586429360,,"^    "
 ?/linebreak
 |2,1,1586381792,47,"linebreak"
 ?/statusline
@@ -220,8 +222,6 @@ $"
 |2,1,1577018225,,"BU_HD1"
 ? bu_hd1
 |2,1,1577018150,,"bu_hd1"
-?/BU_HD2
-|2,1,1577017975,47,"BU_HD2"
 
 # Expression History (newest to oldest):
 
@@ -236,57 +236,51 @@ $"
 # Debug Line History (newest to oldest):
 
 # Registers:
-"0	CHAR	0
-	 vim: filetype=vim foldmethod=marker foldlevel=0 foldcolumn=3
-|3,0,0,0,1,0,1586289524," vim: filetype=vim foldmethod=marker foldlevel=0 foldcolumn=3"
-""1	LINE	0
+"0	LINE	0
+	"}}}1
+|3,0,0,1,1,0,1586425837,"\"}}}1"
+"1	LINE	0
 	
-	
-|3,1,1,1,2,0,1586382575,"",""
+|3,0,1,1,1,0,1586429693,""
 "2	LINE	0
-	" =========================
-	" Status line
-	" =========================
-|3,0,2,1,3,0,1586382566,"\" =========================","\" Status line","\" ========================="
-"3	LINE	0
-	"}}}1
-|3,0,3,1,1,0,1586382551,"\"}}}1"
-"4	LINE	0
-	" =========================
-	" Status line {{{1
-	" =========================
-	set showcmd         " Show cmd at bottom right hand corner of screen, left of cursor 
-						" location. <leader> disappears after timeoutlen has expired.
-	set showmode        " Show mode status n statusline at bottom of screen 
-	set statusline=%<\ %n\ %f\ %m%r%h\ %y%=\ Line:\ \%l/\%L\ (\%p%%)\ Column:\ \%c\ 
-						" Specify content of status line
-	set laststatus=2    " Always set status line of last window on
-	"}}}1
-|3,0,4,1,10,0,1586382538,"\" =========================","\" Status line {{{1","\" =========================","set showcmd         \" Show cmd at bottom right hand corner of screen, left of cursor ","					\" location. <leader> disappears after timeoutlen has expired.","set showmode        \" Show mode status n statusline at bottom of screen ","set statusline=%<\\ %n\\ %f\\ %m%r%h\\ %y%=\\ Line:\\ \\%l/\\%L\\ (\\%p%%)\\ Column:\\ \\%c\\ ",>40
-|<"					\" Specify content of status line","set laststatus=2    \" Always set status line of last window on","\"}}}1"
-"5	LINE	0
-	set foldmethod=manual
-						" define fold automatically by indent w/ 'indent'
-|3,0,5,1,2,0,1586381984,"set foldmethod=manual","					\" define fold automatically by indent w/ 'indent'"
-"6	LINE	0
-	set ignorecase		" Make case insensitive
-	set smartcase		" Use case/become case-sensitive if caps is used
-|3,0,6,1,2,0,1586380475,"set ignorecase		\" Make case insensitive","set smartcase		\" Use case/become case-sensitive if caps is used"
-"7	LINE	0
-	set incsearch		" Show match as search proceeds
-|3,0,7,1,1,0,1586380344,"set incsearch		\" Show match as search proceeds"
-"8	LINE	0
-	set foldmethod=marker
-|3,0,8,1,1,0,1586293176,"set foldmethod=marker"
-"9	LINE	0
 	
-|3,0,9,1,1,0,1586291945,""
+|3,0,2,1,1,0,1586426996,""
+"3	LINE	0
+	
+|3,0,3,1,1,0,1586426992,""
+"4	LINE	0
+	" =================================
+|3,0,4,1,1,0,1586425925,"\" ================================="
+"5	LINE	0
+	
+|3,0,5,1,1,0,1586425874,""
+"6	LINE	0
+	
+|3,0,6,1,1,0,1586425809,""
+"7	LINE	0
+	" ==== pymode config for syntax checkers
+	let g:pymode_python = '/usr/bin/python3'
+	"let g:pymode_lint_on_write = 0
+	                " if needed disable lint check in 'python-mode'
+	"let g:pymode_lint_ignore = 'E265,E266'
+	                    " Disables PEP8 linting messages selectively // OLD
+	
+|3,0,7,1,7,0,1586425784,"\" ==== pymode config for syntax checkers","let g:pymode_python = '/usr/bin/python3'","\"let g:pymode_lint_on_write = 0","                \" if needed disable lint check in 'python-mode'","\"let g:pymode_lint_ignore = 'E265,E266'","                    \" Disables PEP8 linting messages selectively // OLD",""
+"8	LINE	0
+	
+|3,0,8,1,1,0,1586425356,""
+"9	LINE	0
+	let g:streamline_minimal_ui = 1
+	                " Enable minimalist mode for status line
+	let g:strealine_show_ale_status = 1
+	                " show ALE errors and warnings in status line
+|3,0,9,1,4,0,1586423679,"let g:streamline_minimal_ui = 1","                \" Enable minimalist mode for status line","let g:strealine_show_ale_status = 1","                \" show ALE errors and warnings in status line"
 "a	CHAR	0
-	1{{{
-|3,0,10,0,1,0,1586290705,"1{{{"
+	{{{1
+|3,0,10,0,1,0,1586424324,"{{{1"
 "b	LINE	0
-	" 1}}}
-|3,0,11,1,1,0,1586290727,"\" 1}}}"
+	"}}}1
+|3,0,11,1,1,0,1586425379,"\"}}}1"
 "d	LINE	0
 	highlight Nonascii ctermbg=Black ctermfg=Red cterm=italic
 						" guibg=Black guifg=Red
@@ -303,51 +297,119 @@ $"
 "z	CHAR	0
 	t
 |3,0,35,0,1,0,1540560835,"t"
-"-	CHAR	0
-	"
-|3,0,36,0,1,0,1586382561,"\""
+""-	CHAR	0
+	TEST
+|3,1,36,0,1,0,1586429758,"TEST"
 
 # File marks:
-'0  303  0  ~/.vimrc
-|4,48,303,0,1586382592,"~/.vimrc"
-'1  859  0  ~/.vimrc
-|4,49,859,0,1586293490,"~/.vimrc"
-'2  859  0  ~/.vimrc
-|4,50,859,0,1586293490,"~/.vimrc"
-'3  858  0  ~/.vimrc
-|4,51,858,0,1586293490,"~/.vimrc"
-'4  858  0  ~/.vimrc
-|4,52,858,0,1586293490,"~/.vimrc"
-'5  821  0  ~/.vimrc
-|4,53,821,0,1586293447,"~/.vimrc"
-'6  821  0  ~/.vimrc
-|4,54,821,0,1586293447,"~/.vimrc"
-'7  821  0  ~/.vimrc
-|4,55,821,0,1586293447,"~/.vimrc"
-'8  821  0  ~/.vimrc
-|4,56,821,0,1586293447,"~/.vimrc"
-'9  821  0  ~/.vimrc
-|4,57,821,0,1586293447,"~/.vimrc"
+'0  192  12  ~/.vimrc
+|4,48,192,12,1586429850,"~/.vimrc"
+'1  9  30  ~/Documents/Scripts/lastmod
+|4,49,9,30,1586424819,"~/Documents/Scripts/lastmod"
+'2  304  0  ~/.vimrc
+|4,50,304,0,1586382592,"~/.vimrc"
+'3  303  0  ~/.vimrc
+|4,51,303,0,1586382592,"~/.vimrc"
+'4  862  0  ~/.vimrc
+|4,52,862,0,1586293490,"~/.vimrc"
+'5  862  0  ~/.vimrc
+|4,53,862,0,1586293490,"~/.vimrc"
+'6  861  0  ~/.vimrc
+|4,54,861,0,1586293490,"~/.vimrc"
+'7  861  0  ~/.vimrc
+|4,55,861,0,1586293490,"~/.vimrc"
+'8  859  0  ~/.vimrc
+|4,56,859,0,1586293490,"~/.vimrc"
+'9  859  0  ~/.vimrc
+|4,57,859,0,1586293490,"~/.vimrc"
 
 # Jumplist (newest first):
+-'  192  12  ~/.vimrc
+|4,39,192,12,1586429850,"~/.vimrc"
+-'  189  9  ~/.vimrc
+|4,39,189,9,1586429810,"~/.vimrc"
+-'  194  1  ~/.vimrc
+|4,39,194,1,1586429659,"~/.vimrc"
+-'  162  16  ~/.vimrc
+|4,39,162,16,1586429367,"~/.vimrc"
+-'  161  0  ~/.vimrc
+|4,39,161,0,1586429360,"~/.vimrc"
+-'  163  13  ~/.vimrc
+|4,39,163,13,1586429256,"~/.vimrc"
+-'  251  4  ~/.vimrc
+|4,39,251,4,1586425895,"~/.vimrc"
+-'  9  30  ~/Documents/Scripts/lastmod
+|4,39,9,30,1586424819,"~/Documents/Scripts/lastmod"
+-'  1  0  ~/Documents/Scripts/lastmod
+|4,39,1,0,1586424722,"~/Documents/Scripts/lastmod"
+-'  681  0  ~/.vimrc
+|4,39,681,0,1586424437,"~/.vimrc"
+-'  691  0  ~/.vimrc
+|4,39,691,0,1586424413,"~/.vimrc"
+-'  823  27  ~/.vimrc
+|4,39,823,27,1586424354,"~/.vimrc"
+-'  838  69  ~/.vimrc
+|4,39,838,69,1586424336,"~/.vimrc"
+-'  667  44  ~/.vimrc
+|4,39,667,44,1586424242,"~/.vimrc"
+-'  304  0  ~/.vimrc
+|4,39,304,0,1586423651,"~/.vimrc"
 -'  303  0  ~/.vimrc
 |4,39,303,0,1586382592,"~/.vimrc"
+-'  303  0  ~/.vimrc
+|4,39,303,0,1586382592,"~/.vimrc"
+-'  630  0  ~/.vimrc
+|4,39,630,0,1586380690,"~/.vimrc"
 -'  629  0  ~/.vimrc
 |4,39,629,0,1586380690,"~/.vimrc"
+-'  629  0  ~/.vimrc
+|4,39,629,0,1586380690,"~/.vimrc"
+-'  610  0  ~/.vimrc
+|4,39,610,0,1586380686,"~/.vimrc"
+-'  582  0  ~/.vimrc
+|4,39,582,0,1586380686,"~/.vimrc"
+-'  609  0  ~/.vimrc
+|4,39,609,0,1586380686,"~/.vimrc"
+-'  581  0  ~/.vimrc
+|4,39,581,0,1586380686,"~/.vimrc"
 -'  609  0  ~/.vimrc
 |4,39,609,0,1586380686,"~/.vimrc"
 -'  581  0  ~/.vimrc
 |4,39,581,0,1586380686,"~/.vimrc"
 -'  1  0  ~/.vimrc
 |4,39,1,0,1586380327,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1586380327,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1586380327,"~/.vimrc"
+-'  812  0  ~/.vimrc
+|4,39,812,0,1586380319,"~/.vimrc"
 -'  810  0  ~/.vimrc
 |4,39,810,0,1586380319,"~/.vimrc"
+-'  810  0  ~/.vimrc
+|4,39,810,0,1586380319,"~/.vimrc"
+-'  862  0  ~/.vimrc
+|4,39,862,0,1586380304,"~/.vimrc"
 -'  859  0  ~/.vimrc
 |4,39,859,0,1586380304,"~/.vimrc"
+-'  859  0  ~/.vimrc
+|4,39,859,0,1586380304,"~/.vimrc"
+-'  861  0  ~/.vimrc
+|4,39,861,0,1586293490,"~/.vimrc"
 -'  858  0  ~/.vimrc
 |4,39,858,0,1586293490,"~/.vimrc"
 -'  858  0  ~/.vimrc
 |4,39,858,0,1586293490,"~/.vimrc"
+-'  858  0  ~/.vimrc
+|4,39,858,0,1586293490,"~/.vimrc"
+-'  858  0  ~/.vimrc
+|4,39,858,0,1586293490,"~/.vimrc"
+-'  821  0  ~/.vimrc
+|4,39,821,0,1586293453,"~/.vimrc"
+-'  821  0  ~/.vimrc
+|4,39,821,0,1586293453,"~/.vimrc"
+-'  821  0  ~/.vimrc
+|4,39,821,0,1586293453,"~/.vimrc"
 -'  821  0  ~/.vimrc
 |4,39,821,0,1586293453,"~/.vimrc"
 -'  821  0  ~/.vimrc
@@ -356,6 +418,10 @@ $"
 |4,39,821,0,1586293453,"~/.vimrc"
 -'  821  0  ~/.vimrc
 |4,39,821,0,1586293447,"~/.vimrc"
+-'  821  0  ~/.vimrc
+|4,39,821,0,1586293447,"~/.vimrc"
+-'  856  0  ~/.vimrc
+|4,39,856,0,1586293163,"~/.vimrc"
 -'  853  0  ~/.vimrc
 |4,39,853,0,1586293163,"~/.vimrc"
 -'  853  0  ~/.vimrc
@@ -364,6 +430,30 @@ $"
 |4,39,853,0,1586293163,"~/.vimrc"
 -'  853  0  ~/.vimrc
 |4,39,853,0,1586293163,"~/.vimrc"
+-'  853  0  ~/.vimrc
+|4,39,853,0,1586293163,"~/.vimrc"
+-'  853  0  ~/.vimrc
+|4,39,853,0,1586293163,"~/.vimrc"
+-'  853  0  ~/.vimrc
+|4,39,853,0,1586293163,"~/.vimrc"
+-'  853  0  ~/.vimrc
+|4,39,853,0,1586293163,"~/.vimrc"
+-'  1  20  ~/.vim/after/ftplugin/vim.vim
+|4,39,1,20,1586293151,"~/.vim/after/ftplugin/vim.vim"
+-'  1  20  ~/.vim/after/ftplugin/vim.vim
+|4,39,1,20,1586293151,"~/.vim/after/ftplugin/vim.vim"
+-'  1  20  ~/.vim/after/ftplugin/vim.vim
+|4,39,1,20,1586293151,"~/.vim/after/ftplugin/vim.vim"
+-'  1  20  ~/.vim/after/ftplugin/vim.vim
+|4,39,1,20,1586293151,"~/.vim/after/ftplugin/vim.vim"
+-'  1  20  ~/.vim/after/ftplugin/vim.vim
+|4,39,1,20,1586293151,"~/.vim/after/ftplugin/vim.vim"
+-'  1  20  ~/.vim/after/ftplugin/vim.vim
+|4,39,1,20,1586293151,"~/.vim/after/ftplugin/vim.vim"
+-'  1  20  ~/.vim/after/ftplugin/vim.vim
+|4,39,1,20,1586293151,"~/.vim/after/ftplugin/vim.vim"
+-'  1  20  ~/.vim/after/ftplugin/vim.vim
+|4,39,1,20,1586293151,"~/.vim/after/ftplugin/vim.vim"
 -'  1  20  ~/.vim/after/ftplugin/vim.vim
 |4,39,1,20,1586293151,"~/.vim/after/ftplugin/vim.vim"
 -'  1  20  ~/.vim/after/ftplugin/vim.vim
@@ -382,6 +472,24 @@ $"
 |4,39,853,0,1586292714,"~/.vimrc"
 -'  853  0  ~/.vimrc
 |4,39,853,0,1586292714,"~/.vimrc"
+-'  853  0  ~/.vimrc
+|4,39,853,0,1586292714,"~/.vimrc"
+-'  853  0  ~/.vimrc
+|4,39,853,0,1586292714,"~/.vimrc"
+-'  850  0  ~/.vimrc
+|4,39,850,0,1586292670,"~/.vimrc"
+-'  848  0  ~/.vimrc
+|4,39,848,0,1586292670,"~/.vimrc"
+-'  848  0  ~/.vimrc
+|4,39,848,0,1586292670,"~/.vimrc"
+-'  848  0  ~/.vimrc
+|4,39,848,0,1586292670,"~/.vimrc"
+-'  848  0  ~/.vimrc
+|4,39,848,0,1586292670,"~/.vimrc"
+-'  848  0  ~/.vimrc
+|4,39,848,0,1586292670,"~/.vimrc"
+-'  848  0  ~/.vimrc
+|4,39,848,0,1586292670,"~/.vimrc"
 -'  848  0  ~/.vimrc
 |4,39,848,0,1586292670,"~/.vimrc"
 -'  848  0  ~/.vimrc
@@ -398,6 +506,14 @@ $"
 |4,39,848,0,1586292668,"~/.vimrc"
 -'  848  0  ~/.vimrc
 |4,39,848,0,1586292668,"~/.vimrc"
+-'  848  0  ~/.vimrc
+|4,39,848,0,1586292668,"~/.vimrc"
+-'  848  0  ~/.vimrc
+|4,39,848,0,1586292668,"~/.vimrc"
+-'  866  0  ~/.vimrc
+|4,39,866,0,1586292617,"~/.vimrc"
+-'  865  0  ~/.vimrc
+|4,39,865,0,1586292617,"~/.vimrc"
 -'  863  0  ~/.vimrc
 |4,39,863,0,1586292617,"~/.vimrc"
 -'  862  0  ~/.vimrc
@@ -408,243 +524,134 @@ $"
 |4,39,862,0,1586292617,"~/.vimrc"
 -'  862  0  ~/.vimrc
 |4,39,862,0,1586292617,"~/.vimrc"
--'  862  0  ~/.vimrc
-|4,39,862,0,1586292617,"~/.vimrc"
--'  862  0  ~/.vimrc
-|4,39,862,0,1586292617,"~/.vimrc"
--'  862  0  ~/.vimrc
-|4,39,862,0,1586292617,"~/.vimrc"
--'  803  13  ~/.vimrc
-|4,39,803,13,1586292368,"~/.vimrc"
--'  798  13  ~/.vimrc
-|4,39,798,13,1586292368,"~/.vimrc"
--'  798  13  ~/.vimrc
-|4,39,798,13,1586292368,"~/.vimrc"
--'  798  13  ~/.vimrc
-|4,39,798,13,1586292368,"~/.vimrc"
--'  798  13  ~/.vimrc
-|4,39,798,13,1586292368,"~/.vimrc"
--'  798  13  ~/.vimrc
-|4,39,798,13,1586292368,"~/.vimrc"
--'  798  13  ~/.vimrc
-|4,39,798,13,1586292368,"~/.vimrc"
--'  798  13  ~/.vimrc
-|4,39,798,13,1586292368,"~/.vimrc"
--'  798  13  ~/.vimrc
-|4,39,798,13,1586292366,"~/.vimrc"
--'  798  13  ~/.vimrc
-|4,39,798,13,1586292366,"~/.vimrc"
--'  862  20  ~/.vimrc
-|4,39,862,20,1586292201,"~/.vimrc"
--'  861  20  ~/.vimrc
-|4,39,861,20,1586292201,"~/.vimrc"
--'  861  20  ~/.vimrc
-|4,39,861,20,1586292201,"~/.vimrc"
--'  861  20  ~/.vimrc
-|4,39,861,20,1586292201,"~/.vimrc"
--'  861  20  ~/.vimrc
-|4,39,861,20,1586292201,"~/.vimrc"
--'  861  20  ~/.vimrc
-|4,39,861,20,1586292201,"~/.vimrc"
--'  861  20  ~/.vimrc
-|4,39,861,20,1586292201,"~/.vimrc"
--'  861  20  ~/.vimrc
-|4,39,861,20,1586292201,"~/.vimrc"
--'  861  20  ~/.vimrc
-|4,39,861,20,1586292201,"~/.vimrc"
--'  861  20  ~/.vimrc
-|4,39,861,20,1586292201,"~/.vimrc"
--'  861  20  ~/.vimrc
-|4,39,861,20,1586292199,"~/.vimrc"
--'  861  20  ~/.vimrc
-|4,39,861,20,1586292199,"~/.vimrc"
--'  876  22  ~/.vimrc
-|4,39,876,22,1586292110,"~/.vimrc"
--'  875  22  ~/.vimrc
-|4,39,875,22,1586292110,"~/.vimrc"
--'  875  22  ~/.vimrc
-|4,39,875,22,1586292110,"~/.vimrc"
--'  875  22  ~/.vimrc
-|4,39,875,22,1586292110,"~/.vimrc"
--'  875  22  ~/.vimrc
-|4,39,875,22,1586292110,"~/.vimrc"
--'  875  22  ~/.vimrc
-|4,39,875,22,1586292110,"~/.vimrc"
--'  875  22  ~/.vimrc
-|4,39,875,22,1586292110,"~/.vimrc"
--'  875  22  ~/.vimrc
-|4,39,875,22,1586292110,"~/.vimrc"
--'  875  22  ~/.vimrc
-|4,39,875,22,1586292110,"~/.vimrc"
--'  875  22  ~/.vimrc
-|4,39,875,22,1586292110,"~/.vimrc"
--'  875  22  ~/.vimrc
-|4,39,875,22,1586292110,"~/.vimrc"
--'  875  22  ~/.vimrc
-|4,39,875,22,1586292110,"~/.vimrc"
--'  875  22  ~/.vimrc
-|4,39,875,22,1586292108,"~/.vimrc"
--'  875  22  ~/.vimrc
-|4,39,875,22,1586292108,"~/.vimrc"
--'  855  30  ~/.vimrc
-|4,39,855,30,1586291778,"~/.vimrc"
--'  855  30  ~/.vimrc
-|4,39,855,30,1586291778,"~/.vimrc"
--'  855  30  ~/.vimrc
-|4,39,855,30,1586291778,"~/.vimrc"
--'  855  30  ~/.vimrc
-|4,39,855,30,1586291778,"~/.vimrc"
--'  855  30  ~/.vimrc
-|4,39,855,30,1586291778,"~/.vimrc"
--'  855  30  ~/.vimrc
-|4,39,855,30,1586291778,"~/.vimrc"
--'  855  30  ~/.vimrc
-|4,39,855,30,1586291778,"~/.vimrc"
--'  855  30  ~/.vimrc
-|4,39,855,30,1586291778,"~/.vimrc"
--'  855  30  ~/.vimrc
-|4,39,855,30,1586291778,"~/.vimrc"
--'  855  30  ~/.vimrc
-|4,39,855,30,1586291778,"~/.vimrc"
--'  855  30  ~/.vimrc
-|4,39,855,30,1586291778,"~/.vimrc"
--'  855  30  ~/.vimrc
-|4,39,855,30,1586291778,"~/.vimrc"
--'  855  30  ~/.vimrc
-|4,39,855,30,1586291778,"~/.vimrc"
--'  855  30  ~/.vimrc
-|4,39,855,30,1586291778,"~/.vimrc"
--'  850  30  ~/.vimrc
-|4,39,850,30,1586291775,"~/.vimrc"
--'  850  30  ~/.vimrc
-|4,39,850,30,1586291775,"~/.vimrc"
--'  850  30  ~/.vimrc
-|4,39,850,30,1586291775,"~/.vimrc"
--'  850  30  ~/.vimrc
-|4,39,850,30,1586291775,"~/.vimrc"
--'  850  30  ~/.vimrc
-|4,39,850,30,1586291775,"~/.vimrc"
--'  850  30  ~/.vimrc
-|4,39,850,30,1586291775,"~/.vimrc"
--'  850  30  ~/.vimrc
-|4,39,850,30,1586291775,"~/.vimrc"
--'  850  30  ~/.vimrc
-|4,39,850,30,1586291775,"~/.vimrc"
 
 # Buffer list:
-%~/.vimrc	303	0
+%~/.vimrc	192	12
 
 # History of marks within files (newest to oldest):
 
 > ~/.vimrc
-	*	1586382589	0
-	"	303	0
-	^	476	1
-	.	803	0
-	+	855	35
-	+	860	15
-	+	856	0
-	+	860	15
-	+	855	35
-	+	860	15
-	+	862	10
-	+	803	18
-	+	803	0
-	+	805	9
-	+	817	0
-	+	821	28
-	+	832	0
-	+	855	35
-	+	860	15
-	+	751	15
-	+	801	0
-	+	731	18
-	+	747	0
-	+	727	0
-	+	723	20
-	+	860	15
-	+	855	35
-	+	876	19
-	+	855	30
-	+	690	18
-	+	719	0
-	+	679	72
-	+	686	0
-	+	671	8
-	+	675	0
-	+	667	0
-	+	668	0
-	+	612	35
-	+	583	21
-	+	608	0
-	+	876	22
-	+	867	49
-	+	876	20
-	+	803	13
-	+	863	0
-	+	859	0
-	+	855	14
-	+	857	1
-	+	855	18
-	+	608	0
-	+	807	17
-	+	601	0
-	+	808	0
-	+	807	17
-	+	813	7
-	+	814	7
-	+	479	11
-	+	579	1
-	+	583	24
-	+	667	4
-	+	671	11
-	+	675	1
-	+	679	72
-	+	686	1
-	+	690	21
-	+	719	4
-	+	723	23
-	+	727	1
-	+	731	18
-	+	747	4
-	+	751	18
-	+	801	1
-	+	803	17
-	+	803	1
-	+	805	12
-	+	817	1
-	+	821	27
-	+	832	1
-	+	853	42
-	+	862	27
-	+	878	1
-	+	880	4
-	+	803	29
-	+	756	0
-	+	858	22
-	+	859	0
-	+	858	22
-	+	865	4
-	+	869	4
-	+	865	0
-	+	612	38
-	+	688	0
-	+	803	0
-	+	677	0
-	+	608	4
-	+	473	0
-	+	803	0
-	+	462	0
-	+	471	0
-	+	475	0
+	*	1586429850	0
+	"	192	12
+	^	189	4
+	.	192	12
+	+	609	4
 	+	476	0
-	+	462	0
-	+	803	0
+	+	805	0
+	+	463	0
+	+	476	0
+	+	477	0
+	+	463	0
+	+	805	0
+	+	476	0
+	+	466	0
+	+	467	3
+	+	469	6
+	+	621	62
+	+	622	42
+	+	627	31
+	+	629	0
+	+	628	8
+	+	637	0
+	+	633	14
+	+	667	53
+	+	838	62
+	+	852	4
+	+	838	0
+	+	838	65
+	+	691	0
+	+	884	0
+	+	885	0
+	+	4	18
+	+	4	12
+	+	5	0
+	+	4	41
+	+	32	10
+	+	35	6
+	+	25	10
+	+	96	4
+	+	99	12
+	+	218	0
+	+	220	0
+	+	222	0
+	+	221	2
+	+	226	42
+	+	253	0
+	+	257	2
+	+	263	0
+	+	257	6
+	+	251	0
+	+	221	21
+	+	252	0
+	+	208	0
+	+	109	31
+	+	122	1
+	+	121	1
+	+	120	1
+	+	119	1
+	+	117	1
+	+	118	1
+	+	116	1
+	+	115	1
+	+	114	1
+	+	113	1
+	+	112	1
+	+	111	1
+	+	117	1
+	+	121	4
+	+	123	4
+	+	126	4
+	+	129	1
+	+	130	1
+	+	131	4
+	+	130	4
+	+	129	4
+	+	122	49
+	+	123	12
+	+	122	61
+	+	123	9
+	+	122	24
+	+	105	7
+	+	107	7
+	+	6	0
+	+	11	0
+	+	9	18
+	+	10	19
+	+	10	0
+	+	9	19
+	+	101	19
+	+	109	9
+	+	156	0
+	+	114	16
+	+	119	15
+	+	126	15
+	+	163	0
+	+	162	0
+	+	161	0
+	+	162	0
+	+	189	6
+	+	190	12
+	+	191	17
+	+	192	12
 
 > /usr/share/vim/vim82/doc/options.txt
-	*	1586382298	0
-	"	1267	41
+	*	1586429032	0
+	"	2022	17
 	^	4757	38
+
+> /usr/share/vim/vim82/doc/map.txt
+	*	1586428602	0
+	"	196	49
+
+> ~/Documents/Scripts/lastmod
+	*	1586424818	0
+	"	9	30
+	^	6	24
+	.	9	30
+	+	9	34
+	+	7	24
+	+	6	23
+	+	9	30
 
 > ~/.vim/bundle/LaTeX-Suite-aka-Vim-LaTeX/doc/latexhelp.txt
 	*	1586381868	0
@@ -860,14 +867,3 @@ $"
 	+	108	36
 	+	118	9
 	+	119	42
-
-> /usr/share/vim/vim82/doc/usr_27.txt
-	*	1586167155	0
-	"	8	58
-
-> ~/.profile
-	*	1585909636	0
-	"	64	33
-	^	64	27
-	.	64	26
-	+	64	26

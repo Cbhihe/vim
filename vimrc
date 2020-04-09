@@ -1,15 +1,13 @@
 " ==============================
 "    .VIMRC
 " ==============================
-" Last edit   : ckb, on Thu 11 Apr 2019 09:37:30 CEST
+" Last edit: 2020.04.09 at 11:28:46 [ckb] 
 
 set encoding=utf-8
 scriptencoding=utf-8
 set termencoding=utf-8
-"set nocompatible
-				" Superfluous: vim automatically sets nocompatible if it finds 
-				" vimrc or gvimrc " at startup.
-
+"set nocompatible   " Superfluous: vim automatically sets nocompatible if it finds 
+                    " vimrc or gvimrc " at startup.
 
 " =========================
 " Sensitive content 
@@ -24,17 +22,17 @@ source ~/.vim/functions.vim
 
 
 " =========================
-" Plugins
+" Plugins {{{1
 " =========================
 " :scriptnames
 				" Check loaded plugins  
 " :set runtimepath? 
 				" Check loaded plugins' RT path
 " :echo syntastic#util#system('echo "$PATH"')
-				" to see syntastic's idea of env-var $PATH
+				" See Syntastic's idea of env-var $PATH
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
-				" set the runtime path for vundle, required
+				" Set runtime path for vundle, required
 call vundle#begin()
 				" Initialize Vundle, required
 
@@ -95,72 +93,81 @@ let g:ft_ignore_pat = '\.\(Z\|gz\|bz2\|zip\|tgz\)$'
 				" Ensure contents of compressed files not inspected.
 let rmd_include_html = 1
 				" Source 'ftplugin/html.vim' plugin for R markdown
-
+"}}}1
 
 " =========================
-" Mappings 
+" Mappings {{{1 
 " =========================
-set nopaste			" required for abbreviation and insertmode mapping to work
+set nopaste         " required for abbreviation and insertmode mapping to work
 					" in terminal
 
 let mapleader = ',,'	
-				" <leader> mapped to '\' by default. 
+				    " <leader> mapped to '\' by default. 
 let maplocalleader = ','	
-				" <localleader> mapped to '\' by default. 
+				    " <localleader> mapped to '\' by default. 
 
-" Prepend prefix to 'map' 
-"    : normal, visual, select, operator-pending
-"   n: normal            -- cursor motions and basic editing operations
-"   o: operator-pending  -- cmd awaits motion instruction to execute (d,c,y,...)
-"   i: insert & replace  -- character insertion (i,I,o,O,a,A,r,R,s,cw,ce,cb,c$)
-"   x: (block) visual    -- select text (v,V,<C-V>)
-"   s: select
-"   v: visual + select
-"   c: command-line      -- everytime 'ESC:' has been issued
-"   l: insert & command-line & regexp-search & ...
-"      collectively called "Lang-Arg" pseudo-mode)
-"	t: terminal-job
-"nore: makes mapping non-recursive, i.e. lhs expands to rhs only
-"      even if rhs is already mapped to something else.
+" Usage: 
+" Prepend prefix to 'map'
+"     : normal, visual, select, operator-pending
+"    n: normal            -- cursor motions and basic editing operations
+"    o: operator-pending  -- cmd awaits motion instruction to execute (d,c,y,...)
+"    i: insert or replace  -- character insertion (i,I,o,O,a,A,r,R,s,cw,ce,cb,c$)
+"    x: (block) visual    -- select text (v,V,<C-V>)
+"    s: select
+"    v: visual + select
+"    c: command           -- everytime 'ESC:' has been issued
+"    l: insert, command & regexp-search & ...
+"       collectively called "Lang-Arg" pseudo-mode)
+"    t: terminal-job
+" nore: non-recursive, i.e lhs expands literally to rhs only,
+"       i.e even if rhs is already mapped to something else.
 
 " Append suffix to 'map'
-"   !: insert & command-line
+"    !: insert, command
 
 " Just before the {rhs} a special character can appear:
-"	*	indicates that it is not remappable
-"	&	indicates that only script-local mappings are remappable
-"	@	indicates a buffer-local mapping
+"    *	indicates that it is not remappable
+"    &	indicates that only script-local mappings are remappable
+"    @	indicates a buffer-local mapping
 
-map <C-R> :noh<CR>:redraw!"<CR>
-					" Redraws session screen erasing all highlights
-map <silent> <leader><CR> :noh<CR>
-					" temporarily disable highlight when <leader><cr> is pressed
-nnoremap <CR> :noh<CR>
+map <C-R> :noh<cr>:redraw!"<cr>
+					" Redraw session screen erasing all highlights
+map <silent> <leader><cr> :noh<cr>
+					" Temporarily disable highlight when <leader><cr> is pressed
+nnoremap <cr> :noh<cr>
 					" Useful to disable highlighted search results
 
 noremap ºº <Esc>
+                    " in normal, visual, select, operator-pending modes
 noremap! ºº <Esc>
+                    " in insert and command modes
 
 inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk
 					" Insert mode: make cursor move as expected with wrapped lines
 					" Disallow mapping of rhs to avoid nested or recursive mapping.
 
-noremap! <Leader>< <Esc>:s/^    //<CR>:noh<CR>
-noremap! <Leader>> <Esc>:s/^/    /<CR>:noh<CR>
-vnoremap <Leader>< :s/^    //<CR>:noh<CR><Esc>
-vnoremap <Leader>> :s/^/    /<CR>:noh<CR><Esc>
-                    "  delete and insert 4 space indent at begining of line in
-                    "  visuals, insert and cmd modes
+noremap! <Leader>< <Esc>:s/^    //<cr>:noh<cr>
+noremap! <Leader>> <Esc>:s/^/    /<cr>:noh<cr>
+vnoremap <Leader>< :s/^    //<cr>:noh<cr><Esc>
+vnoremap <Leader>> :s/^/    /<cr>:noh<cr><Esc>
+                    " Delete and insert 4 space indent at begining of line in
+                    " Visuals, insert and cmd modes
 
-"nmap <Leader>j :bnext<CR>
-        "nmap <Leader>k :bprev<CR>
+nmap <Leader>j :bnext<cr>
+                    " Go to next normal buffer or to the next help buffer if
+                    " in one when the command is issued.
+                    " Wraps around end of buffer list
+nmap <Leader>k :bprev<cr>
+                    " Go to previous normal buffer or to the next help buffer if
+                    " in one when the command is issued.
+                    " Wraps around start of buffer list
 
-"nnoremap <Leader>b :ls<CR>:b<Space>
-					" move among buffers with CTRL key
-nnoremap <Leader>b :set nomore <Bar> :ls <Bar> :set more <CR>:b<Space>
-					" list active buffers, prepare to switch to one
-					" either with buffer's partial name +TAB or with 
+"nnoremap <Leader>b :ls<cr>:b<Space>
+					" Move among buffers with CTRL key
+nnoremap <Leader>b :set nomore <Bar> :ls <Bar> :set more <cr>:b<Space>
+					" List active buffers, prepare to switch to one
+                    " either with buffer's partial name +TAB or with 
 					" buffer number
 map <space> /
 					" (normal/command, visual, select, operator-pending modes)
@@ -169,12 +176,14 @@ map <space> /
 					" map Ctrl-<space> to backward search (?) in active window
 					" WARNING: ineffectual because <C-space> produces no ASCII character
 
-imap <F2> <Esc>a [ckb]  <Esc>a <C-R>=strftime("%c")<CR><Esc>
-cmap <F2> <Esc>a [ckb]  <Esc>a <C-R>=strftime("%c")<CR><Esc>
-nmap <F2> a [ckb]  <Esc>a <C-R>=strftime("%c")<CR><Esc>
-					" maps F2 for in-place insertion of time-stamp, 
-                    " in normal, insert and cmd modes.
-                    " [ckb]   Wed 10 Apr 2019 19:49:05 CEST
+map! <F2> <Esc>a<C-R>=system('printf " [%b] " $USER').strftime('%Y.%m.%d at %H:%M:%S')]<cr><Esc>
+nmap <F2> a<C-R>=system('printf " [%b] " $USER').strftime('%Y.%m.%d at %H:%M:%S')]<cr><Esc>
+					" maps F2 for in-place insertion of timestamp, 
+                    " e.g. [ckb]   Wed 10 Apr 2019 19:49:05 CEST
+                    " in insert and cmd modes, as well as in normal mode.
+nnoremap <Leader>le <Esc>o<C-R>="\t\" Last edit: ".strftime('%Y.%m.%d at %H:%M:%S').system('printf " [%b]" $USER')<Esc>
+					" add last edit's timestamp and author below current line
+                    " Last edit: 2020.04.09 at 18:21:46 [ckb]
  
 set go+=a           " enable automatic X11 primary `"*y` register copying just 
 					" by highlighting with mouse in visual mode
@@ -188,14 +197,12 @@ noremap <C-t> <Esc>:tabnew .<CR>
 					" open new buffer with pwd's file tree (ft | t)
 					" ':q' to CLOSE and come back to calling buffer
 
-inoremap <C-u> <Esc>ebveuea
-inoremap <Leader>u <Esc>ebveuea
-nnoremap <C-u> ebveue
-					" transform whole current word in lowercase
-inoremap <C-U> <Esc>ebveUea
-inoremap <Leader>U <Esc>ebveUea
-nnoremap <C-U> ebveUe
-					" transform whole current word in uppercase
+inoremap <C-l> <Esc>ebveuea
+nnoremap <C-l> ebveue
+					" change whole current word to lowercase
+inoremap <C-u> <Esc>ebveUea
+nnoremap <C-u> ebveUe
+					" change whole current word to uppercase
 
 " Function 'SelectMinTextObject()' defined in ~/.vim/functions.vim
 vnoremap ip <esc>:call SelectMinTextObject('({[<', 'i', 1)<cr>
@@ -203,26 +210,26 @@ vnoremap ap <esc>:call SelectMinTextObject('({[<', 'a', 1)<cr>
 onoremap ip :call SelectMinTextObject('({[<', 'i', 0)<cr>
 onoremap ap :call SelectMinTextObject('({[<', 'a', 0)<cr>
 "onoremap p( i(
-                    " delete all text inside ()
-                    " respect order of embedding
-                    " use with 'dp' or 'cp'
-" =================================
+                    " Delete all text inside ()
+                    " Respect order of embedding
+                    " Use with 'dp' or 'cp'
 
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 					" edit ~/.vimrc in a jiffy
 nnoremap <leader>sv :source $MYVIMRC<cr>
 					" source  ~/.vimrc in a jiffy 
-nnoremap <Leader>le <Esc>ddO--le
-					" last edit author and date
 
 map <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 				" Define a shortcut for YCM goto definition
+"}}}1
 
-" ==== YCM configuration
+" =========================
+" YCM configuration  {{{1
+" =========================
 "let g:ycm_server_keep_logfiles = 1
 "let g:ycm_server_log_level = 'debug'
 				" Keep for YCM plugin install debug
-let g:ycm_server_python_interpreter = 'python3'
+let g:ycm_server_python_interpreter = '/usr/bin/python3'
 				" NEEDED because YCM's server is compiled with Python 2.7
 				" Nevertheless YCM accepts vim clients with either py2 or py3
 
@@ -247,18 +254,17 @@ let g:ycm_extra_conf_vim_data = [
 let g:ycm_global_ycm_extra_conf = '~/.config/ycm/python/global_extra_conf.py'
 let g:ycm_autoclose_preview_window_after_completion=1
 				" Ensure auto-complete window goes away when done with it
+"}}}1
 
+" =========================
+" Sane linting {{{1 
+" =========================
 " ==== pymode config for syntax checkers
-let g:pymode_python = 'python3'
+let g:pymode_python = '/usr/bin/python3'
 "let g:pymode_lint_on_write = 0
                 " if needed disable lint check in 'python-mode'
 "let g:pymode_lint_ignore = 'E265,E266'
                     " Disables PEP8 linting messages selectively // OLD
-
-
-" =========================
-" Sane linting
-" =========================
 let g:python_recommended_style = 0
 					" Do not follow PEP8 style recommendation for format
 					" (in particular 'tabstop=8')
@@ -457,23 +463,22 @@ let g:syntastic_ruby_checkers = ['mri']
 				" See this style-linter project at http://github.com/foodcritic/
 let g:syntastic_ruby_mri_exec = '/user/bin/ruby'
 				" Default executable path
-
+"}}}1
 
 " =========================
 " Status line {{{1
 " =========================
+let g:streamline_minimal_ui = 1
+                    " Enable minimalist mode for status line
+let g:strealine_show_ale_status = 1
+                    " show ALE errors and warnings in status line
 set showcmd         " Show cmd at bottom right hand corner of screen, left of cursor 
 					" location. <leader> disappears after timeoutlen has expired.
 set showmode        " Show mode status n statusline at bottom of screen 
 set statusline=%<\ %n\ %f\ %m%r%h\ %y%=\ Line:\ \%l/\%L\ (\%p%%)\ Column:\ \%c\ 
 					" Specify content of status line
 set laststatus=2    " Always set status line of last window on
-let g:streamline_minimal_ui = 1
-                " Enable minimalist mode for status line
-let g:strealine_show_ale_status = 1
-                " show ALE errors and warnings in status line
 "}}}1
-
 
 " =========================
 " Colors   {{{1
@@ -578,7 +583,6 @@ augroup hlNonascii
 augroup END
 "1}}}
 
-
 " =========================
 " General settings   {{{1
 " =========================
@@ -607,7 +611,6 @@ set timeoutlen=1500 " Define time (ms) available to enter command after the <lea
 					" synonym of 'set tm=1500'
 "}}}1
 
-
 " =========================
 " viminfo + last cursor position   {{{1
 " =========================
@@ -617,15 +620,15 @@ set timeoutlen=1500 " Define time (ms) available to enter command after the <lea
 "  <1000:  limit the number of lines saved for each register to 1000 lines
 "  s100 :  registers with more than 100 KB of text are skipped.
 "  h	:  disable search highlight when opening a file
-"  c	:  attempt by foreign vim shell to read 'viminfo' file w original
-"		   encoding (need +iconv at compile time)
+"  c	:  attempt by foreign vim shell to read 'viminfo' file w/ original
+"		   encoding (need +iconv at compilation time)
 "  "100 :  will save up to 100 lines for each register
 "  :100 :  up to 100 lines of command-line history will be remembered
 "  %    :  saves and restores the buffer list
 "  n... :  where to save the viminfo files
-set viminfo='20,<1000,s100,h,c,/100,\"100,:100,%,n~/.vim/.viminfo
-					" Remember last cursor position when reopening file
-"set viminfo+=/100   " Control history size
+set viminfo='20,<1000,s100,h,c,\"100,:100,%,n~/.vim/.viminfo
+	        		" Remember last cursor position when reopening file
+set viminfo+=/100   " Control history size
 
 function! ResCur()	" Restore session with cursor in last position inside line
   if line("'\"") > 1 && line("'\"") <= line('$') 
@@ -633,6 +636,7 @@ function! ResCur()	" Restore session with cursor in last position inside line
     return 1
   endif
 endfunction
+
 if has('folding')
   function! UnfoldCur()
     if !&foldenable
@@ -662,10 +666,9 @@ augroup resCur
     autocmd BufWinEnter * call ResCur()
   endif
 augroup END
-				    " at 3rd line in above block, make g`" into g'" to restore cursor 
+				    " at 3rd line in above block, make g`" into g`" to restore cursor 
 				    " position to last line, at beginning of line
 "}}}1
-
 
 " =========================
 " Undo  {{{1
@@ -673,7 +676,6 @@ augroup END
 set undodir=~/.vim/undodir
 set undofile
 "}}}1
-
 
 " =========================
 " Buffer swap, backup, write-backup files, temporary working directory  {{{1
@@ -684,7 +686,6 @@ set writebackup		" save a temporary backup of file(s) being edited with vim
 set backupdir=~/.vim/backups
 set directory=~/.vim/tmp
 "}}}1
-
 
 " =========================
 " Spell checking  {{{1
@@ -718,14 +719,12 @@ hi SpellBad ctermfg=1* ctermbg=0* cterm=none guisp=Blue gui=undercurl
 "hi SpellLocal ctermfg=00 ctermbg=06 cterm=none guifg=#000000 guibg=#008080
 "}}}1
 
-
 " =========================
 " Input completion  {{{1
 " =========================
 set complete+=k		" 'k' = scan the files given in 'set dict=...' option below
 set dictionary+=~/.vim/dict/iab-dict   
 "}}}1
-
 
 " =========================
 " Sane text files {{{1
@@ -745,7 +744,6 @@ set fileformats=unix,dos,mac
 set fileformat=unix	" Set file format locally
 					" :ff=unix to act locally on active buffer
 "}}}1
-
 
 " =========================
 " Sane editing {{{1
@@ -800,7 +798,6 @@ set wildmode=longest,list
 					" and complete till longest common string.
 "}}}1
 
-
 " =========================
 " Search {{{1
 " =========================
@@ -816,7 +813,6 @@ hi clear Search     " Change default color for searched words
 hi Search ctermfg=DarkRed ctermbg=grey cterm=none guisp=red gui=underline
 "}}}1
 
-
 " =========================
 " User defined commands {{{1
 " =========================
@@ -831,9 +827,8 @@ hi Search ctermfg=DarkRed ctermbg=grey cterm=none guisp=red gui=underline
 					" command mode: auto correction
 "}}}1
 
-
 " =========================
-" Check dynamic loading of python 2.x or 3.x at 'vim' launch 
+" Check dynamic loading of python 2.x or 3.x at 'vim' launch  {{{1
 " =========================
 "if has('python_compiled')
 "  echo 'compiled with Python 2.x support'
@@ -847,16 +842,19 @@ hi Search ctermfg=DarkRed ctermbg=grey cterm=none guisp=red gui=underline
 "    echo 'Python 3.x dynamically loaded'
 "  endif
 "endif
-
+"}}}1
 
 " ========================
 " Folding modes, method, text and pattern {{{1
 " ========================
 " vim:ft=vim:fdl=0:fdc=1
 set filetype=vim 
-"set foldmethod=marker     " defined for vim only in ~/.vim/after/plugin/vim.vim
-"set foldmethod=manual     " define fold automatically by indent w/ 'indent'
-set foldlevel=0 
+"set foldmethod=manual     " Default
+"set foldmethod=indent     " Define fold automatically by indent
+"set foldmethod=marker     " Specify for vim only in ~/.vim/after/plugin/vim.vim
+"set foldmarker={{{,}}}    " Defaut, specify for vim only in ~/.vim/after/plugin/vim.vim
+set foldlevel=3           " Fold levels smaller than 'foldlevel' will not be closed upon 
+                          " exiting the buffer
 set foldcolumn=1
 
 " Function MyfoldText() {{{2
@@ -875,6 +873,8 @@ set foldcolumn=1
 "    let fillcharcount = windowwidth - len(line) - len(foldedlinecount) - 1
 "    return line . ' ...' . repeat(' ', fillcharcount) . foldedlinecount . ' '
 "endfunction
-"2}}}2
+"}}}2
+"
 "set foldtext=MyFoldText()
 "}}}1
+
