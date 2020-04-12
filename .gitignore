@@ -7,3 +7,4 @@ pack/
 bundle/
 after/**
 !after/ftplugin/
+view/**

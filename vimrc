@@ -52,16 +52,16 @@ Plugin 'karamcc/vim-streamline'
 Plugin 'raimondi/delimitmate'
                 " replaces 'townk/vim-autoclose' below
                 " unlike 'townk/vim-autoclose' it takes syntax into account
-                " installed directly from plugins' repo
+                " installed directly from plugins' repository
 "Plugin 'townk/vim-autoclose'
-                " create pairs of (,{,[,",` and ' automatically.
-                " place cursor between them automatically.
-                " delete with one keystroke by doing bs on first sign .
-                " suppress creation of closing sign, by typing ctrl-v in
+                " Create pairs of (,{,[,",` and ' automatically.
+                " Place cursor between them automatically.
+                " Delete with one keystroke by doing bs on first sign .
+                " Suppress creation of closing sign, by typing ctrl-v in
                 " insert mode immediately prior to typing the opening sign.
-                " purged 2018.10.28 for incompatibility reasons
+                " Purged 2018.10.28 for incompatibility reasons
 "Plugin 'vim/matchit.vim'
-                " part of vim standard distribution since v6.0
+                " part of vim standard distribution since vim 6.0
 Plugin 'dougireton/vim-chef'
                 " detects chef cookbook and chef-repo files and sets the filetype
                 " to 'ruby.chef'
@@ -72,7 +72,7 @@ Plugin 'vim-scripts/latex-suite-aka-vim-latex'
                 " git cloned from:
                 " https://github.com/vim-scripts/latex-suite-aka-vim-latex.git
 "Plugin 'syngan/vim-vimlint'
-                " git cloned from https://github.com/syngan/vim-vimlint	
+                " git cloned from https://github.com/syngan/vim-vimlint 
 Plugin 'kuniwak/vint'
                 " git cloned from https://github.com/kuniwak/vint
                 "   or installed with `# pip install vim-vint`
@@ -82,15 +82,15 @@ Plugin 'kuniwak/vint'
 call vundle#end()
 
 filetype plugin indent on
-                " required
-                " load ftplugin.vim and indent.vim from $vimruntime
-                " (/usr/share/vim/vim81)
-                " turn automatic filetype detection on
+                " Required
+                " Load ftplugin.vim and indent.vim from $vimruntime
+                " (/usr/share/vim/vim82)
+                " Turn automatic filetype detection on
 
 let g:ft_ignore_pat = '\.\(z\|gz\|bz2\|zip\|tgz\)$'
-                " ensure contents of compressed files not inspected.
+                " Ensure contents of compressed files not inspected.
 let rmd_include_html = 1
-                " source 'ftplugin/html.vim' plugin for r markdown
+                " Source 'ftplugin/html.vim' plugin for r markdown
 "}}}1
 
 " =========================
@@ -136,7 +136,7 @@ set fileformats=unix,dos,mac
                     " When empty, the format defined with 'fileformat' is used
                     " instead.
                     " When not empty 'fileformat' is ignored.
-set fileformat=unix	" Set file format locally
+set fileformat=unix " Set file format locally
                     " :ff=unix to act locally on active buffer
 "}}}1
 
@@ -638,7 +638,7 @@ color desert
 ":color shine       " very similar to 'solarized' and 'morning'
 
 if !exists('g:syntax_on')
-    syntax enable	" Set syntax highlighting groups not yet set.
+    syntax enable   " Set syntax highlighting groups not yet set.
 endif
                     " Turn syntax highlighting on for different types of files
                     " equivalent to ':source $VIMRUNTIME/syntax/syntax.vim'
@@ -703,15 +703,14 @@ augroup END
 " ========================
 " Folding modes, method, text and pattern {{{1
 " ========================
-" vim:ft=vim:fdl=0:fdc=1
-set filetype=vim
+"set filetype=vim          " Not needed as automatic detection is enabled
 "set foldmethod=manual     " Default
 "set foldmethod=indent     " Define fold automatically by indent
 "set foldmethod=marker     " Specify for vim only in ~/.vim/after/plugin/vim.vim
-"set foldmarker={{{,}}}    " Defaut, specify for vim only in ~/.vim/after/plugin/vim.vim
-set foldlevel=1
-" Fold levels smaller than 'foldlevel' will not be closed upon
-                          " exiting the buffer
+"set foldmarker={{{,}}}    " Default, specify for vim only in ~/.vim/after/plugin/vim.vim
+set foldlevel=1     " Default:0
+                    " Folds with levels smaller than or equal to 'foldlevel' will
+                    " not be closed upon exiting buffer
 set foldcolumn=1
 
 " Function MyfoldText() {{{2
@@ -735,10 +734,10 @@ set foldcolumn=1
 "}}}1
 
 " =========================
-" Last cursor position + viminfo  {{{1
+" viminfo  {{{1
 " =========================
-" :help 'viminfo' for more details
-" :set viminfo?   to inspect parameter values
+":help 'viminfo'    " for more details
+":set viminfo?      " to inspect parameter values
 "  '20  :  marks will be remembered for up to 20 previously edited files
 "  <1000:  limit the number of lines saved for each register to 1000 lines
 "  s100 :  registers with more than 100 KB of text are skipped.
@@ -751,46 +750,77 @@ set foldcolumn=1
 "  n... :  where to save the viminfo files
 set viminfo='20,<1000,s100,h,c,\"100,:100,%,n~/.vim/.viminfo
                     " Remember last cursor position when reopening file
-set viminfo+=/100   " Control history size
+set viminfo+=/100
+                    " Control history size
+"}}}1
 
-function! ResCur()  " Restore session with cursor in last position inside line
-  if line("'\"") > 1 && line("'\"") <= line('$')
-    normal! g`"
-    return 1
-  endif
-endfunction
-
-if has('folding')
-  function! UnfoldCur()
-    if !&foldenable
-      return
-    endif
-    let cl = line('.')
-    if cl <= 1
-      return
-    endif
-    let cf  = foldlevel(cl)
-    let uf  = foldlevel(cl - 1)
-    let min = (cf > uf ? uf : cf)
-    if min
-      execute 'normal!' min . 'zo'
-      return 1
-    endif
-  endfunction
-endif
-
+" =========================
+" Last cursor position {{{1
+" =========================
+" ----- buffer view method {{{2
+" =========================
+" set viewoptions=cursor,folds,options,curdir
+                    " Default
+                    " 'cursor' and 'folds' are necessary to preserve
+                    " exact cursor position with 'au' below.
 augroup resCur
-  autocmd!
-                    " remove all autocmds from group 'resCur' every time
-                    " .vimrc is sourced.
-  if has('folding')
-    autocmd BufWinEnter * if ResCur() | call UnfoldCur() | endif
-  else
-    autocmd BufWinEnter * call ResCur()
-  endif
+    autocmd!
+                    " `!` removes all autocmds from group 'resCur' every time
+                    " ~/.vimrc is sourced.
+    au BufWinLeave * mkview
+    au VimEnter * silent loadview
+                    " Use as an alternative to group 'BufWinEnter'
+                    " (below) in case of Plugin incompatibility
+    "au BufWinEnter * silent loadview
 augroup END
-                    " at 3rd line in above block, make g`" into g`" to restore cursor
-                    " position to last line, at beginning of line
+"}}}2
+" ----- function method {{{2
+" =========================
+" THIS IS INCOMPATIBLE WITH FOLD MARKERS
+" https://vim.fandom.com/wiki/Restore_cursor_to_file_position_in_previous_editing_session
+
+"function! ResCur()
+"    " Restore session with cursor in last line-column position
+"    " Adding suffix ! silently overwrites previously defined function with
+"    " identical name.
+"    if line("'\"") > 1 && line("'\"") <= line('$')
+"        normal! g`"
+"                    " make g`" into g'" to restore cursor position
+"                    " to last known line, at beginning of line
+"        return 1
+"    endif
+"endfunction
+"
+"if has('folding')
+"    function! UnfoldCur()
+"        if !&foldenable
+"            return
+"        endif
+"        let cl = line('.')
+"        if cl <= 1
+"            return
+"        endif
+"        let cf  = foldlevel(cl)
+"        let uf  = foldlevel(cl - 1)
+"        let min = (cf > uf ? uf : cf)
+"        if min
+"            execute 'normal!' min . 'zo'
+"            return 1
+"        endif
+"    endfunction
+"endif
+"
+"augroup resCur
+"    autocmd!
+"                    " `!` removes all autocmds from group 'resCur' every time
+"                    " ~/.vimrc is sourced.
+"    if has('folding')
+"        autocmd BufWinEnter * if ResCur() | call UnfoldCur() | endif
+"    else
+"        autocmd BufWinEnter * call ResCur()
+"    endif
+"augroup END
+"}}}2
 "}}}1
 
 " =========================
@@ -818,7 +848,7 @@ set directory=~/.vim/tmp
 " *.spl files, with: ':mkspell! ~/.vim/after/$USER-*.utf-8.add'
 set spell spelllang=en_us,fr,de,es,cjk
                     " enable spellchecking in English, French, German, Spanish
-                    " cjk indicate Chinese, Japanese and Korean, but treatment
+                    " 'cjk' indicate Chinese, Japanese and Korean, but treatment
                     " of those three cases differs, in that none of the 3 Asian
                     " languages' characters are checked.
 
@@ -869,14 +899,14 @@ hi Search ctermfg=DarkRed ctermbg=grey cterm=none guisp=red gui=underline
 " User defined commands {{{1
 " =========================
 " CMDS only accepted if initial letter is capitalized
-:command WQ	wq
-					" command mode: auto correction
-:command Wq	wq
-					" command mode: auto correction
-:command W	w
-					" command mode: auto correction
-:command Q	q
-					" command mode: auto correction
+:command WQ wq
+                    " command mode: auto correction
+:command Wq wq
+                    " command mode: auto correction
+:command W  w
+                    " command mode: auto correction
+:command Q  q
+                    " command mode: auto correction
 "}}}1
 
 " =========================
