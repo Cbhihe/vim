@@ -351,10 +351,15 @@ let g:ycm_server_python_interpreter = '/usr/bin/python3'
                 " Nevertheless YCM accepts vim clients with both py2 or py3
 
 " ==== YCM extra for C/C++ projects
-" Default location is at project's root, extra location is:
-"let g:ycm_global_ycm_extra_conf = '~/.config/ycm/clang/.ycm_extra_conf.py'
-"let g:ycm_confirm_extra_conf = 1
-"let g:ycm_extra_conf_globlist = ['~/.config/ycm/clang/*','!~/**']
+let g:ycm_global_ycm_extra_conf = '~/.config/ycm/clang/.ycm_extra_conf.py'
+                " Default location is at project's root, extra
+                " configuration file location is:
+let g:ycm_confirm_extra_conf = 1
+                " Extra conf file is python; when found, request
+                " confirmation before loading
+let g:ycm_extra_conf_globlist = ['~/.config/ycm/clang/*','!~/**']
+                " Request confirmation before loading only when
+                " extra_conf files are not white listed above.
 
 " ==== YCM extra for java projects
 "   > see https://wiki.archlinux.org/index.php/Vim/YouCompleteMe
@@ -703,11 +708,30 @@ augroup END
 " ========================
 " Folding modes, method, text and pattern {{{1
 " ========================
-"set filetype=vim          " Not needed as automatic detection is enabled
+" za to toggle the current fold
+" zA to recursively toggle the current fold
+" zf#j creates a fold from the cursor down # lines.
+" zf/string creates a fold from the cursor to string.
+" zj moves the cursor to the next fold.
+" zk moves the cursor to the previous fold.
+" zo opens a fold at the cursor.
+" zO opens all folds at the cursor.
+" zm increases the foldlevel by one.
+" zM closes all folds.
+" zr decreases the foldlevel by one.
+" zR decreases the foldlevel to zero — unfold everything
+" zd deletes the fold at the cursor.
+" zE deletes all folds.
+" [z moves to start of open fold.
+" ]z moves to end of open fold.
+
+set nofoldenable      " When on (default) all folds are closed when opening file
+
 "set foldmethod=manual     " Default
-"set foldmethod=indent     " Define fold automatically by indent
+"set foldmethod=indent     " Specify for python only in ~/.vim/after/plugin/python.vim
 "set foldmethod=marker     " Specify for vim only in ~/.vim/after/plugin/vim.vim
 "set foldmarker={{{,}}}    " Default, specify for vim only in ~/.vim/after/plugin/vim.vim
+
 set foldlevel=1     " Default:0
                     " Folds with levels smaller than or equal to 'foldlevel' will
                     " not be closed upon exiting buffer
