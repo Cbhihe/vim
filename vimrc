@@ -725,7 +725,7 @@ augroup END
 " [z moves to start of open fold.
 " ]z moves to end of open fold.
 
-set nofoldenable      " When on (default) all folds are closed when opening file
+set nofoldenable    " When on (default) all folds are closed when opening file
 
 "set foldmethod=manual     " Default
 "set foldmethod=indent     " Specify for python only in ~/.vim/after/plugin/python.vim
